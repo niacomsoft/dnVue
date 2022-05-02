@@ -5,3 +5,4 @@
 
 /// <reference path="./types/vite.application.d.ts" />
 /// <reference path="./types/lib.functions.d.ts" />
+/// <reference path="./types/lib.typings.d.ts" />

@@ -1,0 +1,50 @@
+{
+    "types": [
+        {
+            "type": "feat",
+            "section": "NEW FEATURE"
+        },
+        {
+            "type": "fix",
+            "section": "BUG FIXED"
+        },
+        {
+            "type": "docs",
+            "section": "DOCUMENTATION"
+        },
+        {
+            "type": "refactor",
+            "section": "REFACTOR"
+        },
+        {
+            "type": "test",
+            "section": "TEST CASE"
+        },
+        {
+            "type": "perf",
+            "section": "PERFORMANCE OPTIMIZE"
+        },
+        {
+            "type": "revert",
+            "section": "REVERT"
+        },
+        {
+            "type": "ci",
+            "section": "CI & CD"
+        },
+        {
+            "type": "chore",
+            "section": "CHORE"
+        },
+        {
+            "type": "style",
+            "section": "CODE STYLE"
+        },
+        {
+            "type": "build",
+            "section": "BUILD"
+        }
+    ],
+    "preMajor": true,
+    "header": "# CHANGELOG"
+}

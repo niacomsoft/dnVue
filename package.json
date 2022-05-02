@@ -1,0 +1,46 @@
+{
+  "name": "@niacomsoft/dnvue",
+  "version": "1.0.0-alpha.0",
+  "description": "A .NET programmer was developed, a front-end framework based on Vue3 and VITE!",
+  "displayName": "dnVue",
+  "scripts": {
+    "release:alpha-dryrun": "standard-version -p alpha -i CHANGELOG.md --dry-run",
+    "release:alpha": "standard-version -p alpha -i CHANGELOG.md",
+    "release:beta-dryrun": "standard-version -p beta -i CHANGELOG.md --dry-run",
+    "release:beta": "standard-version -p beta -i CHANGELOG.md",
+    "release:preview-dryrun": "standard-version -p preview -i CHANGELOG.md --dry-run",
+    "release:preview": "standard-version -p preview -i CHANGELOG.md",
+    "release:release-dryrun": "standard-version -i CHANGELOG.md --dry-run",
+    "release:release": "standard-version -i CHANGELOG.md",
+    "npm-version:pre-release": "npm version prerelease --no-git-tag-version --workspaces",
+    "npm-version:pre-patch": "npm version prepatch --no-git-tag-version --workspaces",
+    "npm-version:pre-minor": "npm version preminor --no-git-tag-version --workspaces",
+    "npm-version:pre-major": "npm version premajor --no-git-tag-version --workspaces",
+    "npm-version:patch": "npm version patch --no-git-tag-version --workspaces",
+    "npm-version:minor": "npm version minor --no-git-tag-version --workspaces",
+    "npm-version:major": "npm version major --no-git-tag-version --workspaces"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "vue3",
+    "vite",
+    "dotnet",
+    "dotnetcore",
+    "aspnet",
+    "aspnetcore"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "devDependencies": {
+    "standard-version": "^9.3.2"
+  }
+}

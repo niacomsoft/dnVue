@@ -24,7 +24,7 @@
   "homepage": "https://github.com/niacomsoft/dnVue#readme",
   "files": [
     "index.d.ts",
-    "./typings/**/*.d.ts",
+    "./types/**/*.d.ts",
     "LICENSE",
     "licenses/*.license"
   ]

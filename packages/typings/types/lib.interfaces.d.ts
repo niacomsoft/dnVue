@@ -3,7 +3,20 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-/// <reference path="./types/vite.application.d.ts" />
-/// <reference path="./types/lib.functions.d.ts" />
-/// <reference path="./types/lib.typings.d.ts" />
-/// <reference path="./types/lib.interfaces.d.ts" />
+declare namespace dnvue {
+    /**
+     * 定义了解释字符串的接口。
+     *
+     * @interface IStringResolver
+     */
+    interface IStringResolver {
+        /**
+         * 解释字符串。
+         *
+         * @param {string} s 原始字符串。
+         * @returns {string}
+         * @memberof IStringResolver
+         */
+        resolve(s: string): string;
+    }
+}

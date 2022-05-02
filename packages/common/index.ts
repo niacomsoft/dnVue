@@ -3,4 +3,4 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { sealed } from "./src";
+export { sealed, LoggerType } from "./src";

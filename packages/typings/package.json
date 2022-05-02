@@ -1,0 +1,31 @@
+{
+  "name": "@dnvue/typings",
+  "version": "1.0.0-1",
+  "description": "dnVue typing declarations.",
+  "main": "index.d.ts",
+  "typings": "index.d.ts",
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "typescript": "^4.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "d.ts"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "files": [
+    "index.d.ts",
+    "./typings/**/*.d.ts",
+    "LICENSE",
+    "licenses/*.license"
+  ]
+}

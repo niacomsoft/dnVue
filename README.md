@@ -4,6 +4,14 @@
 
 ![dnVue](assets/Icons/App.png)
 
+## Status
+
+![GitHub issues](https://img.shields.io/github/issues-raw/niacomsoft/dnvue?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/niacomsoft/dnvue?label=commit%20times&logo=github&style=flat-square) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/niacomsoft/dnvue?include_prereleases&logo=github&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/niacomsoft/dnvue?style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/niacomsoft/dnvue?logo=github&style=flat-square) 
+
+## Activities
+
+![Alt](https://repobeats.axiom.co/api/embed/7a39d33827d87dfcb82cefd048c68114a5e99879.svg "Repobeats analytics image")
+
 ## Git Repositories
 
 |**Repository**|

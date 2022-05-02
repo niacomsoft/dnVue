@@ -42,5 +42,9 @@
   "homepage": "https://github.com/niacomsoft/dnVue#readme",
   "devDependencies": {
     "standard-version": "^9.3.2"
-  }
+  },
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ]
 }

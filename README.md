@@ -33,6 +33,10 @@
   - Pinia (Instead of Vuex)
   - ElementPlus or Quasar
 
+## Documentations
+
+- [NPM DEPENDENCIES](docs/npm-dependencies.md)
+
 ## [License](LICENSE.md)
 
 >THE MIT LICENSE

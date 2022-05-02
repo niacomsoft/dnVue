@@ -36,6 +36,7 @@
 ## Documentations
 
 - [NPM DEPENDENCIES](docs/npm-dependencies.md)
+- [CHANGELOG](CHANGELOG.md)
 
 ## [License](LICENSE.md)
 

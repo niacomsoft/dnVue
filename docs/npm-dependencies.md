@@ -8,3 +8,4 @@
 |---------|
 |**[@types/node](https://www.npmjs.com/package/@types/node)**|
 |**[typescript](https://www.npmjs.com/package/typescript)**|
+|**[dayjs](https://www.npmjs.com/package/dayjs)**|

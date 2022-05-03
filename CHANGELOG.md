@@ -1,4 +1,27 @@
 # CHANGELOG
+## [1.0.0-alpha.2](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2022-05-03)
+
+
+### DOCUMENTATION
+
+* 新增项目变更日志文档。 ([a4cc660](https://github.com/niacomsoft/dnVue/commit/a4cc660fa1566720c8655905a108939331d58d29))
+* 修改了项目自述文档。 ([6968255](https://github.com/niacomsoft/dnVue/commit/69682556c0fa96c22e7071175f7b866a37d1ce21))
+* 修改了项目自述文档。 ([643e2a9](https://github.com/niacomsoft/dnVue/commit/643e2a9218980f472c05249bc5abd6bf92af5f44))
+
+
+### NEW FEATURE
+
+* **Issue #4:** 新增管理输出运行时日志方法的统一方法。 ([d216676](https://github.com/niacomsoft/dnVue/commit/d21667692e9ba606720f43f15101fdd056ce7cf3)), closes [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #4:** 新增基于浏览器 console 的记录运行时日志的方法。 ([cf6899f](https://github.com/niacomsoft/dnVue/commit/cf6899fef21d07a50afe29f849dde1cf336e4a35)), closes [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #4:** 新增日志抽象类。 ([4dc9da2](https://github.com/niacomsoft/dnVue/commit/4dc9da215a5b7989b88031cb4c503b33a1ba4b1c)), closes [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #4:** 新增日志接口。 ([fd5ba25](https://github.com/niacomsoft/dnVue/commit/fd5ba259d647dbfbc07d28696bd4ba6722253eb0)), closes [#4](https://github.com/niacomsoft/dnVue/issues/4)
+
+
+### CHORE
+
+* 升级包的版本号。 ([a63a513](https://github.com/niacomsoft/dnVue/commit/a63a513ed6257c190f6c82ad7c1430709eab73a5))
+* 修改了脚本库版本号。 ([9ce3d06](https://github.com/niacomsoft/dnVue/commit/9ce3d06f4677fe64055520c77734d3f195ddc2d2))
+
 ## 1.0.0-alpha.1 (2022-05-02)
 
 

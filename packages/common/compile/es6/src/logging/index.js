@@ -3,3 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 export { LoggerType } from "./logger-type";
+export { Logger } from "./logger";
+export { ConsoleLogger } from "./console-logger";
+export { LoggerManager } from "./logger-manager";

@@ -1,1 +1,1 @@
-export { sealed, LoggerType } from "./src";
+export { sealed, LoggerType, ILogger } from "./src";

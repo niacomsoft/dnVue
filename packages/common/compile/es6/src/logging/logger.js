@@ -13,19 +13,21 @@ import { LoggerType } from "./logger-type";
  */
 export class Logger {
     write(message, type, contextData) {
-        if (!type) {
-            type = LoggerType.DEBUG;
+        if ((message !== null && message !== void 0 ? message : "").trim() !== "") {
+            if (!type) {
+                type = LoggerType.DEBUG;
+            }
+            if (this._compareType(type, LoggerType.DEBUG))
+                this.writeDebug(message, contextData);
+            if (this._compareType(type, LoggerType.TRACE))
+                this.writeTrace(message, contextData);
+            if (this._compareType(type, LoggerType.INFO))
+                this.writeInformation(message, contextData);
+            if (this._compareType(type, LoggerType.WARN))
+                this.writeWarning(message, contextData);
+            if (this._compareType(type, LoggerType.ERROR))
+                this.writeError(message, contextData);
         }
-        if (this._compareType(type, LoggerType.DEBUG))
-            this.writeDebug(message, contextData);
-        if (this._compareType(type, LoggerType.TRACE))
-            this.writeTrace(message, contextData);
-        if (this._compareType(type, LoggerType.INFO))
-            this.writeInformation(message, contextData);
-        if (this._compareType(type, LoggerType.WARN))
-            this.writeWarning(message, contextData);
-        if (this._compareType(type, LoggerType.ERROR))
-            this.writeError(message, contextData);
     }
     /**
      * 对比运行时日志类型。

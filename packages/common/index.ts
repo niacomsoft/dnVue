@@ -7,5 +7,6 @@ export {
     sealed,
     LoggerType,
     ILogger,
-    Logger
+    Logger,
+    ConsoleLogger
 } from "./src";

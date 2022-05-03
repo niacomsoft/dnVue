@@ -1,2 +1,2 @@
 export { sealed } from "./decorators";
-export { LoggerType, ILogger, Logger } from "./logging";
+export { LoggerType, ILogger, Logger, ConsoleLogger } from "./logging";

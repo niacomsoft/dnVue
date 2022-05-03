@@ -34,6 +34,7 @@
     "compile/**/*.d.ts"
   ],
   "dependencies": {
-    "@dnvue/typings": "^1.0.0"
+    "@dnvue/typings": "^1.0.0",
+    "dayjs": "^1.11.1"
   }
 }

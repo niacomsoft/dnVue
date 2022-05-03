@@ -1,4 +1,18 @@
 # CHANGELOG
+## [1.0.0-alpha.3](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2022-05-03)
+
+
+### REFACTOR
+
+* **Issue #4:** 抽象了 LoggerManager 接口。 ([a73d8f4](https://github.com/niacomsoft/dnVue/commit/a73d8f4c914ca4e6fb7ed4a00c83a9c46dd9c97a)), closes [#4](https://github.com/niacomsoft/dnVue/issues/4)
+
+
+### NEW FEATURE
+
+* **Issue #5:** 调整了日志相关组合式 API。 ([d0c44e6](https://github.com/niacomsoft/dnVue/commit/d0c44e6c6fb550c453004be64960827697bb37e8)), closes [#5](https://github.com/niacomsoft/dnVue/issues/5)
+* **Issue #5:** 新增日志相关的组合式 API。 ([dddb62f](https://github.com/niacomsoft/dnVue/commit/dddb62fc3d2d10f6ed8209a57beacc7e9693d836)), closes [#5](https://github.com/niacomsoft/dnVue/issues/5)
+* **Issue #5:** 新增组合式 API 项目。 ([0eaa5eb](https://github.com/niacomsoft/dnVue/commit/0eaa5eb26a9fb4d3e449ed304b9e17b8713bb974)), closes [#5](https://github.com/niacomsoft/dnVue/issues/5)
+
 ## [1.0.0-alpha.2](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2022-05-03)
 
 

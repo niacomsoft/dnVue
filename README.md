@@ -6,7 +6,7 @@
 
 ## Status
 
-![GitHub issues](https://img.shields.io/github/issues-raw/niacomsoft/dnvue?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/niacomsoft/dnvue?label=commit%20times&logo=github&style=flat-square) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/niacomsoft/dnvue?include_prereleases&logo=github&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/niacomsoft/dnvue?style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/niacomsoft/dnvue?logo=github&style=flat-square) 
+![GitHub issues](https://img.shields.io/github/issues-raw/niacomsoft/dnvue?style=flat-square&logo=github) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/niacomsoft/dnvue?label=commit%20times&logo=github&style=flat-square) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/niacomsoft/dnvue?include_prereleases&logo=github&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/niacomsoft/dnvue?style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/niacomsoft/dnvue?logo=github&style=flat-square) 
 
 ## Activities
 

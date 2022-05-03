@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/common",
-  "version": "1.0.0-1",
+  "version": "1.0.1",
   "description": "dnVue common library.",
   "main": "compile/es6/index.js",
   "typings": "compile/es6/index.d.ts",
@@ -34,6 +34,6 @@
     "compile/**/*.d.ts"
   ],
   "dependencies": {
-    "@dnvue/typings": "^1.0.0-0"
+    "@dnvue/typings": "^1.0.0"
   }
 }

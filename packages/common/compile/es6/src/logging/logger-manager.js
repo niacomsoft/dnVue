@@ -11,7 +11,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var LoggerManager_1;
 import { ConsoleLogger } from "./console-logger";
 import { Logger } from "./logger";
 import { sealed } from "../decorators";
@@ -21,10 +20,11 @@ import { sealed } from "../decorators";
  * @export
  * @class LoggerManager
  * @extends {Logger}
+ * @implements {ILoggerManager}
  * @implements {ILogger}
  * @sealed
  */
-let LoggerManager = LoggerManager_1 = class LoggerManager extends Logger {
+let LoggerManager = class LoggerManager extends Logger {
     /**
      * 用于初始化一个 LoggerManager 类型的对象实例。
      *
@@ -41,19 +41,6 @@ let LoggerManager = LoggerManager_1 = class LoggerManager extends Logger {
          */
         this.loggers = [];
         this.loggers.push(new ConsoleLogger());
-    }
-    /**
-     * 获取 ILogger 类型的对象实例，用于表示记录运行时日志的方法。
-     *
-     * @readonly
-     * @static
-     * @type {ILogger}
-     * @memberof LoggerManager
-     */
-    static get currentLogger() {
-        if (!LoggerManager_1._loggerMgr)
-            LoggerManager_1._loggerMgr = new LoggerManager_1();
-        return LoggerManager_1._loggerMgr;
     }
     writeDebug(message, contextData) {
         this.loggers.forEach(logger => {
@@ -81,7 +68,7 @@ let LoggerManager = LoggerManager_1 = class LoggerManager extends Logger {
         });
     }
 };
-LoggerManager = LoggerManager_1 = __decorate([
+LoggerManager = __decorate([
     sealed,
     __metadata("design:paramtypes", [])
 ], LoggerManager);

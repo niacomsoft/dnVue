@@ -1,4 +1,5 @@
 import { ILogger } from "./logger-interface";
+import { ILoggerManager } from "./logger-manager-interface";
 import { Logger } from "./logger";
 /**
  * 提供了管理运行时日志相关的方法。密闭的，不可以从此类型派生。
@@ -6,10 +7,11 @@ import { Logger } from "./logger";
  * @export
  * @class LoggerManager
  * @extends {Logger}
+ * @implements {ILoggerManager}
  * @implements {ILogger}
  * @sealed
  */
-export declare class LoggerManager extends Logger implements ILogger {
+export declare class LoggerManager extends Logger implements ILoggerManager, ILogger {
     /**
      * 获取 ILogger 类型的对象实例集合，用于表示输出运行时日志的方法。
      *
@@ -18,16 +20,6 @@ export declare class LoggerManager extends Logger implements ILogger {
      * @readonly
      */
     readonly loggers: ILogger[];
-    private static _loggerMgr;
-    /**
-     * 获取 ILogger 类型的对象实例，用于表示记录运行时日志的方法。
-     *
-     * @readonly
-     * @static
-     * @type {ILogger}
-     * @memberof LoggerManager
-     */
-    static get currentLogger(): ILogger;
     /**
      * 用于初始化一个 LoggerManager 类型的对象实例。
      *

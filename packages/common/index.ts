@@ -9,5 +9,6 @@ export {
     ILogger,
     Logger,
     ConsoleLogger,
+    ILoggerManager,
     LoggerManager
 } from "./src";

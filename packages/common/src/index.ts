@@ -4,4 +4,4 @@
 // **************************************************************************************************************************
 
 export { sealed } from "./decorators";
-export { LoggerType, ILogger, Logger, ConsoleLogger } from "./logging";
+export { LoggerType, ILogger, Logger, ConsoleLogger, LoggerManager } from "./logging";

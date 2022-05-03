@@ -8,5 +8,6 @@ export {
     LoggerType,
     ILogger,
     Logger,
-    ConsoleLogger
+    ConsoleLogger,
+    LoggerManager
 } from "./src";

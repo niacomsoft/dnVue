@@ -3,16 +3,22 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { LoggerManager, ILogger } from "@dnvue/common";
+/// <reference path="../global.d.ts" />
+
+
+import { ILoggerManager, ILogger, LoggerManager } from "@dnvue/common";
 
 /**
  * 使用管理运行时日志的方法。
  *
  * @export
- * @returns {LoggerManager}
+ * @returns {ILoggerManager}
  */
-export function useLoggerManager(): LoggerManager {
-    return LoggerManager.currentLogger as LoggerManager;
+export function useLoggerManager(): ILoggerManager {
+    if (!window.DNVUE_LOGGER_MANAGER)
+        window.DNVUE_LOGGER_MANAGER = new LoggerManager();
+
+    return window.DNVUE_LOGGER_MANAGER;
 }
 
 /**
@@ -22,5 +28,8 @@ export function useLoggerManager(): LoggerManager {
  * @returns {ILogger}
  */
 export function useLogger(): ILogger {
-    return LoggerManager.currentLogger;
+    if (!window.DNVUE_LOGGER)
+        window.DNVUE_LOGGER = new LoggerManager();
+
+    return window.DNVUE_LOGGER;
 }

@@ -31,18 +31,3 @@ export var LoggerType;
      */
     LoggerType[LoggerType["ERROR"] = 16] = "ERROR";
 })(LoggerType || (LoggerType = {}));
-/**
- * 为 LoggerType 类型提供的扩展方法。
- */
-(function (LoggerType) {
-    /**
-     * 用于校验 source 是否等于 target 值。
-     *
-     * @param {(LoggerType | number)} source 需要对比的源值。
-     * @param {(LoggerType | number)} target 需要对比的目标值。
-     * @returns {boolean}
-     */
-    function equals(source, target) {
-        return (source & target) === target;
-    }
-})(LoggerType || (LoggerType = {}));

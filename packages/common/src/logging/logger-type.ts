@@ -31,19 +31,3 @@ export enum LoggerType {
      */
     ERROR = 16
 }
-
-/**
- * 为 LoggerType 类型提供的扩展方法。
- */
-export namespace LoggerType {
-    /**
-     * 用于校验 source 是否等于 target 值。
-     *
-     * @param {(LoggerType | number)} source 需要对比的源值。
-     * @param {(LoggerType | number)} target 需要对比的目标值。
-     * @returns {boolean}
-     */
-    function equals(source: LoggerType | number, target: LoggerType | number): boolean {
-        return (source & target) === target;
-    }
-}

@@ -26,8 +26,3 @@ export declare enum LoggerType {
      */
     ERROR = 16
 }
-/**
- * 为 LoggerType 类型提供的扩展方法。
- */
-export declare namespace LoggerType {
-}

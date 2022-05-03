@@ -50,9 +50,9 @@ export interface ILogger {
      * 输出日志。
      *
      * @param {string} [message] 日志信息。
-     * @param {(LoggerType | number)} [type] 日志类型。
+     * @param {LoggerType} [type] 日志类型。
      * @param {*} [contextData] 跟随日志一起输出的上下文数据。
      * @memberof ILogger
      */
-    write(message?: string, type?: LoggerType | number, contextData?: any): void;
+    write(message?: string, type?: LoggerType, contextData?: any): void;
 }

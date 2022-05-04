@@ -76,4 +76,47 @@ declare namespace dnvue {
          */
         error?: Error;
     }
+
+    /**
+     * 定义了有颜色的 Console 样式配置。
+     *
+     * @interface ColoredConsoleStyleOptions
+     */
+    interface ColoredConsoleStyleOptions {
+        /**
+         * 调试样式。
+         *
+         * @type {string}
+         * @memberof ColoredConsoleStyleOptions
+         */
+        debug?: string;
+        /**
+         * 追踪样式。
+         *
+         * @type {string}
+         * @memberof ColoredConsoleStyleOptions
+         */
+        trace?: string;
+        /**
+         * 信息样式。
+         *
+         * @type {string}
+         * @memberof ColoredConsoleStyleOptions
+         */
+        information?: string;
+        /**
+         * 警告样式。
+         *
+         * @type {string}
+         * @memberof ColoredConsoleStyleOptions
+         */
+        warning?: string;
+        /**
+         * 错误样式。
+         *
+         * @type {string}
+         * @memberof ColoredConsoleStyleOptions
+         */
+        error?: string;
+    }
 }

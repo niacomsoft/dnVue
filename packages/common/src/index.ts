@@ -4,4 +4,4 @@
 // **************************************************************************************************************************
 
 export { sealed } from "./decorators";
-export { LogWriter } from "./logging";
+export { LogWriter, ConsoleLogWriter } from "./logging";

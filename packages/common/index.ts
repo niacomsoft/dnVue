@@ -5,5 +5,6 @@
 
 export {
     sealed,
-    LogWriter
+    LogWriter,
+    ConsoleLogWriter
 } from "./src";

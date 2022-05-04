@@ -1,4 +1,26 @@
 # CHANGELOG
+## [1.0.0-alpha.4](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2022-05-04)
+
+
+### REFACTOR
+
+* 重构日志模块。 ([0a7ef91](https://github.com/niacomsoft/dnVue/commit/0a7ef91c27c02f4b2356bd11d6b36ce66e451cce))
+* 重构日志模块。 ([92c142e](https://github.com/niacomsoft/dnVue/commit/92c142e08248124b002105e3cb82ae500ce26321))
+
+
+### PERFORMANCE OPTIMIZE
+
+* **Issue #2:** 调整了 LogLevel 枚举定义。 ([88e5e58](https://github.com/niacomsoft/dnVue/commit/88e5e5848f3969cceb14626af7c918ac7db19210)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2)
+
+
+### NEW FEATURE
+
+* **Issue #2 #4:** 新增 LogWriter 基类。 ([746a4de](https://github.com/niacomsoft/dnVue/commit/746a4dedd8626ddf6aa9edfe647a8f9485a079d0)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #2 #4:** 新增运行时日志接口定义。 ([3254980](https://github.com/niacomsoft/dnVue/commit/3254980f0bee16c3a4d8f38103d145457ed2f167)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #3 #4:** 新增 ColoredConsoleLogWriter 类。 ([f423775](https://github.com/niacomsoft/dnVue/commit/f42377534f402604eaa4116ea47f6dd63455aa1f)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #3 #4:** 新增 ConsoleLogWriter 类型。 ([8b1a892](https://github.com/niacomsoft/dnVue/commit/8b1a892140a9d8d622d6628421d209d248b9f1c5)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #3 #4:** 新增 ConsoleLogWriterFactory 类。 ([498368f](https://github.com/niacomsoft/dnVue/commit/498368fbe92bbcf3d8e148834f14253cb92be4ea)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+
 ## [1.0.0-alpha.3](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2022-05-03)
 
 

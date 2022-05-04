@@ -16,3 +16,13 @@ export declare class ConsoleLogWriter extends LogWriter implements dnvue.ILogWri
     writeWarning(warnEntry?: dnvue.LogEntry | undefined): void;
     writeError(errorEntry?: dnvue.LogEntry | undefined): void;
 }
+/**
+ * 提供了创建 ConsoleLogWriter 类型的对象实例相关的工厂方法。
+ *
+ * @export
+ * @class ConsoleLogWriterFactory
+ * @implements {dnvue.ILogWriterFactory}
+ */
+export declare class ConsoleLogWriterFactory implements dnvue.ILogWriterFactory {
+    create(): dnvue.ILogWriter;
+}

@@ -3,4 +3,4 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 export { sealed } from "./decorators";
-export { LogWriter, ConsoleLogWriter } from "./logging";
+export { LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory } from "./logging";

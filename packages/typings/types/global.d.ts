@@ -37,5 +37,9 @@ declare global {
          * @memberof Window
          */
         DEFAULT_LOGGER: dnvue.ILogger;
+
+        __SINGLETON_MANAGER__: {
+            CONSOLE_LOGWRITER?: dnvue.ILogWriter;
+        };
     }
 }

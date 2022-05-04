@@ -33,3 +33,22 @@ export class ConsoleLogWriter extends LogWriter implements dnvue.ILogWriter {
         console.error(`${errorEntry?.message} See %o`, { contextData: errorEntry?.contextData, contextError: errorEntry?.error, time: new Date() });
     }
 }
+
+/**
+ * 提供了创建 ConsoleLogWriter 类型的对象实例相关的工厂方法。
+ *
+ * @export
+ * @class ConsoleLogWriterFactory
+ * @implements {dnvue.ILogWriterFactory}
+ */
+export class ConsoleLogWriterFactory implements dnvue.ILogWriterFactory {
+    create(): dnvue.ILogWriter {
+        if (!window.__SINGLETON_MANAGER__?.CONSOLE_LOGWRITER) {
+            if (!window.__SINGLETON_MANAGER__) {
+                window.__SINGLETON_MANAGER__ = {};
+            }
+            window.__SINGLETON_MANAGER__.CONSOLE_LOGWRITER = new ConsoleLogWriter();
+        }
+        return window.__SINGLETON_MANAGER__.CONSOLE_LOGWRITER;
+    }
+}

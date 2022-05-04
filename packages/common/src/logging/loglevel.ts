@@ -3,7 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-declare namespace dnvue {
+namespace dnvue {
     /**
      * 定义了运行时日志级别枚举类型。
      *
@@ -13,22 +13,22 @@ declare namespace dnvue {
         /**
          * 调试级日志。
          */
-        DEBUG,
+        DEBUG = 1,
         /**
          * 追踪级日志。
          */
-        TRACE,
+        TRACE = 2,
         /**
          * 信息级日志。
          */
-        INFORMATION,
+        INFORMATION = 4,
         /**
          * 警告级日志。
          */
-        WARNING,
+        WARNING = 8,
         /**
          * 错误级日志。
          */
-        ERROR
+        ERROR = 16
     }
 }

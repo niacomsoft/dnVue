@@ -1,1 +1,1 @@
-export { sealed } from "./src";
+export { sealed, LogWriter } from "./src";

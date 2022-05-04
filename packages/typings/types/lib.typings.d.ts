@@ -45,4 +45,35 @@ declare namespace dnvue {
          */
         id: T;
     }
+
+    /**
+     * 定义了日志项类型。
+     *
+     * @interface LogEntry
+     */
+    interface LogEntry {
+        /**
+         * 设置或获取一个字符串，用于表示运行时日志信息。
+         *
+         * @type {string}
+         * @memberof LogEntry
+         */
+        message: string;
+
+        /**
+         * 设置或获取 any 类型的对象实例或值，用于表示需要一起输出到日志的上下文数据。
+         *
+         * @type {*}
+         * @memberof LogEntry
+         */
+        contextData?: any;
+
+        /**
+         * 设置或获取 Error 类型的对象实例，用于表示运行时异常。
+         *
+         * @type {Error}
+         * @memberof LogEntry
+         */
+        error?: Error;
+    }
 }

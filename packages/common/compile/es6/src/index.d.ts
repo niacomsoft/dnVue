@@ -1,0 +1,1 @@
+export { sealed } from "./decorators";

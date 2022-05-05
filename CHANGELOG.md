@@ -1,4 +1,14 @@
 # CHANGELOG
+## [1.0.0-alpha.6](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2022-05-05)
+
+
+### NEW FEATURE
+
+* **Issue #2 #7:** 新增应用上下文接口定义。 ([2b49524](https://github.com/niacomsoft/dnVue/commit/2b495248e034f026fb9584264e552c12657dc22a)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#7](https://github.com/niacomsoft/dnVue/issues/7)
+* **Issue #3 #5 #7:** 新增应用初始化配置组合 API。 ([294ad73](https://github.com/niacomsoft/dnVue/commit/294ad735a4036562662aff3ae81d591ffc990360)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#5](https://github.com/niacomsoft/dnVue/issues/5) [#7](https://github.com/niacomsoft/dnVue/issues/7) [#7](https://github.com/niacomsoft/dnVue/issues/7)
+* **Issue #3 #7:** 新增 Startup 类。 ([33e1eee](https://github.com/niacomsoft/dnVue/commit/33e1eee2bbfc03a6a3de2bab035756b40967229a)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#7](https://github.com/niacomsoft/dnVue/issues/7)
+* **Issue #3 #7:** 新增应用上下文类型 AppContext。 ([05e2301](https://github.com/niacomsoft/dnVue/commit/05e23011f408732f0d2a9e9e2dbdecfef06c3569)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#7](https://github.com/niacomsoft/dnVue/issues/7)
+
 ## [1.0.0-alpha.5](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2022-05-05)
 
 

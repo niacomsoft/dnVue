@@ -13,3 +13,4 @@ export {
     ColoredConsoleLogWriterFactory,
     Logger
 } from "./logging";
+export { AppContext } from "./appcontext";

@@ -3,5 +3,14 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { useLogger, useDefaultLogWriter } from "./composition-logging";
-export { configureDnvue } from "./composition-startup";
+import { Startup } from "@dnvue/common";
+
+/**
+ * 配置 dnVue 应用。
+ *
+ * @export
+ * @param {dnvue.ParameterizedAction<dnvue.IAppContext>} [config] 配置方法。
+ */
+export function configureDnvue(config?: dnvue.ParameterizedAction<dnvue.IAppContext>): void {
+    Startup.configure(config);
+}

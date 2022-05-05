@@ -10,5 +10,6 @@ export {
     ConsoleLogWriter,
     ConsoleLogWriterFactory,
     ColoredConsoleLogWriter,
-    ColoredConsoleLogWriterFactory
+    ColoredConsoleLogWriterFactory,
+    Logger
 } from "./src";

@@ -1,2 +1,2 @@
 export { sealed } from "./decorators";
-export { LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory } from "./logging";
+export { LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLogWriter, ColoredConsoleLogWriterFactory } from "./logging";

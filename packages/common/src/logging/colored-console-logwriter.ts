@@ -46,19 +46,40 @@ export class ColoredConsoleLogWriter extends LogWriter implements dnvue.ILogWrit
     }
 
     writeDebug(debugEntry?: dnvue.LogEntry | undefined): void {
-        throw new Error("Method not implemented.");
+        console.debug(`%c${debugEntry?.message} See %o`, this._styleOptions.debug, { contextData: debugEntry?.contextData, contextError: debugEntry?.error, time: new Date() });
     }
     writeTrace(traceEntry?: dnvue.LogEntry | undefined): void {
-        throw new Error("Method not implemented.");
+        console.trace(`%c${traceEntry?.message} See %o`, this._styleOptions.trace, { contextData: traceEntry?.contextData, contextError: traceEntry?.error, time: new Date() });
     }
     writeInformation(infoEntry?: dnvue.LogEntry | undefined): void {
-        throw new Error("Method not implemented.");
+        console.info(`%c${infoEntry?.message} See %o`, this._styleOptions.information, { contextData: infoEntry?.contextData, contextError: infoEntry?.error, time: new Date() });
     }
     writeWarning(warnEntry?: dnvue.LogEntry | undefined): void {
-        throw new Error("Method not implemented.");
+        console.warn(`%c${warnEntry?.message} See %o`, this._styleOptions.warning, { contextData: warnEntry?.contextData, contextError: warnEntry?.error, time: new Date() });
     }
     writeError(errorEntry?: dnvue.LogEntry | undefined): void {
-        throw new Error("Method not implemented.");
+        console.error(`%c${errorEntry?.message} See %o`, this._styleOptions.error, { contextData: errorEntry?.contextData, contextError: errorEntry?.error, time: new Date() });
+    }
+}
+
+/**
+ * 提供了创建 ColoredConsoleLogWriter 类型的对象实例相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class ColoredConsoleLogWriterFactory
+ * @implements {dnvue.ILogWriterFactory}
+ * @sealed
+ */
+@sealed
+export class ColoredConsoleLogWriterFactory implements dnvue.ILogWriterFactory {
+    create(): dnvue.ILogWriter {
+        if (!window.__SINGLETON_MANAGER__?.COLORED_CONSOLE_LOGWRITER) {
+            if (!window.__SINGLETON_MANAGER__) {
+                window.__SINGLETON_MANAGER__ = {};
+            }
+            window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER = new ColoredConsoleLogWriter();
+        }
+        return window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER;
     }
 
 }

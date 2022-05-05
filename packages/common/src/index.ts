@@ -5,7 +5,9 @@
 
 export { sealed } from "./decorators";
 export {
-    LogWriter, 
+    LogWriter,
     ConsoleLogWriter,
-    ConsoleLogWriterFactory
+    ConsoleLogWriterFactory,
+    ColoredConsoleLogWriter,
+    ColoredConsoleLogWriterFactory
 } from "./logging";

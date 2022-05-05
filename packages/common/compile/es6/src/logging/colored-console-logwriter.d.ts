@@ -32,3 +32,14 @@ export declare class ColoredConsoleLogWriter extends LogWriter implements dnvue.
     writeWarning(warnEntry?: dnvue.LogEntry | undefined): void;
     writeError(errorEntry?: dnvue.LogEntry | undefined): void;
 }
+/**
+ * 提供了创建 ColoredConsoleLogWriter 类型的对象实例相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class ColoredConsoleLogWriterFactory
+ * @implements {dnvue.ILogWriterFactory}
+ * @sealed
+ */
+export declare class ColoredConsoleLogWriterFactory implements dnvue.ILogWriterFactory {
+    create(): dnvue.ILogWriter;
+}

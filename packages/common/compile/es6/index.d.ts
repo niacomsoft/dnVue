@@ -1,1 +1,1 @@
-export { sealed, LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory } from "./src";
+export { sealed, LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLogWriter, ColoredConsoleLogWriterFactory } from "./src";

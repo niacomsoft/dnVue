@@ -7,5 +7,7 @@ export {
     sealed,
     LogWriter,
     ConsoleLogWriter,
-    ConsoleLogWriterFactory
+    ConsoleLogWriterFactory,
+    ColoredConsoleLogWriter,
+    ColoredConsoleLogWriterFactory
 } from "./src";

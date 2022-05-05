@@ -41,13 +41,14 @@ ConsoleLogWriter = __decorate([
 ], ConsoleLogWriter);
 export { ConsoleLogWriter };
 /**
- * 提供了创建 ConsoleLogWriter 类型的对象实例相关的工厂方法。
+ * 提供了创建 ConsoleLogWriter 类型的对象实例相关的工厂方法。密闭的，不可以从此类型派生。
  *
  * @export
  * @class ConsoleLogWriterFactory
  * @implements {dnvue.ILogWriterFactory}
+ * @sealed
  */
-export class ConsoleLogWriterFactory {
+let ConsoleLogWriterFactory = class ConsoleLogWriterFactory {
     create() {
         var _a;
         if (!((_a = window.__SINGLETON_MANAGER__) === null || _a === void 0 ? void 0 : _a.CONSOLE_LOGWRITER)) {
@@ -58,4 +59,8 @@ export class ConsoleLogWriterFactory {
         }
         return window.__SINGLETON_MANAGER__.CONSOLE_LOGWRITER;
     }
-}
+};
+ConsoleLogWriterFactory = __decorate([
+    sealed
+], ConsoleLogWriterFactory);
+export { ConsoleLogWriterFactory };

@@ -40,6 +40,7 @@ declare global {
 
         __SINGLETON_MANAGER__: {
             CONSOLE_LOGWRITER?: dnvue.ILogWriter;
+            COLORED_CONSOLE_LOGWRITER?: dnvue.ILogWriter;
         };
     }
 }

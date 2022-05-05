@@ -35,19 +35,19 @@ let ColoredConsoleLogWriter = ColoredConsoleLogWriter_1 = class ColoredConsoleLo
         this._styleOptions = Object.assign({}, ColoredConsoleLogWriter_1.DEFAULT_STYLE, styleOptions);
     }
     writeDebug(debugEntry) {
-        throw new Error("Method not implemented.");
+        console.debug(`%c${debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.message} See %o`, this._styleOptions.debug, { contextData: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.contextData, contextError: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.error, time: new Date() });
     }
     writeTrace(traceEntry) {
-        throw new Error("Method not implemented.");
+        console.trace(`%c${traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.message} See %o`, this._styleOptions.trace, { contextData: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.contextData, contextError: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.error, time: new Date() });
     }
     writeInformation(infoEntry) {
-        throw new Error("Method not implemented.");
+        console.info(`%c${infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.message} See %o`, this._styleOptions.information, { contextData: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.contextData, contextError: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.error, time: new Date() });
     }
     writeWarning(warnEntry) {
-        throw new Error("Method not implemented.");
+        console.warn(`%c${warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.message} See %o`, this._styleOptions.warning, { contextData: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.contextData, contextError: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.error, time: new Date() });
     }
     writeError(errorEntry) {
-        throw new Error("Method not implemented.");
+        console.error(`%c${errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.message} See %o`, this._styleOptions.error, { contextData: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.contextData, contextError: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.error, time: new Date() });
     }
 };
 /**
@@ -69,3 +69,27 @@ ColoredConsoleLogWriter = ColoredConsoleLogWriter_1 = __decorate([
     __metadata("design:paramtypes", [Object])
 ], ColoredConsoleLogWriter);
 export { ColoredConsoleLogWriter };
+/**
+ * 提供了创建 ColoredConsoleLogWriter 类型的对象实例相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class ColoredConsoleLogWriterFactory
+ * @implements {dnvue.ILogWriterFactory}
+ * @sealed
+ */
+let ColoredConsoleLogWriterFactory = class ColoredConsoleLogWriterFactory {
+    create() {
+        var _a;
+        if (!((_a = window.__SINGLETON_MANAGER__) === null || _a === void 0 ? void 0 : _a.COLORED_CONSOLE_LOGWRITER)) {
+            if (!window.__SINGLETON_MANAGER__) {
+                window.__SINGLETON_MANAGER__ = {};
+            }
+            window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER = new ColoredConsoleLogWriter();
+        }
+        return window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER;
+    }
+};
+ColoredConsoleLogWriterFactory = __decorate([
+    sealed
+], ColoredConsoleLogWriterFactory);
+export { ColoredConsoleLogWriterFactory };

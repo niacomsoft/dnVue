@@ -3,4 +3,5 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 export { sealed } from "./decorators";
+export { SingletonManager } from "./singleton-manager";
 export { LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLogWriter, ColoredConsoleLogWriterFactory } from "./logging";

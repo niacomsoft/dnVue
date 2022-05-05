@@ -14,6 +14,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ColoredConsoleLogWriter_1;
 import { LogWriter } from "./logwriter";
 import { sealed } from "../decorators";
+import { SingletonManager } from "../singleton-manager";
 /**
  * 提供了带有颜色的 Console  输出运行时日志相关的方法。密闭的，不可以从此类型派生。
  *
@@ -79,14 +80,9 @@ export { ColoredConsoleLogWriter };
  */
 let ColoredConsoleLogWriterFactory = class ColoredConsoleLogWriterFactory {
     create() {
-        var _a;
-        if (!((_a = window.__SINGLETON_MANAGER__) === null || _a === void 0 ? void 0 : _a.COLORED_CONSOLE_LOGWRITER)) {
-            if (!window.__SINGLETON_MANAGER__) {
-                window.__SINGLETON_MANAGER__ = {};
-            }
-            window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER = new ColoredConsoleLogWriter();
-        }
-        return window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER;
+        return SingletonManager.createOrGet("__DNVUE_COLORED_CONSOLE_LOGWRITER__", () => {
+            return new ColoredConsoleLogWriter();
+        });
     }
 };
 ColoredConsoleLogWriterFactory = __decorate([

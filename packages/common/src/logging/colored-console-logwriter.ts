@@ -5,6 +5,7 @@
 
 import { LogWriter } from "./logwriter";
 import { sealed } from "../decorators";
+import { SingletonManager } from "../singleton-manager";
 
 /**
  * 提供了带有颜色的 Console  输出运行时日志相关的方法。密闭的，不可以从此类型派生。
@@ -73,13 +74,9 @@ export class ColoredConsoleLogWriter extends LogWriter implements dnvue.ILogWrit
 @sealed
 export class ColoredConsoleLogWriterFactory implements dnvue.ILogWriterFactory {
     create(): dnvue.ILogWriter {
-        if (!window.__SINGLETON_MANAGER__?.COLORED_CONSOLE_LOGWRITER) {
-            if (!window.__SINGLETON_MANAGER__) {
-                window.__SINGLETON_MANAGER__ = {};
-            }
-            window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER = new ColoredConsoleLogWriter();
-        }
-        return window.__SINGLETON_MANAGER__.COLORED_CONSOLE_LOGWRITER;
+        return SingletonManager.createOrGet<ColoredConsoleLogWriter>("__DNVUE_COLORED_CONSOLE_LOGWRITER__", () => {
+            return new ColoredConsoleLogWriter();
+        });
     }
 
 }

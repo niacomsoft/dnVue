@@ -10,6 +10,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LogWriter } from "./logwriter";
 import { sealed } from "../decorators";
+import { SingletonManager } from "../singleton-manager";
 /**
  * 提供了基于 Console 记录运行时日志相关的方法。密闭的，不可以从此类型派生。
  *
@@ -50,14 +51,9 @@ export { ConsoleLogWriter };
  */
 let ConsoleLogWriterFactory = class ConsoleLogWriterFactory {
     create() {
-        var _a;
-        if (!((_a = window.__SINGLETON_MANAGER__) === null || _a === void 0 ? void 0 : _a.CONSOLE_LOGWRITER)) {
-            if (!window.__SINGLETON_MANAGER__) {
-                window.__SINGLETON_MANAGER__ = {};
-            }
-            window.__SINGLETON_MANAGER__.CONSOLE_LOGWRITER = new ConsoleLogWriter();
-        }
-        return window.__SINGLETON_MANAGER__.CONSOLE_LOGWRITER;
+        return SingletonManager.createOrGet("__DNVUE_CONSOLE_LOGWRITER__", () => {
+            return new ConsoleLogWriter();
+        });
     }
 };
 ConsoleLogWriterFactory = __decorate([

@@ -38,9 +38,6 @@ declare global {
          */
         DEFAULT_LOGGER: dnvue.ILogger;
 
-        __SINGLETON_MANAGER__: {
-            CONSOLE_LOGWRITER?: dnvue.ILogWriter;
-            COLORED_CONSOLE_LOGWRITER?: dnvue.ILogWriter;
-        };
+        DNVUE_SINGLETON_INSTANCE_MANAGER: Record<string, any>;
     }
 }

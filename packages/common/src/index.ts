@@ -4,6 +4,7 @@
 // **************************************************************************************************************************
 
 export { sealed } from "./decorators";
+export { SingletonManager } from "./singleton-manager";
 export {
     LogWriter,
     ConsoleLogWriter,

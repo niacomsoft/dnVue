@@ -5,6 +5,7 @@
 
 export {
     sealed,
+    SingletonManager,
     LogWriter,
     ConsoleLogWriter,
     ConsoleLogWriterFactory,

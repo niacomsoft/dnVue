@@ -1,4 +1,15 @@
 # CHANGELOG
+## [1.0.0-alpha.5](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2022-05-05)
+
+
+### NEW FEATURE
+
+* **Issue #2 #3 #4:** 新增 ColoredConsoleLogWriter 和 ColoredConsoleLogWriterFactory 类。 ([dd6f56e](https://github.com/niacomsoft/dnVue/commit/dd6f56e9b55b990468038c3456dd07abdf05636e)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#3](https://github.com/niacomsoft/dnVue/issues/3) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #2 #4:** 调整 LogWriterFactory 构建方法为 SingletonManager 来管理。 ([f20d2ae](https://github.com/niacomsoft/dnVue/commit/f20d2aeac751d86318bc362c1d6975dfc9ee3d97)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #2 #4:** 新增统一记录运行时日志的方法 Logger。 ([3a230c0](https://github.com/niacomsoft/dnVue/commit/3a230c0ad61d6d10c2e3c6c9a39aed7a47379418)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#4](https://github.com/niacomsoft/dnVue/issues/4)
+* **Issue #2:** 新增单例服务管理程序 SingletonManager。 ([c8163fd](https://github.com/niacomsoft/dnVue/commit/c8163fd32c0ceece76ea8535ca6c1df4235113ae)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2)
+* **Issue #3 #4 #5:** 新增日志相关的组合式 API。 ([5842384](https://github.com/niacomsoft/dnVue/commit/58423849c085b575072a0af1026c421a26e9b250)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#4](https://github.com/niacomsoft/dnVue/issues/4) [#5](https://github.com/niacomsoft/dnVue/issues/5)
+
 ## [1.0.0-alpha.4](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2022-05-04)
 
 

@@ -133,4 +133,47 @@ declare namespace dnvue {
          */
         addFactories(...factories: ILogWriterFactory[]): void;
     }
+
+    /**
+     * 定义了应用上下文的接口。
+     *
+     * @interface IAppContext
+     */
+    interface IAppContext {
+        /**
+         * 设置默认的统一记录运行时日志的方法。
+         *
+         * @param {ILogger} [logger] 实现了 ILogger 类型接口的对象实例。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultLogger(logger?: ILogger): IAppContext;
+
+        /**
+         * 设置默认的记录运行时日志的方法。
+         *
+         * @param {ILogWriter} [writer] 实现了 ILogWriter 类型接口的对象实例。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultLogWriter(writer?: ILogWriter): IAppContext;
+
+        /**
+         * 注册记录运行时日志的方法。
+         *
+         * @param {...ILogWriter[]} writers 记录运行时日志的方法集合。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        addLogWriters(...writers: ILogWriter[]): IAppContext;
+
+        /**
+         * 注册构建 ILogWriter 对象实例的工厂集合。
+         *
+         * @param {...ILogWriterFactory[]} factories 实现了 ILogWriterFactory 类型接口的对象实例集合。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        addLogWriterFactories(...factories: ILogWriterFactory[]): IAppContext;
+    }
 }

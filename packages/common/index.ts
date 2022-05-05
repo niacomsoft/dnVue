@@ -11,5 +11,7 @@ export {
     ConsoleLogWriterFactory,
     ColoredConsoleLogWriter,
     ColoredConsoleLogWriterFactory,
-    Logger
+    Logger,
+    AppContext,
+    Startup
 } from "./src";

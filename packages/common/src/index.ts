@@ -14,3 +14,4 @@ export {
     Logger
 } from "./logging";
 export { AppContext } from "./appcontext";
+export { Startup } from "./startup";

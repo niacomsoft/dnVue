@@ -13,5 +13,6 @@ export {
     ColoredConsoleLogWriterFactory,
     Logger,
     AppContext,
-    Startup
+    Startup,
+    StringResolver
 } from "./src";

@@ -1,1 +1,1 @@
-export { useLogger, useDefaultLogWriter, configureDnvue } from "./src";
+export { useLogger, useDefaultLogWriter, configureDnvue, useDefaultResolver } from "./src";

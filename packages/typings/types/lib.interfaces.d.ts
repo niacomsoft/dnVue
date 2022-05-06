@@ -175,5 +175,14 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         addLogWriterFactories(...factories: ILogWriterFactory[]): IAppContext;
+
+        /**
+         * 设置默认的字符串解释程序。
+         *
+         * @param {IStringResolver} [resolver] 字符串解释程序。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultResolver(resolver?: IStringResolver): IAppContext;
     }
 }

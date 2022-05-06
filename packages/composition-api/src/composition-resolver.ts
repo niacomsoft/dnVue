@@ -3,9 +3,17 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useLogger,
-    useDefaultLogWriter,
-    configureDnvue,
-    useDefaultResolver
-} from "./src";
+import { ConstantStringResolver } from "@dnvue/common";
+
+/**
+ * 使用默认的字符串解释程序。
+ *
+ * @export
+ * @returns {dnvue.IStringResolver}
+ */
+export function useDefaultResolver(): dnvue.IStringResolver {
+    if (!window.DEFAULT_STRING_RESOLVER)
+        window.DEFAULT_STRING_RESOLVER = new ConstantStringResolver();
+
+    return window.DEFAULT_STRING_RESOLVER;
+}

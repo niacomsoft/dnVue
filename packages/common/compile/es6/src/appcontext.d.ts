@@ -7,6 +7,7 @@
  * @implements {dnvue.IAppContext}
  */
 export declare class AppContext implements dnvue.IAppContext {
+    setDefaultResolver(resolver?: dnvue.IStringResolver | undefined): dnvue.IAppContext;
     setDefaultLogger(logger?: dnvue.ILogger | undefined): dnvue.IAppContext;
     setDefaultLogWriter(writer?: dnvue.ILogWriter | undefined): dnvue.IAppContext;
     addLogWriters(...writers: dnvue.ILogWriter[]): dnvue.IAppContext;

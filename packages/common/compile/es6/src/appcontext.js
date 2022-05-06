@@ -11,6 +11,11 @@ import { Logger } from "./logging";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext {
+    setDefaultResolver(resolver) {
+        if (resolver)
+            window.DEFAULT_STRING_RESOLVER = resolver;
+        return this;
+    }
     setDefaultLogger(logger) {
         if (logger)
             window.DEFAULT_LOGGER = logger;

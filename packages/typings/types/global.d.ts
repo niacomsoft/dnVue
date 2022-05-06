@@ -38,6 +38,20 @@ declare global {
          */
         DEFAULT_LOGGER: dnvue.ILogger;
 
+        /**
+         * 默认的字符串解释程序。
+         *
+         * @type {dnvue.IStringResolver}
+         * @memberof Window
+         */
+        DEFAULT_STRING_RESOLVER: dnvue.IStringResolver;
+
+        /**
+         * 单例管理工具。
+         *
+         * @type {Record<string, any>}
+         * @memberof Window
+         */
         DNVUE_SINGLETON_INSTANCE_MANAGER: Record<string, any>;
     }
 }

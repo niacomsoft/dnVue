@@ -54,4 +54,31 @@ declare global {
          */
         DNVUE_SINGLETON_INSTANCE_MANAGER: Record<string, any>;
     }
+
+    interface StringConstructor {
+        /**
+         * 空白字符串。
+         *
+         * @returns {string}
+         */
+        empty(): string;
+
+        /**
+         * 用于校验字符串 s 是否等于 null、undefined 或者空白符。
+         *
+         * @param {(string | null | undefined)} [s] 需要校验的值。
+         * @returns {boolean}
+         * @memberof StringConstructor
+         */
+        isNullOrEmpty(s?: string | null | undefined): boolean;
+
+        /**
+         * 用于校验字符串 s 是否等于 null、undefined、空白符或者空格。
+         *
+         * @param {(string | null | undefined)} [s] 需要校验的值。
+         * @returns {boolean}
+         * @memberof StringConstructor
+         */
+        isNullOrWhitespace(s?: string | null | undefined): boolean;
+    }
 }

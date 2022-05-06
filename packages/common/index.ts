@@ -15,5 +15,17 @@ export {
     AppContext,
     Startup,
     StringResolver,
-    ConstantStringResolver
+    ConstantStringResolver,
 } from "./src";
+
+String.empty = function (): string {
+    return "";
+};
+
+String.isNullOrEmpty = function (s): boolean {
+    return (s ?? String.empty()) === String.empty();
+};
+
+String.isNullOrWhitespace = function (s): boolean {
+    return (s ?? String.empty()).trim() === String.empty();
+};

@@ -16,6 +16,7 @@ export {
 export { AppContext } from "./appcontext";
 export { Startup } from "./startup";
 export {
-    StringResolver, 
+    StringResolver,
     ConstantStringResolver,
 } from "./utilities";
+export { CultureInfoPersistence } from "./globalizations";

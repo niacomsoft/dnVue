@@ -1,4 +1,18 @@
 # CHANGELOG
+## [1.0.0-alpha.7](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2022-05-06)
+
+
+### NEW FEATURE
+
+* 新增 i18next 依赖。 ([d0a63e5](https://github.com/niacomsoft/dnVue/commit/d0a63e5d7d1b1d4c06c87a06e160bab34185bd69))
+* **Issue #2 #3 #8:** 新增 Object 扩展方法。 ([d10069b](https://github.com/niacomsoft/dnVue/commit/d10069bed5d67dd836f0e4e1376d9f8041b60735)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#3](https://github.com/niacomsoft/dnVue/issues/3) [#8](https://github.com/niacomsoft/dnVue/issues/8)
+* **Issue #2 #3 #8:** 新增字符串扩展方法。 ([16bd37b](https://github.com/niacomsoft/dnVue/commit/16bd37b6c7b104dcacc06a91651c16c679d462fd)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#3](https://github.com/niacomsoft/dnVue/issues/3) [#8](https://github.com/niacomsoft/dnVue/issues/8)
+* **Issue #2 #6:** 新增文化区域类型定义。 ([1b5a843](https://github.com/niacomsoft/dnVue/commit/1b5a8436fd07ac8eab1f67afe7cb1f86e6e76f98)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#6](https://github.com/niacomsoft/dnVue/issues/6)
+* **Issue #3 #2 #8:** 新增字符串解释程序组合 API。 ([bb5411e](https://github.com/niacomsoft/dnVue/commit/bb5411ef81ca7004d71fdbe1ea77790d3bafb9fb)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#2](https://github.com/niacomsoft/dnVue/issues/2) [#8](https://github.com/niacomsoft/dnVue/issues/8)
+* **Issue #3 #8:** 新增 ConstantStringResolver 工具类。 ([51cedba](https://github.com/niacomsoft/dnVue/commit/51cedba29f5c5d92a710da78fa447f608bd8aa25)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#8](https://github.com/niacomsoft/dnVue/issues/8)
+* **Issue #3 #8:** 新增 StringResolver 基类。 ([2738822](https://github.com/niacomsoft/dnVue/commit/273882285bdacfbe1b04bd4a14945893101d7139)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#8](https://github.com/niacomsoft/dnVue/issues/8)
+* **Issue #6:** 新增文化区域持久化抽象方法。 ([cdb23d6](https://github.com/niacomsoft/dnVue/commit/cdb23d6ec27797d7d423c2ce82c3eb5d073c9368)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
 ## [1.0.0-alpha.6](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2022-05-05)
 
 

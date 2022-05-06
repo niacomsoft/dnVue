@@ -14,5 +14,6 @@ export {
     Logger,
     AppContext,
     Startup,
-    StringResolver
+    StringResolver,
+    ConstantStringResolver
 } from "./src";

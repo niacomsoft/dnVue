@@ -29,3 +29,7 @@ String.isNullOrEmpty = function (s): boolean {
 String.isNullOrWhitespace = function (s): boolean {
     return (s ?? String.empty()).trim() === String.empty();
 };
+
+Object.safeGet = function <T>(value: T | undefined | null, safeValue: T): T {
+    return value ?? safeValue;
+};

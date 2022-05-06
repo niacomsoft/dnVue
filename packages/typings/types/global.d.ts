@@ -81,4 +81,17 @@ declare global {
          */
         isNullOrWhitespace(s?: string | null | undefined): boolean;
     }
+
+    interface ObjectConstructor {
+        /**
+         * 当 value 等于 undefined、null 时，将返回 safeValue；否则返回 value。
+         *
+         * @template T
+         * @param {(T | null | undefined)} value 需要校验的值。
+         * @param {T} safeValue 当 value 等于 undefined、null 时，将返回的安全值。
+         * @returns {T}
+         * @memberof ObjectConstructor
+         */
+        safeGet<T>(value: T | null | undefined, safeValue: T): T;
+    }
 }

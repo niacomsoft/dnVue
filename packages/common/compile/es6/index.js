@@ -12,3 +12,6 @@ String.isNullOrEmpty = function (s) {
 String.isNullOrWhitespace = function (s) {
     return (s !== null && s !== void 0 ? s : String.empty()).trim() === String.empty();
 };
+Object.safeGet = function (value, safeValue) {
+    return value !== null && value !== void 0 ? value : safeValue;
+};

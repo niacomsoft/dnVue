@@ -185,4 +185,27 @@ declare namespace dnvue {
          */
         setDefaultResolver(resolver?: IStringResolver): IAppContext;
     }
+
+    /**
+     * 定义了文化区域信息持久化的接口。
+     *
+     * @interface ICultureInfoPersistence
+     */
+    interface ICultureInfoPersistence {
+        /**
+         * 保存文化区域信息。
+         *
+         * @param {CultureInfo} culture
+         * @memberof ICultureInfoPersistence
+         */
+        save(culture: CultureInfo): void;
+
+        /**
+         * 读取文化区域信息。
+         *
+         * @returns {CultureInfo}
+         * @memberof ICultureInfoPersistence
+         */
+        get(): CultureInfo;
+    }
 }

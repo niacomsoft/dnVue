@@ -47,14 +47,6 @@ declare global {
         DEFAULT_STRING_RESOLVER: dnvue.IStringResolver;
 
         /**
-         * 默认的文化区域持久化服务。
-         *
-         * @type {dnvue.ICultureInfoPersistence}
-         * @memberof Window
-         */
-        DEFAULT_CULTURE_PERSISTENCE_PROVIDER: dnvue.ICultureInfoPersistence;
-
-        /**
          * 单例管理工具。
          *
          * @type {Record<string, any>}

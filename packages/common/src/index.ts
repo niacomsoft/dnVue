@@ -19,4 +19,3 @@ export {
     StringResolver,
     ConstantStringResolver,
 } from "./utilities";
-export { CultureInfoPersistence } from "./globalizations";

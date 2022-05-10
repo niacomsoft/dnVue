@@ -184,6 +184,15 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setDefaultResolver(resolver?: IStringResolver): IAppContext;
+
+        /**
+         * 设置默认的文化区域管理程序。
+         *
+         * @param {ICulutureInfoManager} [cultureMgr] 默认的文化区域管理程序。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultCultureManager(cultureMgr?: ICulutureInfoManager): IAppContext;
     }
 
     /**

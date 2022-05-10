@@ -135,4 +135,12 @@ declare namespace dnvue {
          */
         readonly name: string;
     }
+
+    /**
+     * 定义了资源集合类型。
+     *
+     * @interface ResourceInfo
+     * @extends {Record<string, Record<string, string>>}
+     */
+    interface ResourceInfo extends Record<string, Record<string, string>> { }
 }

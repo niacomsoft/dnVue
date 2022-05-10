@@ -4,6 +4,7 @@
 // **************************************************************************************************************************
 
 import { Logger } from "./logging";
+import { SingletonManager } from "./singleton-manager";
 
 /**
  * 提供了管理应用上下文相关的方法。
@@ -13,10 +14,16 @@ import { Logger } from "./logging";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext implements dnvue.IAppContext {
+    setDefaultCultureManager(cultureMgr?: dnvue.ICulutureInfoManager | undefined): dnvue.IAppContext {
+        if (cultureMgr)
+            window.DEFAULT_CULTURE_MANAGER = cultureMgr;
+
+        return this;
+    }
     setDefaultResolver(resolver?: dnvue.IStringResolver | undefined): dnvue.IAppContext {
         if (resolver)
             window.DEFAULT_STRING_RESOLVER = resolver;
-            
+
         return this;
     }
     setDefaultLogger(logger?: dnvue.ILogger | undefined): dnvue.IAppContext {
@@ -47,5 +54,4 @@ export class AppContext implements dnvue.IAppContext {
 
         return this;
     }
-
 }

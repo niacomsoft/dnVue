@@ -47,6 +47,14 @@ declare global {
         DEFAULT_STRING_RESOLVER: dnvue.IStringResolver;
 
         /**
+         * 默认的文化区域管理程序。
+         *
+         * @type {dnvue.ICulutureInfoManager}
+         * @memberof Window
+         */
+        DEFAULT_CULTURE_MANAGER: dnvue.ICulutureInfoManager;
+
+        /**
          * 单例管理工具。
          *
          * @type {Record<string, any>}

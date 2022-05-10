@@ -184,37 +184,5 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setDefaultResolver(resolver?: IStringResolver): IAppContext;
-
-        /**
-         * 设置默认的文化区域管理程序。
-         *
-         * @param {ICulutureInfoManager} [cultureMgr] 默认的文化区域管理程序。
-         * @returns {IAppContext}
-         * @memberof IAppContext
-         */
-        setDefaultCultureManager(cultureMgr?: ICulutureInfoManager): IAppContext;
-    }
-
-    /**
-     * 定义了管理文化区域信息的接口。
-     *
-     * @interface ICulutureInfoManager
-     */
-    interface ICulutureInfoManager {
-        /**
-         * 更新当前的文化区域。
-         *
-         * @param {dnvue.CultureInfo} cultureInfo 文化区域信息。
-         * @memberof ICulutureInfoManager
-         */
-        setCurrentCulture(cultureInfo: dnvue.CultureInfo): void;
-
-        /**
-         * 获取当前的文化区域设置。
-         *
-         * @returns {dnvue.CultureInfo}
-         * @memberof ICulutureInfoManager
-         */
-        getCurrentCulture(): dnvue.CultureInfo;
     }
 }

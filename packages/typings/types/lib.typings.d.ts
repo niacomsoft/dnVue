@@ -119,28 +119,4 @@ declare namespace dnvue {
          */
         error?: string;
     }
-
-    /**
-     * 定义了文化区域信息类型。
-     *
-     * @interface CultureInfo
-     */
-    interface CultureInfo {
-        /**
-         * 获取一个字符串，用于表示文化区域名称。
-         *
-         * @type {string}
-         * @memberof CultureInfo
-         * @readonly
-         */
-        readonly name: string;
-    }
-
-    /**
-     * 定义了资源集合类型。
-     *
-     * @interface ResourceInfo
-     * @extends {Record<string, Record<string, string>>}
-     */
-    interface ResourceInfo extends Record<string, Record<string, string>> { }
 }

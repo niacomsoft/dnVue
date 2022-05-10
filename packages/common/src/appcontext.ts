@@ -14,12 +14,6 @@ import { SingletonManager } from "./singleton-manager";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext implements dnvue.IAppContext {
-    setDefaultCultureManager(cultureMgr?: dnvue.ICulutureInfoManager | undefined): dnvue.IAppContext {
-        if (cultureMgr)
-            window.DEFAULT_CULTURE_MANAGER = cultureMgr;
-
-        return this;
-    }
     setDefaultResolver(resolver?: dnvue.IStringResolver | undefined): dnvue.IAppContext {
         if (resolver)
             window.DEFAULT_STRING_RESOLVER = resolver;

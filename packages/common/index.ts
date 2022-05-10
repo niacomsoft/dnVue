@@ -15,8 +15,7 @@ export {
     AppContext,
     Startup,
     StringResolver,
-    ConstantStringResolver,
-    CultureInfoManager
+    ConstantStringResolver
 } from "./src";
 
 String.empty = function (): string {

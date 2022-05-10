@@ -4,3 +4,4 @@ export { LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLog
 export { AppContext } from "./appcontext";
 export { Startup } from "./startup";
 export { StringResolver, ConstantStringResolver, } from "./utilities";
+export { CultureInfoManager } from "./globalization";

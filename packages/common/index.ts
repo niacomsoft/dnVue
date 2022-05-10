@@ -16,6 +16,7 @@ export {
     Startup,
     StringResolver,
     ConstantStringResolver,
+    CultureInfoManager
 } from "./src";
 
 String.empty = function (): string {

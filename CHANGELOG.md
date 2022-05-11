@@ -1,4 +1,28 @@
 # CHANGELOG
+## [1.0.0-alpha.8](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2022-05-11)
+
+
+### REFACTOR
+
+* **Issue #6:** 删除了不合理的类型。 ([e4b2ad1](https://github.com/niacomsoft/dnVue/commit/e4b2ad101142e2082be9d45a241cea3e304bd4ab)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+* **Issue #6:** 重构多语言支持。 ([11c2cb5](https://github.com/niacomsoft/dnVue/commit/11c2cb59ae56258b8d8c495c95ac0c53b3500e97)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+* **Issue #6:** 重构多语言支持相关代码。 ([f21caee](https://github.com/niacomsoft/dnVue/commit/f21caeef5123d9f1ac776bc28562e4f9ab3ef3e2)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
+
+### DOCUMENTATION
+
+* **Issue #6:** 新增多语言设置清单。 ([1a95f43](https://github.com/niacomsoft/dnVue/commit/1a95f43f895e89958cb083fbcab3b300accf751b)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
+
+### NEW FEATURE
+
+* 新建空白 Vite 项目。 ([9c9041c](https://github.com/niacomsoft/dnVue/commit/9c9041c3ba1f6728a18120d310307abc539226d3))
+* **Issue #1:** 初始化 Vite 应用骨架。 ([8990883](https://github.com/niacomsoft/dnVue/commit/899088346eaf73bc40de10e63ff7b2f73686bcaf)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 初始化插件系统脚本。 ([1553e65](https://github.com/niacomsoft/dnVue/commit/1553e65ed5cb15383f3a806103acfb7ffcb0b58f)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #2 #6:** 新增资源信息类型。 ([b89bb7c](https://github.com/niacomsoft/dnVue/commit/b89bb7c67950a946a1f34f12d38be1fe816673b3)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#6](https://github.com/niacomsoft/dnVue/issues/6)
+* **Issue #6 #3 #2:** 新增抽象类 CultureInfoManager。 ([8fe2735](https://github.com/niacomsoft/dnVue/commit/8fe2735c149330c6e6b98cbcc19b098515377985)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6) [#3](https://github.com/niacomsoft/dnVue/issues/3) [#2](https://github.com/niacomsoft/dnVue/issues/2)
+* **Issue #6:** 新增 ICultureInfoManager 接口定义。 ([f6b7d9d](https://github.com/niacomsoft/dnVue/commit/f6b7d9d8d6fe4310ea92d21cf87bf88472601b2b)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
 ## [1.0.0-alpha.7](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2022-05-06)
 
 

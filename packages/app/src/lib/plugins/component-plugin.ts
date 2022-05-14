@@ -3,23 +3,18 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { App, createApp } from 'vue';
-import AppEntry from './App.vue';
-import { useMaterialDesignIcon, useAnimateCss, useMaterialColors, useElementPlus } from "../lib";
+import ElementPlus from "element-plus";
+import { App } from "vue";
 
 /**
- * 配置 dnVue 应用程序。
+ * 启用 Element-Plus 组件库。
+ *
+ * @export
+ * @param {App} app Vue 应用程序对象实例。
+ * @returns {App}
  */
-function configure(): void {
-    const app: App = createApp(AppEntry);
+export function useElementPlus(app: App): App {
+    import("../../assets/_element-plus.scss");
 
-    useMaterialDesignIcon();
-    useAnimateCss();
-    useMaterialColors();
-
-    useElementPlus(app);
-
-    app.mount('#app');
+    return app.use(ElementPlus, { zIndex: 9999 });
 }
-
-configure();

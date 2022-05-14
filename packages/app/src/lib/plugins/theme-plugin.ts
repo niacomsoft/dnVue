@@ -11,3 +11,21 @@
 export function useMaterialDesignIcon(): void {
     import("@mdi/font/css/materialdesignicons.min.css");
 }
+
+/**
+ * 启用 animate.css 动画样式表。
+ *
+ * @export
+ */
+export function useAnimateCss(): void {
+    import("animate.css/animate.min.css");
+}
+
+/**
+ * 启用 material-colors 颜色样式表。
+ *
+ * @export
+ */
+export function useMaterialColors(): void {
+    import("material-colors/dist/colors.var.css");
+}

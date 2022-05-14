@@ -3,4 +3,10 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { useMaterialDesignIcon } from "./theme-plugin";
+export {
+    useMaterialDesignIcon,
+    useAnimateCss,
+    useMaterialColors
+} from "./theme-plugin";
+
+export { useElementPlus } from "./component-plugin";

@@ -798,3 +798,5 @@ package-lock.json
 node_modules/
 dist/
 build/
+*.css
+*.css.map

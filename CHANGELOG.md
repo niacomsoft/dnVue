@@ -1,4 +1,22 @@
 # CHANGELOG
+## [1.0.0-alpha.9](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2022-05-14)
+
+
+### BUILD
+
+* **Issue #1:** 新增环境变量和构建脚本。 ([186a0c2](https://github.com/niacomsoft/dnVue/commit/186a0c28da75d4f15bee4721e7f2fec247403368)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### NEW FEATURE
+
+* **Issue #1 #2:** 新增组件属性类型定义。 ([f8cef2f](https://github.com/niacomsoft/dnVue/commit/f8cef2fc2e690283c222c70727c6d5884c9e8062)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1) [#2](https://github.com/niacomsoft/dnVue/issues/2)
+* **Issue #1:** 调整了组件继承关系。 ([75d8024](https://github.com/niacomsoft/dnVue/commit/75d80243f1e771646b99cb823844e768f0bc33b4)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增 App 应用组件。 ([6ef00b3](https://github.com/niacomsoft/dnVue/commit/6ef00b36cd74b039dbd1296c542e6b1eeeb31558)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增 Element-Plus 组件管理程序。 ([8d5e615](https://github.com/niacomsoft/dnVue/commit/8d5e615292f5fe63f4595f69d181e61dfb2f104e)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增弹性盒容器组件。 ([bf94bb3](https://github.com/niacomsoft/dnVue/commit/bf94bb3cc006480b12c7114c55388d3787bc2f8c)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增公共组件。 ([ebe1de4](https://github.com/niacomsoft/dnVue/commit/ebe1de4a95f896d214f972adf0de292a684da01f)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增路由配置。 ([e6d98f6](https://github.com/niacomsoft/dnVue/commit/e6d98f6e9ce58102ba7d54c96c092c36fcff239d)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
 ## [1.0.0-alpha.8](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2022-05-11)
 
 

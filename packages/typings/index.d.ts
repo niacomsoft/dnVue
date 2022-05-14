@@ -8,4 +8,3 @@
 /// <reference path="./types/lib.interfaces.d.ts" />
 /// <reference path="./types/lib.enums.d.ts" />
 /// <reference path="./types/global.d.ts" />
-/// <reference path="./types/lib.components.d.ts" />

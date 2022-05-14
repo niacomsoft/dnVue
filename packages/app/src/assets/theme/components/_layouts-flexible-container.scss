@@ -1,0 +1,10 @@
+@mixin generate-class {
+    .v-flexible-container {
+        display        : flex;
+        flex-direction : row;
+        justify-content: flex-start;
+        align-items    : flex-start;
+        width          : percentage($number: 1);
+        height         : percentage($number: 1);
+    }
+}

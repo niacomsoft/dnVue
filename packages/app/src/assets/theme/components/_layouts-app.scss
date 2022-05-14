@@ -1,3 +1,5 @@
+@use "./_layouts-flexible-container" as _flexible-container;
+
 @mixin generate-variables {
     --v-app--background-color: var(--md-grey-50);
 }
@@ -6,5 +8,7 @@
     .v-app {
         background-color: var(--v-app--background-color);
         height          : percentage($number: 1);
+
+        @include _flexible-container.generate-class;
     }
 }

@@ -6,26 +6,41 @@
 -->
 
 <template>
-  <div class="v-app" :style="overrideStyle">
-    <slot />
-  </div>
+  <div class="v-flexible-container" :style="inlineStyle"></div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType } from "vue";
+import { defineProps, computed } from "vue";
 
 const props = defineProps({
   /**
-   * 设置或获取 Record<string, any> 类型的对象实例，用于表示可供重写的全局内联样式。
+   * 设置或获取一个值，用于表示启用列模式方向。
    *
-   * @property {Record<string, any>}
+   * @property {boolean}
    */
-  overrideStyle: {
-    type: Object as PropType<Record<string, any>>,
-    default() {
-      return null;
-    },
+  columnMode: {
+    type: Boolean,
+    default: false,
   },
+  /**
+   * 设置或获取一个值，用于表示翻转主轴方向。
+   *
+   * @property {boolean}
+   */
+  reverse: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const inlineStyle = computed(() => {
+  let direction: string = "row";
+  if (props.columnMode) direction = "column";
+  if (props.reverse) direction = `${direction}-reverse`;
+
+  return {
+    flexDirection: direction,
+  };
 });
 </script>
 

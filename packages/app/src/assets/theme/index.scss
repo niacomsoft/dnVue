@@ -1,0 +1,16 @@
+@use "./components/_layouts-app"as components;
+
+:root {
+    @include components.generate-variables;
+}
+
+html,
+body,
+#app {
+    height : percentage($number: 1);
+    border : 0 none var(--md-white);
+    padding: 0;
+    margin : 0;
+}
+
+@include components.generate-class;

@@ -7,5 +7,6 @@ export {
     useMaterialDesignIcon,
     useAnimateCss,
     useMaterialColors,
-    useElementPlus
+    useElementPlus,
+    usePrivateComponents
 } from "./plugins";

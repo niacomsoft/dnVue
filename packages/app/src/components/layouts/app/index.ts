@@ -3,10 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors
-} from "./theme-plugin";
+import vApp from "./app.vue";
 
-export { useElementPlus, usePrivateComponents } from "./component-plugin";
+export { vApp };

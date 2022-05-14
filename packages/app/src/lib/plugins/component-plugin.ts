@@ -18,3 +18,16 @@ export function useElementPlus(app: App): App {
 
     return app.use(ElementPlus, { zIndex: 9999 });
 }
+
+/**
+ * 启用 dnVue 私有组件。
+ *
+ * @export
+ * @param {App} app
+ * @returns {App}
+ */
+export function usePrivateComponents(app: App): App {
+    import("../../assets/theme/index.scss");
+
+    return app;
+}

@@ -1,0 +1,10 @@
+@mixin generate-variables {
+    --v-app--background-color: var(--md-grey-50);
+}
+
+@mixin generate-class {
+    .v-app {
+        background-color: var(--v-app--background-color);
+        height          : percentage($number: 1);
+    }
+}

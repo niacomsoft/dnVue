@@ -9,7 +9,8 @@ import {
     useMaterialDesignIcon,
     useAnimateCss,
     useMaterialColors,
-    useElementPlus
+    useElementPlus,
+    usePrivateComponents
 } from "../lib";
 import { configureRoute } from "./router";
 
@@ -24,6 +25,7 @@ function configure(): void {
     useMaterialColors();
 
     useElementPlus(app);
+    usePrivateComponents(app);
 
     configureRoute(app);
 

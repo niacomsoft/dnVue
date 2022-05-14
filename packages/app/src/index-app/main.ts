@@ -5,7 +5,13 @@
 
 import { App, createApp } from 'vue';
 import AppEntry from './App.vue';
-import { useMaterialDesignIcon, useAnimateCss, useMaterialColors, useElementPlus } from "../lib";
+import {
+    useMaterialDesignIcon,
+    useAnimateCss,
+    useMaterialColors,
+    useElementPlus
+} from "../lib";
+import { configureRoute } from "./router";
 
 /**
  * 配置 dnVue 应用程序。
@@ -18,6 +24,8 @@ function configure(): void {
     useMaterialColors();
 
     useElementPlus(app);
+
+    configureRoute(app);
 
     app.mount('#app');
 }

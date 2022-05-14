@@ -21,7 +21,7 @@ export default ((mode) => {
    * 
    * @type {string[]}
    */
-  const envPrefixes: string[] = ["VITE_", "DNVUE_"];
+  const envPrefixes: string[] = ["VITE_", "DNVUE_", "PRIVATE_"];
 
   // 环境变量清单。
   const environmentVars = loadEnv(mode, envDir, envPrefixes);

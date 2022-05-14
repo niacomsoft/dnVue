@@ -3,9 +3,14 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-/// <reference path="./types/lib.functions.d.ts" />
-/// <reference path="./types/lib.typings.d.ts" />
-/// <reference path="./types/lib.interfaces.d.ts" />
-/// <reference path="./types/lib.enums.d.ts" />
-/// <reference path="./types/global.d.ts" />
-/// <reference path="./types/lib.components.d.ts" />
+declare namespace dnvue {
+    namespace appComponent {
+        /**
+         * 可重写的内联样式组件属性。
+         *
+         * @interface OverrideStyle
+         * @extends {Record<string, any>}
+         */
+        interface OverrideStyleProperty extends Record<string, any> { }
+    }
+}

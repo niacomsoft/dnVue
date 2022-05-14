@@ -12,6 +12,8 @@
 </template>
 
 <script lang="ts" setup>
+/// <reference types="@dnvue/typings" />
+
 import { defineProps, PropType } from "vue";
 
 defineProps({
@@ -21,7 +23,7 @@ defineProps({
    * @property {Object}
    */
   overrideStyle: {
-    type: Object as PropType<Record<string, any>>,
+    type: Object as PropType<dnvue.appComponent.OverrideStyleProperty>,
     default() {
       return null;
     },

@@ -12,5 +12,5 @@
 </template>
 
 <script lang="ts" setup>
-import { vApp } from "../components";
+import { vApp, vFlexibleContainer } from "../components";
 </script>

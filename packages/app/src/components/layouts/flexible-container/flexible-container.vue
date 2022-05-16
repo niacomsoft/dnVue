@@ -6,11 +6,15 @@
 -->
 
 <template>
-  <div class="v-flexible-container" :style="inlineStyle"></div>
+  <div class="v-flexible-container" :style="inlineStyle">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, computed } from "vue";
+/// <reference path="../../../components.d.ts" />
+
+import { defineProps, computed, PropType } from "vue";
 
 const props = defineProps({
   /**
@@ -31,6 +35,14 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  justifyContent: {
+    type: String as PropType<FlexibleContainerJustifyContentAlignment>,
+    default: "flex-start",
+  },
+  alignItems: {
+    type: String as PropType<FlexibleContainerAlignItemsAlignment>,
+    default: "flex-start",
+  },
 });
 
 const inlineStyle = computed(() => {
@@ -40,6 +52,8 @@ const inlineStyle = computed(() => {
 
   return {
     flexDirection: direction,
+    justifyContent: props.justifyContent,
+    alignItems: props.alignItems,
   };
 });
 </script>

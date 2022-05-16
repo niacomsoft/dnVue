@@ -3,5 +3,9 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { vApp, vFlexibleContainer } from "./layouts";
+export {
+    vApp, 
+    vFlexibleContainer,
+    vControlPanel
+} from "./layouts";
 export { vMdIcon } from "./md-icon";

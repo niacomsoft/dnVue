@@ -5,8 +5,12 @@
   **************************************************************************************************************************
 -->
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<template>
+  <v-control-panel>
+      
+  </v-control-panel>
+</template>
 
-export default defineComponent({});
+<script lang="ts" setup>
+import { vControlPanel } from "../../components";
 </script>

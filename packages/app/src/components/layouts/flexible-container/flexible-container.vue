@@ -67,12 +67,3 @@ const inlineStyle = computed(() => {
   };
 });
 </script>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import { ComponentBase } from "../../abstracts";
-
-export default defineComponent({
-  extends: ComponentBase,
-});
-</script>

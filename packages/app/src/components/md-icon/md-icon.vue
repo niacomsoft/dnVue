@@ -45,6 +45,15 @@ const props = defineProps({
     type: String,
     default: "#FFFFFF",
   },
+  /**
+   * 设置或获取一个值，用于表示是否禁用此组件。
+   *
+   * @property {boolean}
+   */
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emits = defineEmits({
@@ -60,11 +69,11 @@ const iconClsName = computed<string>(() => {
 const inlineStyle = computed(() => {
   return {
     fontSize: typeof props.size === "number" ? `${props.size}px` : props.size,
-    color: props.color,
+    "--v-md-icon--color": props.disabled ? "--v-md-icon--color-disabled" : props.color,
   };
 });
 
 function onClick() {
-  emits("click");
+  if (!props.disabled) emits("click");
 }
 </script>

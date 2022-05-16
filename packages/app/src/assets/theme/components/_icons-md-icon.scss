@@ -1,3 +1,8 @@
+@mixin generate-variables {
+    --v-md-icon--color         : var(--md-indigo-900);
+    --v-md-icon--color-disabled: var(--md-grey-400);
+}
+
 @mixin generate-class {
     .v-md-icon {
         font: {
@@ -5,5 +10,7 @@
             size  : 16px;
             weight: normal;
         }
+
+        cursor: pointer;
     }
 }

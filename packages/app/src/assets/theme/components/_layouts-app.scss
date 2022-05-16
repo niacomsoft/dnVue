@@ -1,8 +1,10 @@
 @use "./_layouts-flexible-container"as _flexible-container;
+@use "./_layouts-control-panel"as _control-panel;
 @use "./_icons-md-icon"as _md-icon;
 
 @mixin generate-variables {
     --v-app--background-color: var(--md-grey-50);
+    @include _md-icon.generate-variables;
 }
 
 @mixin generate-class {
@@ -16,5 +18,6 @@
 
         @include _flexible-container.generate-class;
         @include _md-icon.generate-class;
+        @include _control-panel.generate-class;
     }
 }

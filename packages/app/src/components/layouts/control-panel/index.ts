@@ -3,6 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import ComponentBase from "./component-base.vue";
+import vControlPanel from "./control-panel.vue";
 
-export { ComponentBase };
+export { vControlPanel };

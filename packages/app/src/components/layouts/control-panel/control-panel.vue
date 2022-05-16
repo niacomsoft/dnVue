@@ -6,25 +6,10 @@
 -->
 
 <template>
-  <div class="v-app" :style="overrideStyle">
-    <slot />
-  </div>
+    <v-flexible-container column-mode>
+    </v-flexible-container>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType } from "vue";
-
-const props = defineProps({
-  /**
-   * 设置或获取 Record<string, any> 类型的对象实例，用于表示可供重写的全局内联样式。
-   *
-   * @property {Record<string, any>}
-   */
-  overrideStyle: {
-    type: Object as PropType<Record<string, any>>,
-    default() {
-      return null;
-    },
-  },
-});
+import { vFlexibleContainer } from "../flexible-container";
 </script>

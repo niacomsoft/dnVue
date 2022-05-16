@@ -5,3 +5,4 @@
 
 export { vApp } from "./app";
 export { vFlexibleContainer } from "./flexible-container";
+export { vControlPanel } from "./control-panel";

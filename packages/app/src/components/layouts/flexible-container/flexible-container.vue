@@ -35,10 +35,20 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  /**
+   * 设置或获取一个字符串，用于表示 flex justify-content 样式。
+   * 
+   * @property {string}
+   */
   justifyContent: {
     type: String as PropType<FlexibleContainerJustifyContentAlignment>,
     default: "flex-start",
   },
+  /**
+   * 设置或获取一个字符串，用于表示 flex align-items 样式。
+   * 
+   * @property {string}
+   */
   alignItems: {
     type: String as PropType<FlexibleContainerAlignItemsAlignment>,
     default: "flex-start",

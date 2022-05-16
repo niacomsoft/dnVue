@@ -1,0 +1,9 @@
+@mixin generate-class {
+    .v-md-icon {
+        font: {
+            style : italic;
+            size  : 16px;
+            weight: normal;
+        }
+    }
+}

@@ -13,14 +13,13 @@
     "@dnvue/common": "^1.0.0",
     "@dnvue/composition-api": "^1.0.0",
     "@mdi/font": "^6.6.96",
-    "@panter/vue-i18next": "^0.15.2",
     "animate.css": "^4.1.1",
     "change-case": "^4.1.2",
     "element-plus": "^2.2.0",
-    "i18next": "^21.8.2",
     "material-colors": "^1.2.6",
     "pinia": "^2.0.14",
     "vue": "^3.2.33",
+    "vue-i18n": "^9.1.10",
     "vue-router": "4"
   },
   "devDependencies": {

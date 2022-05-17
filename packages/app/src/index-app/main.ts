@@ -11,7 +11,8 @@ import {
     useMaterialColors,
     useElementPlus,
     usePrivateComponents,
-    configureApplication
+    configureApplication,
+    useLocalizations
 } from "../lib";
 import { configureRoute } from "./router";
 
@@ -31,6 +32,8 @@ function configure(): void {
     configureRoute(app);
 
     configureApplication(app);
+
+    useLocalizations(app);
 
     app.mount('#app');
 }

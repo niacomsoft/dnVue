@@ -3,13 +3,5 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors,
-    useElementPlus,
-    usePrivateComponents,
-    configureApplication,
-    useLocalizations
-} from "./plugins";
-export { getApplicationConfiguration } from "./app-configuration";
+export { enUS } from "./en-us";
+export { zhCN } from "./zh-cn";

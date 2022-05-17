@@ -12,3 +12,5 @@ export {
 export { useElementPlus, usePrivateComponents } from "./component-plugin";
 
 export { configureApplication } from "./configurator";
+
+export { useLocalizations } from "./localization-plugin";

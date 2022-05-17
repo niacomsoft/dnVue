@@ -5,6 +5,7 @@
 @mixin generate-variables {
     --v-app--background-color: var(--md-grey-50);
     @include _md-icon.generate-variables;
+    @include _control-panel.generate-variables;
 }
 
 @mixin generate-class {

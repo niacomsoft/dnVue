@@ -3,12 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors,
-    useElementPlus,
-    usePrivateComponents,
-    configureApplication
-} from "./plugins";
-export { getApplicationConfiguration } from "./app-configuration";
+import vTopBanner from "./top-banner.vue";
+
+export { vTopBanner };

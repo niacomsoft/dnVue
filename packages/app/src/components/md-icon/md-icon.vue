@@ -12,7 +12,7 @@
 <script lang="ts" setup>
 /// <reference types="@dnvue/typings" />
 
-import { computed, defineProps, defineEmits } from "vue";
+import { computed } from "vue";
 import { paramCase } from "change-case";
 
 const props = defineProps({

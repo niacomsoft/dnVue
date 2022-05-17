@@ -1,0 +1,19 @@
+@mixin generate-variables {
+    --v-top-banner--background-color: transparent;
+    --v-top-banner-logo--height     : 40px;
+}
+
+@mixin generate-class {
+    .v-top-banner {
+        background-color: var(--v-top-banner--background-color);
+
+        >div[data-role="topbanner-logo"] {
+            >img {
+                height : var(--v-top-banner-logo--height);
+                width  : auto;
+                cursor : pointer;
+                display: block;
+            }
+        }
+    }
+}

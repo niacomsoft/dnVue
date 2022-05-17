@@ -4,8 +4,9 @@
 // **************************************************************************************************************************
 
 export {
-    vApp, 
+    vApp,
     vFlexibleContainer,
     vControlPanel
 } from "./layouts";
 export { vMdIcon } from "./md-icon";
+export { vTopBanner } from "./top-banner";

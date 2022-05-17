@@ -19,3 +19,38 @@ declare type FlexibleContainerJustifyContentAlignment = ("space-between" | "spac
  * 纵向对齐模式。
  */
 declare type FlexibleContainerAlignItemsAlignment = FlexibleContainerBaseAlignment;
+
+/**
+ * 应用连接项配置。
+ */
+declare type LinkedApplicationItemOption = {
+    /**
+     * 获取一个字符串，用于表示应用名称（或者资源名称）。
+     *
+     * @type {string}
+     * @readonly
+     */
+    readonly name: string;
+
+    /**
+     * 获取一个字符串，用于表示应用图标 BASE64 格式的 URL。
+     *
+     * @type {string}
+     * @readonly
+     */
+    readonly iconDataURL?: string;
+
+    /**
+     * 获取一个值，用于表示是否为外部链接。
+     *
+     * @type {boolean}
+     */
+    readonly externalLink?: boolean;
+
+    /**
+     * 获取一个字符串，用于表示应用 URL 地址。
+     *
+     * @type {string}
+     */
+    readonly url: string;
+};

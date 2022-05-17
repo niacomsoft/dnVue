@@ -6,13 +6,14 @@
 -->
 
 <template>
-  <v-control-panel> 
-    <template #header>
-      <v-top-banner />
-    </template>
-  </v-control-panel>
+  <v-flexible-container class="v-top-banner" align-items="center" justify-content="space-between">
+    <div data-role="topbanner-logo">
+      <img src="../../assets/icons/dnvue-128x128.png" />
+    </div>
+  </v-flexible-container>
 </template>
 
 <script lang="ts" setup>
-import { vControlPanel, vTopBanner } from "../../components";
+import { vFlexibleContainer } from "../layouts";
+import { getApplicationConfiguration } from "../../lib";
 </script>

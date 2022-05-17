@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 /// <reference path="../../../components.d.ts" />
 
-import { defineProps, computed, PropType } from "vue";
+import { computed, PropType } from "vue";
 
 const props = defineProps({
   /**

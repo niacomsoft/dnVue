@@ -3,12 +3,14 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors,
-    useElementPlus,
-    usePrivateComponents,
-    configureApplication
-} from "./plugins";
-export { getApplicationConfiguration } from "./app-configuration";
+/// <reference path="../components.d.ts" />
+
+/**
+ * 获取应用程序配置。
+ *
+ * @export
+ * @returns {LinkedApplicationItemOption[]}
+ */
+export function getApplicationConfiguration(): LinkedApplicationItemOption[] {
+    return [];
+}

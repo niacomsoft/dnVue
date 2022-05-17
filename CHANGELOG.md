@@ -1,4 +1,31 @@
 # CHANGELOG
+## [1.0.0-alpha.10](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2022-05-17)
+
+
+### REFACTOR
+
+* **Issue #1:** 调整了组件中的代码。 ([63f6bd7](https://github.com/niacomsoft/dnVue/commit/63f6bd7701ffa00dbee7097e71be92e73d809993)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### PERFORMANCE OPTIMIZE
+
+* **Issue #2:** 优化了 ColoredConsoleLogWriter 类的输出结构。 ([91f8725](https://github.com/niacomsoft/dnVue/commit/91f87259329ceaa099ed8bbcddf6bd2c9b7a67cc)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2)
+
+
+### CHORE
+
+* 新增多语言支持包 i18next 和 @panter/vue-i18next。 ([5812c93](https://github.com/niacomsoft/dnVue/commit/5812c93365a0f8eea19e7510de73c8cbbdc9c7c9))
+
+
+### NEW FEATURE
+
+* **Issue #1 #6:** 新增 i18n 支持。 ([1948e3e](https://github.com/niacomsoft/dnVue/commit/1948e3ebc133145f11cc94d0c225701a48a7a8f3)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1) [#6](https://github.com/niacomsoft/dnVue/issues/6)
+* **Issue #1:** 新增 ControlPanel 组件的运行时日志。 ([4b34fb8](https://github.com/niacomsoft/dnVue/commit/4b34fb8d4c3526795b9a670239b3948b0b087e98)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增 Material Design Icon 组件。 ([58e3a51](https://github.com/niacomsoft/dnVue/commit/58e3a51b24100143c2d041f23cdfd964e9f73d45)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增 TopBanner 组件。 ([1968cce](https://github.com/niacomsoft/dnVue/commit/1968ccede58fe8669d855ba21827adfa260fa746)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增弹性盒容器组件。 ([c202289](https://github.com/niacomsoft/dnVue/commit/c202289c5065f4049dd2434be955b5b3620083d0)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增控制面板组件。 ([d3c40df](https://github.com/niacomsoft/dnVue/commit/d3c40df2feaa16004d89e97a6bfb608da6749cff)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
 ## [1.0.0-alpha.9](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2022-05-14)
 
 

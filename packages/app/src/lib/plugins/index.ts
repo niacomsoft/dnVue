@@ -10,3 +10,5 @@ export {
 } from "./theme-plugin";
 
 export { useElementPlus, usePrivateComponents } from "./component-plugin";
+
+export { configureApplication } from "./configurator";

@@ -22,11 +22,19 @@
 <script lang="ts" setup>
 import { computed, useSlots } from "vue";
 import { vFlexibleContainer } from "../flexible-container";
+import { useDefaultLogWriter } from "@dnvue/composition-api";
+
+const logWriter = useDefaultLogWriter();
 
 const slots = useSlots();
 
 const showHeaderSlot = computed<boolean>(() => {
-  return slots.header !== null && slots.header !== undefined;
+  const visible = slots.header !== null && slots.header !== undefined;
+
+  if(!visible)
+    logWriter.writeWarning({message:"未能找到 'header-slot'，因此隐藏。"})
+
+  return visible;
 });
 
 const showFooterSlot = computed<boolean>(() => {

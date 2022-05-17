@@ -1,7 +1,7 @@
 {
   "name": "dnvue",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "debug": "vite --mode debug",
     "build:pre-release": "vite build --mode pre-release",
@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dnvue/common": "^1.0.0",
+    "@dnvue/composition-api": "^1.0.0",
     "@mdi/font": "^6.6.96",
     "animate.css": "^4.1.1",
     "change-case": "^4.1.2",

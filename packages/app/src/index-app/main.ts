@@ -10,7 +10,8 @@ import {
     useAnimateCss,
     useMaterialColors,
     useElementPlus,
-    usePrivateComponents
+    usePrivateComponents,
+    configureApplication
 } from "../lib";
 import { configureRoute } from "./router";
 
@@ -28,6 +29,8 @@ function configure(): void {
     usePrivateComponents(app);
 
     configureRoute(app);
+
+    configureApplication(app);
 
     app.mount('#app');
 }

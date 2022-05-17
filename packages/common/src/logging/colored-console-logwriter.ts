@@ -1,6 +1,6 @@
 // **************************************************************************************************************************
 // COPYRIGHT © 2006 - 2022 WANG YUCAI. ALL RIGHTS RESERVED.
-// LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
+// LICENSED UNDER THE MIT LICENSE. See detailed data: LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
 import { LogWriter } from "./logwriter";
@@ -47,19 +47,34 @@ export class ColoredConsoleLogWriter extends LogWriter implements dnvue.ILogWrit
     }
 
     writeDebug(debugEntry?: dnvue.LogEntry | undefined): void {
-        console.debug(`%c${debugEntry?.message} See %o`, this._styleOptions.debug, { contextData: debugEntry?.contextData, contextError: debugEntry?.error, time: new Date() });
+        console.groupCollapsed("DNVUE DEBUG");
+        console.debug(`%c${debugEntry?.message}`, this._styleOptions.debug);
+        console.debug(`%cSee detailed data: %o`, this._styleOptions.debug, { contextData: debugEntry?.contextData, contextError: debugEntry?.error, time: new Date() });
+        console.groupEnd();
     }
     writeTrace(traceEntry?: dnvue.LogEntry | undefined): void {
-        console.trace(`%c${traceEntry?.message} See %o`, this._styleOptions.trace, { contextData: traceEntry?.contextData, contextError: traceEntry?.error, time: new Date() });
+        console.groupCollapsed("DNVUE TRACE");
+        console.trace(`%c${traceEntry?.message}`, this._styleOptions.trace);
+        console.trace(`%cSee detailed data: %o`, this._styleOptions.trace, { contextData: traceEntry?.contextData, contextError: traceEntry?.error, time: new Date() });
+        console.groupEnd();
     }
     writeInformation(infoEntry?: dnvue.LogEntry | undefined): void {
-        console.info(`%c${infoEntry?.message} See %o`, this._styleOptions.information, { contextData: infoEntry?.contextData, contextError: infoEntry?.error, time: new Date() });
+        console.group("DNVUE INFORMATION");
+        console.info(`%c${infoEntry?.message}`, this._styleOptions.information);
+        console.info(`%cSee detailed data: %o`, this._styleOptions.information, { contextData: infoEntry?.contextData, contextError: infoEntry?.error, time: new Date() });
+        console.groupEnd();
     }
     writeWarning(warnEntry?: dnvue.LogEntry | undefined): void {
-        console.warn(`%c${warnEntry?.message} See %o`, this._styleOptions.warning, { contextData: warnEntry?.contextData, contextError: warnEntry?.error, time: new Date() });
+        console.group("DNVUE WARNING");
+        console.warn(`%c${warnEntry?.message}`, this._styleOptions.warning);
+        console.warn(`%cSee detailed data: %o`, this._styleOptions.warning, { contextData: warnEntry?.contextData, contextError: warnEntry?.error, time: new Date() });
+        console.groupEnd();
     }
     writeError(errorEntry?: dnvue.LogEntry | undefined): void {
-        console.error(`%c${errorEntry?.message} See %o`, this._styleOptions.error, { contextData: errorEntry?.contextData, contextError: errorEntry?.error, time: new Date() });
+        console.group("DNVUE ERROR");
+        console.error(`%c${errorEntry?.message}%o`, this._styleOptions.error);
+        console.error(`%cSee detailed data: %o`, this._styleOptions.error, { contextData: errorEntry?.contextData, contextError: errorEntry?.error, time: new Date() });
+        console.groupEnd();
     }
 }
 

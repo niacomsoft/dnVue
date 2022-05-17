@@ -3,11 +3,18 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors,
-    useElementPlus,
-    usePrivateComponents,
-    configureApplication
-} from "./plugins";
+import { Startup, ColoredConsoleLogWriterFactory } from "@dnvue/common";
+import { App } from "vue";
+
+/**
+ * 配置应用程序。
+ *
+ * @export
+ * @param {App} app Vue 应用程序对象实例。
+ */
+export function configureApplication(app: App): void {
+    Startup.configure(ctx => {
+        ctx.setDefaultLogWriter(new ColoredConsoleLogWriterFactory().create())
+            .setDefaultLogger();
+    });
+}

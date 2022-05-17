@@ -1,6 +1,6 @@
 // **************************************************************************************************************************
 // COPYRIGHT © 2006 - 2022 WANG YUCAI. ALL RIGHTS RESERVED.
-// LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
+// LICENSED UNDER THE MIT LICENSE. See detailed data: LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -36,19 +36,34 @@ let ColoredConsoleLogWriter = ColoredConsoleLogWriter_1 = class ColoredConsoleLo
         this._styleOptions = Object.assign({}, ColoredConsoleLogWriter_1.DEFAULT_STYLE, styleOptions);
     }
     writeDebug(debugEntry) {
-        console.debug(`%c${debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.message} See %o`, this._styleOptions.debug, { contextData: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.contextData, contextError: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.error, time: new Date() });
+        console.groupCollapsed("DNVUE DEBUG");
+        console.debug(`%c${debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.message}`, this._styleOptions.debug);
+        console.debug(`%cSee detailed data: %o`, this._styleOptions.debug, { contextData: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.contextData, contextError: debugEntry === null || debugEntry === void 0 ? void 0 : debugEntry.error, time: new Date() });
+        console.groupEnd();
     }
     writeTrace(traceEntry) {
-        console.trace(`%c${traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.message} See %o`, this._styleOptions.trace, { contextData: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.contextData, contextError: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.error, time: new Date() });
+        console.groupCollapsed("DNVUE TRACE");
+        console.trace(`%c${traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.message}`, this._styleOptions.trace);
+        console.trace(`%cSee detailed data: %o`, this._styleOptions.trace, { contextData: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.contextData, contextError: traceEntry === null || traceEntry === void 0 ? void 0 : traceEntry.error, time: new Date() });
+        console.groupEnd();
     }
     writeInformation(infoEntry) {
-        console.info(`%c${infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.message} See %o`, this._styleOptions.information, { contextData: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.contextData, contextError: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.error, time: new Date() });
+        console.group("DNVUE INFORMATION");
+        console.info(`%c${infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.message}`, this._styleOptions.information);
+        console.info(`%cSee detailed data: %o`, this._styleOptions.information, { contextData: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.contextData, contextError: infoEntry === null || infoEntry === void 0 ? void 0 : infoEntry.error, time: new Date() });
+        console.groupEnd();
     }
     writeWarning(warnEntry) {
-        console.warn(`%c${warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.message} See %o`, this._styleOptions.warning, { contextData: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.contextData, contextError: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.error, time: new Date() });
+        console.group("DNVUE WARNING");
+        console.warn(`%c${warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.message}`, this._styleOptions.warning);
+        console.warn(`%cSee detailed data: %o`, this._styleOptions.warning, { contextData: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.contextData, contextError: warnEntry === null || warnEntry === void 0 ? void 0 : warnEntry.error, time: new Date() });
+        console.groupEnd();
     }
     writeError(errorEntry) {
-        console.error(`%c${errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.message} See %o`, this._styleOptions.error, { contextData: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.contextData, contextError: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.error, time: new Date() });
+        console.group("DNVUE ERROR");
+        console.error(`%c${errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.message}%o`, this._styleOptions.error);
+        console.error(`%cSee detailed data: %o`, this._styleOptions.error, { contextData: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.contextData, contextError: errorEntry === null || errorEntry === void 0 ? void 0 : errorEntry.error, time: new Date() });
+        console.groupEnd();
     }
 };
 /**

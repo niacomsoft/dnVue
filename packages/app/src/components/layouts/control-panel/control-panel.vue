@@ -13,7 +13,7 @@
     <div data-role="content-placeholder">
       <slot />
     </div>
-    <div data-role="footer-placeholder">
+    <div data-role="footer-placeholder" v-if="showFooterSlot">
       <slot name="footer" />
     </div>
   </v-flexible-container>
@@ -29,15 +29,18 @@ const logWriter = useDefaultLogWriter();
 const slots = useSlots();
 
 const showHeaderSlot = computed<boolean>(() => {
-  const visible = slots.header !== null && slots.header !== undefined;
+  const visible:boolean = slots.header !== null && slots.header !== undefined;
 
-  if(!visible)
-    logWriter.writeWarning({message:"未能找到 'header-slot'，因此隐藏。"})
+  if (!visible) logWriter.writeWarning({ message: "未能找到 'header-slot'，因此隐藏。" });
 
   return visible;
 });
 
 const showFooterSlot = computed<boolean>(() => {
-  return slots.footer !== null && slots.footer !== undefined;
+  const visible:boolean = slots.footer !== null && slots.footer !== undefined;
+
+  if (!visible) logWriter.writeWarning({ message: "未能找到 'footer-slot'，因此隐藏。" });
+
+  return visible;
 });
 </script>

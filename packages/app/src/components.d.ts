@@ -25,7 +25,7 @@ declare type FlexibleContainerAlignItemsAlignment = FlexibleContainerBaseAlignme
  */
 declare type LinkedApplicationItemOption = {
     /**
-     * 获取一个字符串，用于表示应用名称（或者资源名称）。
+     * 获取一个字符串，用于表示应用名称对应的资源名称。
      *
      * @type {string}
      * @readonly

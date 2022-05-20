@@ -2,6 +2,8 @@
 
 :root {
     @include components.generate-variables;
+    --v-top-banner-header--logo-height    : 30px;
+    --v-top-banner-header--logo-text-color: var(--md-indigo-900);
 }
 
 html,
@@ -13,4 +15,85 @@ body,
     margin : 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:link,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+
 @include components.generate-class;
+
+body {
+
+    .el-drawer-extensions {
+        opacity  : 0.95;
+        min-width: 300px;
+
+        .v-top-banner-header {
+            display      : flex;
+            width        : percentage($number: 1);
+            align-items  : center;
+            padding      : 10px;
+            border-bottom: 1px solid var(--md-grey-200);
+
+            img {
+                height : var(--v-top-banner-header--logo-height);
+                width  : auto;
+                display: block;
+            }
+
+            span {
+                color       : var(--v-top-banner-header--logo-text-color);
+                padding-left: 10px;
+
+                font: {
+                    weight: bolder;
+                }
+            }
+        }
+
+        .v-top-banner-body {
+            display: block;
+            width  : percentage($number: 1);
+
+            >div {
+                padding      : 5px 10px;
+                display      : flex;
+                width        : percentage($number: 1);
+                border-radius: 2px;
+                cursor       : pointer;
+
+                >div:nth-child(1) {
+                    >img {
+                        display: block;
+                        height : 30px;
+                        width  : auto;
+                    }
+                }
+
+                >div:nth-child(2) {
+                    flex        : 1;
+                    display     : flex;
+                    align-items : center;
+                    padding-left: 10px;
+
+                    a {
+                        font-size: 16px;
+                        color    : var(--md-grey-700);
+                    }
+                }
+            }
+
+            >div:hover {
+                background-color: #FFFFFF;
+                box-shadow      : 0 0 10px 3px var(--md-grey-300);
+            }
+        }
+    }
+}

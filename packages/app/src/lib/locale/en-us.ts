@@ -108,4 +108,6 @@ export const enUS: Record<string, string> = {
     REMEMBER_ME: "Remember Me",
     AUTHENTICATE: "Authenticate",
     APPLICATION_NAME: ".NET & Vue",
+    CONTROL_PANEL: "Control Panel",
+    APPLICATION_MANIFEST: "Application Manifest",
 };

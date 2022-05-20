@@ -108,4 +108,6 @@ export const zhCN: Record<string, string> = {
     REMEMBER_ME: "记住密码",
     AUTHENTICATE: "身份认证",
     APPLICATION_NAME: ".NET & Vue",
+    CONTROL_PANEL: "控制面板",
+    APPLICATION_MANIFEST: "应用清单",
 };

@@ -12,7 +12,7 @@
         <img :src="app.iconDataURL" />
       </div>
       <div>
-        <a :href="app.url">{{ $t(app.name) }}</a>
+        <a :href="app.url" :target="app.externalLink ? '_blank' : '_self'">{{ $t(app.name) }}</a>
       </div>
     </div>
   </div>

@@ -3,11 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    vApp,
-    vFlexibleContainer,
-    vControlPanel,
-    vContentPlaceholder
-} from "./layouts";
-export { vMdIcon } from "./md-icon";
-export { vTopBanner } from "./top-banner";
+import vContentPlaceholder from "./content-placeholder.vue";
+
+export { vContentPlaceholder };

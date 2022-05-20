@@ -6,14 +6,21 @@
 -->
 
 <template>
-  <v-control-panel>
-    <template #header>
-      <v-top-banner />
-    </template>
-    <v-content-placeholder></v-content-placeholder>
-  </v-control-panel>
+  <v-flexible-container class="v-content-placeholder">
+    <div data-role="appmanifest-shortcuts" v-if="showAppShortcuts"></div>
+  </v-flexible-container>
 </template>
 
 <script lang="ts" setup>
-import { vControlPanel, vTopBanner, vFlexibleContainer, vContentPlaceholder } from "../../components";
+import { vFlexibleContainer } from "../flexible-container";
+
+const props = defineProps({
+  /**
+   * 设置或获取一个值，用于表示是否显示应用快捷方式菜单条。
+   */
+  showAppShortcuts: {
+    type: Boolean,
+    default: true,
+  },
+});
 </script>

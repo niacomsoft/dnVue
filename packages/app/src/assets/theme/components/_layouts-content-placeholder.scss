@@ -1,0 +1,21 @@
+@mixin generate-variables {
+    --v-content-placeholder--background-color                      : var(--md-grey-50);
+    --v-content-placeholder--appmanifest-shortcuts-background-color: var(--md-grey-200);
+}
+
+@mixin generate-class {
+    .v-content-placeholder {
+        background-color: var(--v-content-placeholder--background-color);
+
+        >div {
+            height : percentage($number: 1);
+            padding: 10px;
+        }
+
+        >div[data-role=appmanifest-shortcuts] {
+            width           : 50px;
+            background-color: var(--v-content-placeholder--appmanifest-shortcuts-background-color);
+            padding         : 10px 5px;
+        }
+    }
+}

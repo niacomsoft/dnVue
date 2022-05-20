@@ -1,7 +1,7 @@
 {
   "name": "dnvue",
   "private": true,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "debug": "vite --mode debug",
     "build:pre-release": "vite build --mode pre-release",

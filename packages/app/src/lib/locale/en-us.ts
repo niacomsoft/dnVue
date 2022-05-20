@@ -107,4 +107,5 @@ export const enUS: Record<string, string> = {
     PASSWORD: "Password",
     REMEMBER_ME: "Remember Me",
     AUTHENTICATE: "Authenticate",
+    APPLICATION_NAME: ".NET & Vue",
 };

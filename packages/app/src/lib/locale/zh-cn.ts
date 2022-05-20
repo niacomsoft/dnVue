@@ -107,4 +107,5 @@ export const zhCN: Record<string, string> = {
     PASSWORD: "密码",
     REMEMBER_ME: "记住密码",
     AUTHENTICATE: "身份认证",
+    APPLICATION_NAME: ".NET & Vue",
 };

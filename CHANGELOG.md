@@ -1,4 +1,20 @@
 # CHANGELOG
+## [1.0.0-alpha.11](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2022-05-20)
+
+
+### NEW FEATURE
+
+* **Issue #1:** 调整了应用清单超链标签的 a:target 属性。 ([9432998](https://github.com/niacomsoft/dnVue/commit/94329987f3c4aeb82d65c3e07d47b7bf868828e8)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 完善了 TopBanner 组件。 ([157e007](https://github.com/niacomsoft/dnVue/commit/157e0071f020d6491f817bdb7c6c84e445a7bde5)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 新增 Content-Placeholder 组件。 ([387de21](https://github.com/niacomsoft/dnVue/commit/387de216c0df9046c6e31b61a764c34447f9e6da)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 修改了 TopBanner 组件，增加了 Drawer 全局应用清单组件。 ([7218b1f](https://github.com/niacomsoft/dnVue/commit/7218b1fef8a9e3d3da7ffe59bd7738c4031d3037)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### CHORE
+
+* 升级了程序版本。 ([6e1a919](https://github.com/niacomsoft/dnVue/commit/6e1a91957ce38b72c1a33369763488452092fa82))
+* 修改了包版本。 ([25727fb](https://github.com/niacomsoft/dnVue/commit/25727fb870d4eb541016c6213da690523a0a07c7))
+
 ## [1.0.0-alpha.10](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2022-05-17)
 
 

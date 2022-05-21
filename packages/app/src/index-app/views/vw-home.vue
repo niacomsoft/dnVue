@@ -10,7 +10,9 @@
     <template #header>
       <v-top-banner />
     </template>
-    <v-content-placeholder></v-content-placeholder>
+    <v-content-placeholder>
+      <router-view />
+    </v-content-placeholder>
   </v-control-panel>
 </template>
 

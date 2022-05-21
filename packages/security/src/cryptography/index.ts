@@ -4,7 +4,6 @@
 // **************************************************************************************************************************
 
 export {
-    SafeNumber,
     HashAlgorithm,
     MD5AlgorithmProvider,
     SHA1AlgorithmProvider,
@@ -12,4 +11,4 @@ export {
     SHA512AlgorithmProvider,
     SHA3AlgorithmProvider,
     RIPEMD160AlgorithmProvider
-} from "./src";
+} from "./hash-algorithm";

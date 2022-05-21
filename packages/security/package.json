@@ -1,0 +1,45 @@
+{
+  "name": "@dnvue/security",
+  "version": "1.0.0",
+  "description": "dnVue security library.",
+  "main": "compile/es6/index.js",
+  "typings": "compile/es6/index.d.ts",
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^17.0.35",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "compile": "tsc -p tsconfig.es6.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "security",
+    "crypto-js"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "files": [
+    "LICENSE",
+    "index.ts",
+    "src/**/*.ts",
+    "compile/**/*.js",
+    "compile/**/*.d.ts"
+  ],
+  "dependencies": {
+    "@dnvue/common": "^1.0.0",
+    "@dnvue/typings": "^1.0.0",
+    "@fingerprintjs/fingerprintjs": "^3.3.3",
+    "crypto-js": "^4.1.1",
+    "hashids": "^2.2.10"
+  }
+}

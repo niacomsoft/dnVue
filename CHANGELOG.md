@@ -1,4 +1,22 @@
 # CHANGELOG
+## [1.0.0-alpha.12](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2022-05-21)
+
+
+### CHORE
+
+* **Issue #1:** 修改了 Content-Placeholder 组件 Side-Bar 插槽样式。 ([4acf342](https://github.com/niacomsoft/dnVue/commit/4acf342546aa55d719a4cd1467811ee2fc732668)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### NEW FEATURE
+
+* **Issue #1:** 完善了 Content-Placeholder 组件。 ([f62f0c0](https://github.com/niacomsoft/dnVue/commit/f62f0c004a063b8c5a2aaf6e4b15ae14e067d79f)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #3 #2:** 新增 Number 扩展方法。 ([3b4f0f5](https://github.com/niacomsoft/dnVue/commit/3b4f0f57d1003641fd658f0dd77e9b618d2641d3)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#2](https://github.com/niacomsoft/dnVue/issues/2)
+* **Issue #3 #9:** 新增哈希算法集。 ([4f7f6ab](https://github.com/niacomsoft/dnVue/commit/4f7f6abc2f4743c6fd50b4cc1952b8480df7af17)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3) [#9](https://github.com/niacomsoft/dnVue/issues/9)
+* **Issue #9:** 初始化安全、加密类库。 ([d71bbbb](https://github.com/niacomsoft/dnVue/commit/d71bbbbc1bf7bf9010d36a44609000d78c0441d4)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9)
+* **Issue #9:** 新增 SafeNumber 和组合式 API。 ([2fcc516](https://github.com/niacomsoft/dnVue/commit/2fcc5165d3e3dace91b0bde4d22014c0cb330ee6)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9)
+* **Issue #9:** 新增哈希算法相关的组合式 API。 ([c4aed02](https://github.com/niacomsoft/dnVue/commit/c4aed02d263e70dea18be7b0bce55c4de952a361)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9)
+* **Issue #9:** 新增加了 computeHash  组合式 API 的导出。 ([dd0dbd2](https://github.com/niacomsoft/dnVue/commit/dd0dbd28ae823f56499d439f1f74f4d173153e2a)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9)
+
 ## [1.0.0-alpha.11](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2022-05-20)
 
 

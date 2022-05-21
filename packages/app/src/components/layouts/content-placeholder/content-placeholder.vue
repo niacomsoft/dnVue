@@ -7,12 +7,26 @@
 
 <template>
   <v-flexible-container class="v-content-placeholder">
-    <div data-role="appmanifest-shortcuts" v-if="showAppShortcuts"></div>
+    <div data-role="appmanifest-shortcuts" v-if="showAppShortcuts">
+      <v-short-cuts />
+    </div>
+    <div data-role="left-side" v-if="showSidebar">
+      <slot name="sidebar" />
+    </div>
+    <div data-role="content">
+      <slot />
+    </div>
   </v-flexible-container>
 </template>
 
 <script lang="ts" setup>
+import { useDefaultLogWriter } from "@dnvue/composition-api";
+import { computed, useSlots } from "vue";
 import { vFlexibleContainer } from "../flexible-container";
+import vShortCuts from "./shortcuts.vue";
+
+const slots = useSlots();
+const logWriter = useDefaultLogWriter();
 
 const props = defineProps({
   /**
@@ -22,5 +36,18 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  /**
+   * 设置或获取一个值，用于表示激活的应用快捷方式索引数值。
+   */
+  activedAppShortcutIndex: {
+    type: Boolean,
+    default: 0,
+  },
+});
+
+const showSidebar = computed<boolean>(() => {
+  const visible = slots["side-bar"] !== null && slots["side-bar"] !== undefined;
+  if (!visible) logWriter.writeWarning({ message: "未能找到 “side-bar”，因此隐藏。" });
+  return visible;
 });
 </script>

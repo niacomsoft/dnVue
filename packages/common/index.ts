@@ -33,3 +33,23 @@ String.isNullOrWhitespace = function (s): boolean {
 Object.safeGet = function <T>(value: T | undefined | null, safeValue: T): T {
     return value ?? safeValue;
 };
+
+Number.equals = function (value: number, comparableValue?: number): boolean {
+    return value === Object.safeGet<number>(comparableValue, 0);
+};
+
+Number.greatThan = function (value: number, comparableValue?: number): boolean {
+    return value > Object.safeGet<number>(comparableValue, 0);
+};
+
+Number.lessThan = function (value: number, comparableValue?: number): boolean {
+    return value > Object.safeGet<number>(comparableValue, 0);
+};
+
+Number.greatOrEquals = function (value: number, comparableValue?: number): boolean {
+    return Number.greatThan(value, Object.safeGet<number>(comparableValue, 0)) || Number.equals(value, Object.safeGet<number>(comparableValue, 0));
+};
+
+Number.lessOrEquals = function (value: number, comparableValue?: number): boolean {
+    return Number.lessThan(value, Object.safeGet<number>(comparableValue, 0)) || Number.equals(value, Object.safeGet<number>(comparableValue, 0));
+};

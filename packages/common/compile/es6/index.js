@@ -15,3 +15,18 @@ String.isNullOrWhitespace = function (s) {
 Object.safeGet = function (value, safeValue) {
     return value !== null && value !== void 0 ? value : safeValue;
 };
+Number.equals = function (value, comparableValue) {
+    return value === Object.safeGet(comparableValue, 0);
+};
+Number.greatThan = function (value, comparableValue) {
+    return value > Object.safeGet(comparableValue, 0);
+};
+Number.lessThan = function (value, comparableValue) {
+    return value > Object.safeGet(comparableValue, 0);
+};
+Number.greatOrEquals = function (value, comparableValue) {
+    return Number.greatThan(value, Object.safeGet(comparableValue, 0)) || Number.equals(value, Object.safeGet(comparableValue, 0));
+};
+Number.lessOrEquals = function (value, comparableValue) {
+    return Number.lessThan(value, Object.safeGet(comparableValue, 0)) || Number.equals(value, Object.safeGet(comparableValue, 0));
+};

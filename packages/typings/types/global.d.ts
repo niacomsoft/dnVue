@@ -102,4 +102,56 @@ declare global {
          */
         safeGet<T>(value: T | null | undefined, safeValue: T): T;
     }
+
+    interface NumberConstructor {
+        /**
+         * 校验 value 是否与 comparableValue 相等。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        equals(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否大于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+         greatThan(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否大于等于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+         greatOrEquals(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否小于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+         lessThan(value: number, comparableValue?: number): boolean; 
+
+        /**
+         * 校验 value 是否小于等于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+         lessOrEquals(value: number, comparableValue?: number): boolean;                 
+    }
 }

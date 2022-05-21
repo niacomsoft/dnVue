@@ -184,5 +184,14 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setDefaultResolver(resolver?: IStringResolver): IAppContext;
+
+        /**
+         * 设置默认的安全自然数哈希字符串最小长度。
+         *
+         * @param {number} [minLength] 最小长度。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultSafeNumberMinLength(minLength?: number): IAppContext;
     }
 }

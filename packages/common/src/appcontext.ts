@@ -14,6 +14,11 @@ import { SingletonManager } from "./singleton-manager";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext implements dnvue.IAppContext {
+    setDefaultSafeNumberMinLength(minLength?: number | undefined): dnvue.IAppContext {
+        window.DEFAULT_SAFE_NUMBER_MINLENGTH = minLength;
+
+        return this;
+    }
     setDefaultResolver(resolver?: dnvue.IStringResolver | undefined): dnvue.IAppContext {
         if (resolver)
             window.DEFAULT_STRING_RESOLVER = resolver;

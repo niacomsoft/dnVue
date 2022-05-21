@@ -47,12 +47,12 @@ declare global {
         DEFAULT_STRING_RESOLVER: dnvue.IStringResolver;
 
         /**
-         * 默认的文化区域管理程序。
+         * 默认的安全自然数哈希字符串最小长度。
          *
-         * @type {dnvue.ICulutureInfoManager}
+         * @type {number}
          * @memberof Window
          */
-        DEFAULT_CULTURE_MANAGER: dnvue.ICulutureInfoManager;
+        DEFAULT_SAFE_NUMBER_MINLENGTH?: number;
 
         /**
          * 单例管理工具。
@@ -122,7 +122,7 @@ declare global {
          * @returns {boolean}
          * @memberof NumberConstructor
          */
-         greatThan(value: number, comparableValue?: number): boolean;
+        greatThan(value: number, comparableValue?: number): boolean;
 
         /**
          * 校验 value 是否大于等于 comparableValue。
@@ -132,7 +132,7 @@ declare global {
          * @returns {boolean}
          * @memberof NumberConstructor
          */
-         greatOrEquals(value: number, comparableValue?: number): boolean;
+        greatOrEquals(value: number, comparableValue?: number): boolean;
 
         /**
          * 校验 value 是否小于 comparableValue。
@@ -142,7 +142,7 @@ declare global {
          * @returns {boolean}
          * @memberof NumberConstructor
          */
-         lessThan(value: number, comparableValue?: number): boolean; 
+        lessThan(value: number, comparableValue?: number): boolean;
 
         /**
          * 校验 value 是否小于等于 comparableValue。
@@ -152,6 +152,6 @@ declare global {
          * @returns {boolean}
          * @memberof NumberConstructor
          */
-         lessOrEquals(value: number, comparableValue?: number): boolean;                 
+        lessOrEquals(value: number, comparableValue?: number): boolean;
     }
 }

@@ -2,4 +2,8 @@
 // COPYRIGHT © 2006 - 2022 WANG YUCAI. ALL RIGHTS RESERVED.
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
-export { useLogger, useDefaultLogWriter, configureDnvue, useDefaultResolver, useSafeNumber } from "./src";
+import { SingletonManager } from "@dnvue/common";
+import { SafeNumber } from "@dnvue/security";
+export function useSafeNumber() {
+    return SingletonManager.createOrGet("__DNVUE_SAFE_NUMBER__", () => new SafeNumber());
+}

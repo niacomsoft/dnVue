@@ -2,9 +2,10 @@ import CryptoJS from "crypto-js";
 /**
  * 定义了哈希算法的接口。
  *
+ * @exports
  * @interface IHashAlgorithm
  */
-interface IHashAlgorithm {
+export interface IHashAlgorithm {
     /**
      * 计算字符串 s 的哈希字符串。
      *
@@ -134,4 +135,3 @@ export declare class SHA3AlgorithmProvider extends HashAlgorithm implements IHas
 export declare class RIPEMD160AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray;
 }
-export {};

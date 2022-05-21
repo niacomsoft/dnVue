@@ -9,9 +9,10 @@ import CryptoJS from "crypto-js";
 /**
  * 定义了哈希算法的接口。
  *
+ * @exports
  * @interface IHashAlgorithm
  */
-interface IHashAlgorithm {
+export interface IHashAlgorithm {
     /**
      * 计算字符串 s 的哈希字符串。
      *

@@ -5,6 +5,7 @@
 
 export { SafeNumber } from "./safe-number";
 export {
+    IHashAlgorithm,
     HashAlgorithm,
     MD5AlgorithmProvider,
     SHA1AlgorithmProvider,

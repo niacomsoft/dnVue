@@ -8,5 +8,6 @@ export {
     useDefaultLogWriter,
     configureDnvue,
     useDefaultResolver,
-    useSafeNumber
+    useSafeNumber,
+    computeHash
 } from "./src";

@@ -5,4 +5,4 @@
 export { useLogger, useDefaultLogWriter } from "./composition-logging";
 export { configureDnvue } from "./composition-startup";
 export { useDefaultResolver } from "./composition-resolver";
-export { useSafeNumber } from "./composition-security";
+export { useSafeNumber, computeHash } from "./composition-security";

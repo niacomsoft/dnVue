@@ -12,5 +12,4 @@ export {
     SHA512AlgorithmProvider,
     SHA3AlgorithmProvider,
     RIPEMD160AlgorithmProvider,
-    IHashAlgorithm
 } from "./src";

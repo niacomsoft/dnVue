@@ -16,7 +16,7 @@ import CryptoJS from "crypto-js";
  * @export
  * @abstract
  * @class HashAlgorithm
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  */
 export class HashAlgorithm {
     computeHash(s) {
@@ -53,7 +53,7 @@ export class HashAlgorithm {
  * @export
  * @class MD5AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let MD5AlgorithmProvider = class MD5AlgorithmProvider extends HashAlgorithm {
@@ -71,7 +71,7 @@ export { MD5AlgorithmProvider };
  * @export
  * @class SHA1AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let SHA1AlgorithmProvider = class SHA1AlgorithmProvider extends HashAlgorithm {
@@ -89,7 +89,7 @@ export { SHA1AlgorithmProvider };
  * @export
  * @class SHA256AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let SHA256AlgorithmProvider = class SHA256AlgorithmProvider extends HashAlgorithm {
@@ -107,7 +107,7 @@ export { SHA256AlgorithmProvider };
  * @export
  * @class SHA512AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let SHA512AlgorithmProvider = class SHA512AlgorithmProvider extends HashAlgorithm {
@@ -125,7 +125,7 @@ export { SHA512AlgorithmProvider };
  * @export
  * @class SHA3AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let SHA3AlgorithmProvider = class SHA3AlgorithmProvider extends HashAlgorithm {
@@ -156,7 +156,7 @@ export { SHA3AlgorithmProvider };
  * @export
  * @class RIPEMD160AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 let RIPEMD160AlgorithmProvider = class RIPEMD160AlgorithmProvider extends HashAlgorithm {

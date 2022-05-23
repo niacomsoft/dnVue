@@ -4,7 +4,6 @@
 // **************************************************************************************************************************
 
 export {
-    IHashAlgorithm,
     HashAlgorithm,
     MD5AlgorithmProvider,
     SHA1AlgorithmProvider,

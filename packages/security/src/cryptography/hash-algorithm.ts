@@ -7,31 +7,14 @@ import { sealed } from "@dnvue/common";
 import CryptoJS from "crypto-js";
 
 /**
- * 定义了哈希算法的接口。
- *
- * @exports
- * @interface IHashAlgorithm
- */
-export interface IHashAlgorithm {
-    /**
-     * 计算字符串 s 的哈希字符串。
-     *
-     * @param {string} s 原始字符串。
-     * @returns {string}
-     * @memberof IHashAlgorithm
-     */
-    computeHash(s: string): string;
-}
-
-/**
  * 提供了哈希计算相关的基本方法。
  *
  * @export
  * @abstract
  * @class HashAlgorithm
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  */
-export abstract class HashAlgorithm implements IHashAlgorithm {
+export abstract class HashAlgorithm implements dnvue.security.IHashAlgorithm {
     computeHash(s: string): string {
         const input: CryptoJS.lib.WordArray = this._getBytes(s);
         const hashOutput: CryptoJS.lib.WordArray = this._internalComputeHash(input);
@@ -80,11 +63,11 @@ export abstract class HashAlgorithm implements IHashAlgorithm {
  * @export
  * @class MD5AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class MD5AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class MD5AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.MD5(data);
     }
@@ -96,11 +79,11 @@ export class MD5AlgorithmProvider extends HashAlgorithm implements IHashAlgorith
  * @export
  * @class SHA1AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class SHA1AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class SHA1AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.SHA1(data);
     }
@@ -112,11 +95,11 @@ export class SHA1AlgorithmProvider extends HashAlgorithm implements IHashAlgorit
  * @export
  * @class SHA256AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class SHA256AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class SHA256AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.SHA256(data);
     }
@@ -128,11 +111,11 @@ export class SHA256AlgorithmProvider extends HashAlgorithm implements IHashAlgor
  * @export
  * @class SHA512AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class SHA512AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class SHA512AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.SHA512(data);
     }
@@ -144,11 +127,11 @@ export class SHA512AlgorithmProvider extends HashAlgorithm implements IHashAlgor
  * @export
  * @class SHA3AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class SHA3AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class SHA3AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.SHA3(data, options);
     }
@@ -174,11 +157,11 @@ export class SHA3AlgorithmProvider extends HashAlgorithm implements IHashAlgorit
  * @export
  * @class RIPEMD160AlgorithmProvider
  * @extends {HashAlgorithm}
- * @implements {IHashAlgorithm}
+ * @implements {dnvue.security.IHashAlgorithm}
  * @sealed
  */
 @sealed
-export class RIPEMD160AlgorithmProvider extends HashAlgorithm implements IHashAlgorithm {
+export class RIPEMD160AlgorithmProvider extends HashAlgorithm implements dnvue.security.IHashAlgorithm {
     _internalComputeHash(data: CryptoJS.lib.WordArray, options?: object | undefined): CryptoJS.lib.WordArray {
         return CryptoJS.RIPEMD160(data);
     }

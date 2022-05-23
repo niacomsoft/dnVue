@@ -194,4 +194,22 @@ declare namespace dnvue {
          */
         setDefaultSafeNumberMinLength(minLength?: number): IAppContext;
     }
+
+    namespace security {
+        /**
+         * 定义了哈希算法相关的接口。
+         *
+         * @interface IHashAlgorithm
+         */
+        interface IHashAlgorithm {
+            /**
+             * 计算字符串 s 等效的哈希值。
+             *
+             * @param {string} s 原始字符串。
+             * @returns {string}
+             * @memberof IHashAlgorithm
+             */
+            computeHash(s: string): string;
+        }
+    }
 }

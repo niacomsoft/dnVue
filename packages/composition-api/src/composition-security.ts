@@ -6,7 +6,6 @@
 import { SingletonManager } from "@dnvue/common";
 import {
     SafeNumber,
-    IHashAlgorithm,
     MD5AlgorithmProvider,
     SHA1AlgorithmProvider,
     SHA256AlgorithmProvider,
@@ -38,13 +37,13 @@ export function computeHash(s: string, algName: ("md5" | "sha1" | "sha256" | "sh
 
     switch (algName) {
         case "sha1":
-            hashStr = SingletonManager.createOrGet<IHashAlgorithm>("__DNVUE_SHA1_HASH__", () => new SHA1AlgorithmProvider()).computeHash(s);
+            hashStr = SingletonManager.createOrGet<dnvue.security.IHashAlgorithm>("__DNVUE_SHA1_HASH__", () => new SHA1AlgorithmProvider()).computeHash(s);
             break;
         case "sha256":
-            hashStr = SingletonManager.createOrGet<IHashAlgorithm>("__DNVUE_SHA256_HASH__", () => new SHA256AlgorithmProvider()).computeHash(s);
+            hashStr = SingletonManager.createOrGet<dnvue.security.IHashAlgorithm>("__DNVUE_SHA256_HASH__", () => new SHA256AlgorithmProvider()).computeHash(s);
             break;
         case "sha512":
-            hashStr = SingletonManager.createOrGet<IHashAlgorithm>("__DNVUE_SHA512_HASH__", () => new SHA512AlgorithmProvider()).computeHash(s);
+            hashStr = SingletonManager.createOrGet<dnvue.security.IHashAlgorithm>("__DNVUE_SHA512_HASH__", () => new SHA512AlgorithmProvider()).computeHash(s);
             break;
         case "sha3":
             hashStr = SingletonManager.createOrGet<SHA3AlgorithmProvider>("__DNVUE_SHA3_HASH__", () => new SHA3AlgorithmProvider()).computeSHA3(s, 512);
@@ -59,10 +58,10 @@ export function computeHash(s: string, algName: ("md5" | "sha1" | "sha256" | "sh
             hashStr = SingletonManager.createOrGet<SHA3AlgorithmProvider>("__DNVUE_SHA3_HASH__", () => new SHA3AlgorithmProvider()).computeSHA3(s, 384);
             break;
         case "RIPEMD160":
-            hashStr = SingletonManager.createOrGet<IHashAlgorithm>("__DNVUE_RIPEMD160_HASH__", () => new RIPEMD160AlgorithmProvider()).computeHash(s);
+            hashStr = SingletonManager.createOrGet<dnvue.security.IHashAlgorithm>("__DNVUE_RIPEMD160_HASH__", () => new RIPEMD160AlgorithmProvider()).computeHash(s);
             break;
         default:
-            hashStr = SingletonManager.createOrGet<IHashAlgorithm>("__DNVUE_MD5_HASH__", () => new MD5AlgorithmProvider()).computeHash(s);
+            hashStr = SingletonManager.createOrGet<dnvue.security.IHashAlgorithm>("__DNVUE_MD5_HASH__", () => new MD5AlgorithmProvider()).computeHash(s);
             break;
     }
 

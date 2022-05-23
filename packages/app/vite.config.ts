@@ -6,7 +6,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
-export default ((mode) => {
+export default (({ mode }) => {
   const { resolve } = require("path");
 
   /**
@@ -21,7 +21,7 @@ export default ((mode) => {
    * 
    * @type {string[]}
    */
-  const envPrefixes: string[] = ["VITE_", "DNVUE_", "PRIVATE_"];
+  const envPrefixes: string[] = ["VITE_", "DNVUE_", "PRIVATE_", "NODE_"];
 
   // 环境变量清单。
   const environmentVars = loadEnv(mode, envDir, envPrefixes);
@@ -72,6 +72,11 @@ export default ((mode) => {
       },
       sourcemap: false,
       manifest: true
+    },
+    define: {
+      "process.env": {
+        "NODE_ENV": environmentVars.NODE_ENV
+      }
     }
   });
 

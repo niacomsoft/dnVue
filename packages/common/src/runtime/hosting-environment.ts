@@ -22,11 +22,15 @@ export class HostingEnvironment implements dnvue.IHostingEnvironment {
     constructor(envName?: string) {
         this.environmentName = Object.safeGet<string>(envName, process?.env.NODE_ENV ?? "production");
     }
+    get isDevelopment(): boolean {
+        return this.is("development");
+    }
+    get isProduction(): boolean {
+        return this.is("production");
+    }
 
     is(envName: string): boolean {
         return this.environmentName.toLowerCase() === envName.toLowerCase();
     }
-    readonly isDevelopment: boolean = this.is("development");
-    readonly isProduction: boolean = this.is("production");
 
 }

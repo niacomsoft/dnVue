@@ -15,7 +15,8 @@ export {
     AppContext,
     Startup,
     StringResolver,
-    ConstantStringResolver
+    ConstantStringResolver,
+    HostingEnvironment
 } from "./src";
 
 String.empty = function (): string {

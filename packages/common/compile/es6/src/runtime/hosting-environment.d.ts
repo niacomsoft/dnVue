@@ -15,7 +15,7 @@ export declare class HostingEnvironment implements dnvue.IHostingEnvironment {
      * @memberof HostingEnvironment
      */
     constructor(envName?: string);
+    get isDevelopment(): boolean;
+    get isProduction(): boolean;
     is(envName: string): boolean;
-    readonly isDevelopment: boolean;
-    readonly isProduction: boolean;
 }

@@ -163,7 +163,7 @@ declare namespace dnvue {
          * @type {boolean}
          * @memberof IHostingEnvironment
          */
-        readonly isDevelopment: boolean;
+        get isDevelopment(): boolean;
 
         /**
          * 获取一个值，用于表示是否为生产环境。
@@ -171,7 +171,7 @@ declare namespace dnvue {
          * @type {boolean}
          * @memberof IHostingEnvironment
          */
-        readonly isProduction: boolean;
+        get isProduction(): boolean;
     }
 
     /**

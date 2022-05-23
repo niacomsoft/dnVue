@@ -18,9 +18,13 @@ export class HostingEnvironment {
      */
     constructor(envName) {
         var _a;
-        this.isDevelopment = this.is("development");
-        this.isProduction = this.is("production");
         this.environmentName = Object.safeGet(envName, (_a = process === null || process === void 0 ? void 0 : process.env.NODE_ENV) !== null && _a !== void 0 ? _a : "production");
+    }
+    get isDevelopment() {
+        return this.is("development");
+    }
+    get isProduction() {
+        return this.is("production");
     }
     is(envName) {
         return this.environmentName.toLowerCase() === envName.toLowerCase();

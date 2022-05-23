@@ -19,3 +19,4 @@ export {
     StringResolver,
     ConstantStringResolver,
 } from "./utilities";
+export { HostingEnvironment } from "./runtime";

@@ -268,5 +268,32 @@ declare namespace dnvue {
              */
             computeHash(s: string): string;
         }
+
+        /**
+         * 定义了加密、解密的接口。
+         *
+         * @interface ICryptoAlgorithm
+         */
+        interface ICryptoAlgorithm {
+            /**
+             * 加密字符串。
+             *
+             * @param {string} plainText 需要加密的明文。
+             * @param {string} [secureKey] 密钥。
+             * @returns {string}
+             * @memberof ICryptoAlgorithm
+             */
+            encrypt(plainText: string, secureKey?: string): string;
+
+            /**
+             * 解密字符串。
+             *
+             * @param {string} secureText 需要解密的秘文。
+             * @param {string} [secureKey] 密钥。
+             * @returns {string}
+             * @memberof ICryptoAlgorithm
+             */
+            decrypt(secureText: string, secureKey?: string): string;
+        }
     }
 }

@@ -12,4 +12,7 @@ export {
     SHA512AlgorithmProvider,
     SHA3AlgorithmProvider,
     RIPEMD160AlgorithmProvider,
+    CryptoAlgorithm,
+    DESCryptoAlgorithm,
+    AESCryptoAlgorithm
 } from "./src";

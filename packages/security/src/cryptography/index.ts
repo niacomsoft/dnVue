@@ -12,3 +12,9 @@ export {
     SHA3AlgorithmProvider,
     RIPEMD160AlgorithmProvider
 } from "./hash-algorithm";
+
+export {
+    CryptoAlgorithm,
+    DESCryptoAlgorithm,
+    AESCryptoAlgorithm
+} from "./crypto-algorithm";

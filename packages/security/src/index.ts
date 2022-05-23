@@ -11,5 +11,8 @@ export {
     SHA256AlgorithmProvider,
     SHA512AlgorithmProvider,
     SHA3AlgorithmProvider,
-    RIPEMD160AlgorithmProvider
+    RIPEMD160AlgorithmProvider,
+    CryptoAlgorithm,
+    DESCryptoAlgorithm,
+    AESCryptoAlgorithm
 } from "./cryptography";

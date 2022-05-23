@@ -40,7 +40,7 @@ const props = defineProps({
    * 设置或获取一个值，用于表示激活的应用快捷方式索引数值。
    */
   activedAppShortcutIndex: {
-    type: Boolean,
+    type: Number,
     default: 0,
   },
 });

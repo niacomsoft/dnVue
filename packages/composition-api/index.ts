@@ -9,5 +9,6 @@ export {
     configureDnvue,
     useDefaultResolver,
     useSafeNumber,
-    computeHash
+    computeHash,
+    useAppContext
 } from "./src";

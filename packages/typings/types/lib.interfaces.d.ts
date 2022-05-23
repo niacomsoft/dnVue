@@ -135,6 +135,46 @@ declare namespace dnvue {
     }
 
     /**
+     * 定义了访问主机环境信息的接口。
+     *
+     * @interface IHostingEnvironment
+     */
+    interface IHostingEnvironment {
+        /**
+         * 获取一个字符串，用于表示。
+         *
+         * @type {string}
+         * @memberof IHostingEnvironment
+         */
+        readonly environmentName: string;
+
+        /**
+         * 用于校验当前的环境是否等于指定的环境名称。
+         *
+         * @param {string} envName 环境名称。
+         * @returns {boolean}
+         * @memberof IHostingEnvironment
+         */
+        is(envName: string): boolean;
+
+        /**
+         * 获取一个值，用于表示是否为开发环境。
+         *
+         * @type {boolean}
+         * @memberof IHostingEnvironment
+         */
+        get isDevelopment(): boolean;
+
+        /**
+         * 获取一个值，用于表示是否为生产环境。
+         *
+         * @type {boolean}
+         * @memberof IHostingEnvironment
+         */
+        get isProduction(): boolean;
+    }
+
+    /**
      * 定义了应用上下文的接口。
      *
      * @interface IAppContext
@@ -184,5 +224,76 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setDefaultResolver(resolver?: IStringResolver): IAppContext;
+
+        /**
+         * 设置默认的安全自然数哈希字符串最小长度。
+         *
+         * @param {number} [minLength] 最小长度。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setDefaultSafeNumberMinLength(minLength?: number): IAppContext;
+
+        /**
+         * 设置主机环境信息。
+         *
+         * @param {IHostingEnvironment} env 主机环境信息。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setEnvironment(env: IHostingEnvironment): IAppContext;
+
+        /**
+         * 获取 IHostingEnvironment 类型的对象实例，用于表示当前的主机环境信息。
+         *
+         * @type {IHostingEnvironment}
+         * @memberof IAppContext
+         */
+        get environment(): IHostingEnvironment;
+    }
+
+    namespace security {
+        /**
+         * 定义了哈希算法相关的接口。
+         *
+         * @interface IHashAlgorithm
+         */
+        interface IHashAlgorithm {
+            /**
+             * 计算字符串 s 等效的哈希值。
+             *
+             * @param {string} s 原始字符串。
+             * @returns {string}
+             * @memberof IHashAlgorithm
+             */
+            computeHash(s: string): string;
+        }
+
+        /**
+         * 定义了加密、解密的接口。
+         *
+         * @interface ICryptoAlgorithm
+         */
+        interface ICryptoAlgorithm {
+            /**
+             * 加密字符串。
+             *
+             * @param {string} plainText 需要加密的明文。
+             * @param {string} [secureKey] 密钥。
+             * @returns {string}
+             * @memberof ICryptoAlgorithm
+             */
+            encrypt(plainText: string, secureKey?: string): string;
+
+            /**
+             * 解密字符串。
+             *
+             * @param {string} secureText 需要解密的秘文。
+             * @param {string} [secureKey] 密钥。
+             * @returns {string}
+             * @memberof ICryptoAlgorithm
+             */
+            decrypt(secureText: string, secureKey?: string): string;
+        }
     }
 }

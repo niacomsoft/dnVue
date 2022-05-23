@@ -47,12 +47,12 @@ declare global {
         DEFAULT_STRING_RESOLVER: dnvue.IStringResolver;
 
         /**
-         * 默认的文化区域管理程序。
+         * 默认的安全自然数哈希字符串最小长度。
          *
-         * @type {dnvue.ICulutureInfoManager}
+         * @type {number}
          * @memberof Window
          */
-        DEFAULT_CULTURE_MANAGER: dnvue.ICulutureInfoManager;
+        DEFAULT_SAFE_NUMBER_MINLENGTH?: number;
 
         /**
          * 单例管理工具。
@@ -101,5 +101,57 @@ declare global {
          * @memberof ObjectConstructor
          */
         safeGet<T>(value: T | null | undefined, safeValue: T): T;
+    }
+
+    interface NumberConstructor {
+        /**
+         * 校验 value 是否与 comparableValue 相等。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        equals(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否大于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        greatThan(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否大于等于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        greatOrEquals(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否小于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        lessThan(value: number, comparableValue?: number): boolean;
+
+        /**
+         * 校验 value 是否小于等于 comparableValue。
+         *
+         * @param {number} value 数值。
+         * @param {number} [comparableValue=0] 需要对比的值。
+         * @returns {boolean}
+         * @memberof NumberConstructor
+         */
+        lessOrEquals(value: number, comparableValue?: number): boolean;
     }
 }

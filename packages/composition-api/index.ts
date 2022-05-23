@@ -7,5 +7,8 @@ export {
     useLogger,
     useDefaultLogWriter,
     configureDnvue,
-    useDefaultResolver
+    useDefaultResolver,
+    useSafeNumber,
+    computeHash,
+    useAppContext
 } from "./src";

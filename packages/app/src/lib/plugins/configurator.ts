@@ -3,7 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { Startup, ColoredConsoleLogWriterFactory } from "@dnvue/common";
+import { Startup, ColoredConsoleLogWriterFactory, HostingEnvironment } from "@dnvue/common";
 import { App } from "vue";
 
 /**
@@ -15,6 +15,7 @@ import { App } from "vue";
 export function configureApplication(app: App): void {
     Startup.configure(ctx => {
         ctx.setDefaultLogWriter(new ColoredConsoleLogWriterFactory().create())
-            .setDefaultLogger();
+            .setDefaultLogger()
+            .setEnvironment(new HostingEnvironment(import.meta.env.NODE_ENV));
     });
 }

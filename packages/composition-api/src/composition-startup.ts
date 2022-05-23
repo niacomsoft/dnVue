@@ -3,7 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { Startup } from "@dnvue/common";
+import { AppContext, SingletonManager, Startup } from "@dnvue/common";
 
 /**
  * 配置 dnVue 应用。
@@ -13,4 +13,14 @@ import { Startup } from "@dnvue/common";
  */
 export function configureDnvue(config?: dnvue.ParameterizedAction<dnvue.IAppContext>): void {
     Startup.configure(config);
+}
+
+/**
+ * 使用应用上下文。
+ *
+ * @export
+ * @returns {dnvue.IAppContext}
+ */
+export function useAppContext(): dnvue.IAppContext {
+    return SingletonManager.createOrGet<dnvue.IAppContext>("__DNVUE_APP_CONTEXT__", () => { return new AppContext(); });
 }

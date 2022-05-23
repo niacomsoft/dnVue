@@ -3,6 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 import { Logger } from "./logging";
+import { HostingEnvironment } from "./runtime";
 /**
  * 提供了管理应用上下文相关的方法。
  *
@@ -11,6 +12,25 @@ import { Logger } from "./logging";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext {
+    /**
+     * 用于初始化一个 AppContext 类型的对象实例。
+     *
+     * @memberof AppContext
+     */
+    constructor() {
+        this._environment = new HostingEnvironment();
+    }
+    get environment() {
+        return this._environment;
+    }
+    setEnvironment(env) {
+        this._environment = env;
+        return this;
+    }
+    setDefaultSafeNumberMinLength(minLength) {
+        window.DEFAULT_SAFE_NUMBER_MINLENGTH = minLength;
+        return this;
+    }
     setDefaultResolver(resolver) {
         if (resolver)
             window.DEFAULT_STRING_RESOLVER = resolver;

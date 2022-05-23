@@ -7,6 +7,16 @@
  * @implements {dnvue.IAppContext}
  */
 export declare class AppContext implements dnvue.IAppContext {
+    private _environment;
+    /**
+     * 用于初始化一个 AppContext 类型的对象实例。
+     *
+     * @memberof AppContext
+     */
+    constructor();
+    get environment(): dnvue.IHostingEnvironment;
+    setEnvironment(env: dnvue.IHostingEnvironment): dnvue.IAppContext;
+    setDefaultSafeNumberMinLength(minLength?: number | undefined): dnvue.IAppContext;
     setDefaultResolver(resolver?: dnvue.IStringResolver | undefined): dnvue.IAppContext;
     setDefaultLogger(logger?: dnvue.ILogger | undefined): dnvue.IAppContext;
     setDefaultLogWriter(writer?: dnvue.ILogWriter | undefined): dnvue.IAppContext;

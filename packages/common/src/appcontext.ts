@@ -4,6 +4,7 @@
 // **************************************************************************************************************************
 
 import { Logger } from "./logging";
+import { HostingEnvironment } from "./runtime";
 import { SingletonManager } from "./singleton-manager";
 
 /**
@@ -14,6 +15,25 @@ import { SingletonManager } from "./singleton-manager";
  * @implements {dnvue.IAppContext}
  */
 export class AppContext implements dnvue.IAppContext {
+    private _environment: dnvue.IHostingEnvironment;
+
+    /**
+     * 用于初始化一个 AppContext 类型的对象实例。
+     * 
+     * @memberof AppContext
+     */
+    constructor() {
+        this._environment = new HostingEnvironment();
+    }
+    get environment(): dnvue.IHostingEnvironment {
+        return this._environment;
+    }
+
+    setEnvironment(env: dnvue.IHostingEnvironment): dnvue.IAppContext {
+        this._environment = env;
+        return this;
+    }
+
     setDefaultSafeNumberMinLength(minLength?: number | undefined): dnvue.IAppContext {
         window.DEFAULT_SAFE_NUMBER_MINLENGTH = minLength;
 

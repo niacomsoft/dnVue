@@ -135,6 +135,46 @@ declare namespace dnvue {
     }
 
     /**
+     * 定义了访问主机环境信息的接口。
+     *
+     * @interface IHostingEnvironment
+     */
+    interface IHostingEnvironment {
+        /**
+         * 获取一个字符串，用于表示。
+         *
+         * @type {string}
+         * @memberof IHostingEnvironment
+         */
+        readonly environmentName: string;
+
+        /**
+         * 用于校验当前的环境是否等于指定的环境名称。
+         *
+         * @param {string} envName 环境名称。
+         * @returns {boolean}
+         * @memberof IHostingEnvironment
+         */
+        is(envName: string): boolean;
+
+        /**
+         * 获取一个值，用于表示是否为开发环境。
+         *
+         * @type {boolean}
+         * @memberof IHostingEnvironment
+         */
+        readonly isDevelopment: boolean;
+
+        /**
+         * 获取一个值，用于表示是否为生产环境。
+         *
+         * @type {boolean}
+         * @memberof IHostingEnvironment
+         */
+        readonly isProduction: boolean;
+    }
+
+    /**
      * 定义了应用上下文的接口。
      *
      * @interface IAppContext
@@ -193,6 +233,23 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setDefaultSafeNumberMinLength(minLength?: number): IAppContext;
+
+        /**
+         * 设置主机环境信息。
+         *
+         * @param {IHostingEnvironment} env 主机环境信息。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setEnvironment(env: IHostingEnvironment): IAppContext;
+
+        /**
+         * 获取 IHostingEnvironment 类型的对象实例，用于表示当前的主机环境信息。
+         *
+         * @type {IHostingEnvironment}
+         * @memberof IAppContext
+         */
+        get environment(): IHostingEnvironment;
     }
 
     namespace security {

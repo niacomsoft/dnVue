@@ -93,4 +93,29 @@ declare namespace dnvue {
          */
         error?: string;
     }
+
+    namespace caching {
+        /**
+         * 定义了缓存项数据结构。
+         *
+         * @interface CacheItem
+         */
+        interface CacheItem {
+            /**
+             * 获取一个字符串，用于表示缓存标识名称。
+             *
+             * @type {string}
+             * @memberof CacheItem
+             */
+            readonly key: string;
+
+            /**
+             * 获取 any 类型的对象实例或值，用于表示需要缓存的数据。
+             *
+             * @type {*}
+             * @memberof CacheItem
+             */
+            data?: any;
+        }
+    }
 }

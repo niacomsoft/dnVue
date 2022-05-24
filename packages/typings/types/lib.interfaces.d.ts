@@ -305,4 +305,48 @@ declare namespace dnvue {
             decrypt(secureText: string, secureKey?: string): string;
         }
     }
+
+    namespace caching {
+        /**
+         * 定义了缓存相关的接口。
+         *
+         * @interface ICache
+         */
+        interface ICache {
+            /**
+             * 添加或更新需要缓存的数据。
+             *
+             * @param {string} key 缓存标识。
+             * @param {*} [data] 需要缓存的数据。
+             * @param {boolean} [secureStorage] 是否需要加密存储。
+             * @memberof ICache
+             */
+            update(key: string, data?: any, secureStorage?: boolean): void;
+
+            /**
+             * 获取指定标识名称的缓存项。
+             *
+             * @template T
+             * @param {string} key 缓存标识。
+             * @returns {*}  {(T | undefined | null)} 缓存数据。
+             * @memberof ICache
+             */
+            get<T>(key: string): T | undefined | null;
+
+            /**
+             * 删除指定标识名称的缓存数据。
+             *
+             * @param {string} key 缓存标识。
+             * @memberof ICache
+             */
+            remove(key: string): void;
+
+            /**
+             * 清空所有的缓存数据。
+             *
+             * @memberof ICache
+             */
+            clear(): void;
+        }
+    }
 }

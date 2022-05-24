@@ -14,5 +14,6 @@ export {
     RIPEMD160AlgorithmProvider,
     CryptoAlgorithm,
     DESCryptoAlgorithm,
-    AESCryptoAlgorithm
+    AESCryptoAlgorithm,
+    getFingerprintAsync
 } from "./src";

@@ -16,3 +16,4 @@ export {
     DESCryptoAlgorithm,
     AESCryptoAlgorithm
 } from "./cryptography";
+export { getFingerprintAsync } from "./fingerprint";

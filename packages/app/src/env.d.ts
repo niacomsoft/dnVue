@@ -36,6 +36,14 @@ interface ImportMetaEnv extends PrivateImportMetaEnv {
    * @memberof ImportMetaEnv
    */
   DNVUE_DEFAULT_CULTURE_NAME?: string;
+
+  /**
+   * 设置或获取一个字符串，用于表示加密算法密钥。
+   *
+   * @type {string}
+   * @memberof ImportMetaEnv
+   */
+  DNVUE_CRYPTOALGORITHM_SECUREKEY: string;
 }
 
 /**

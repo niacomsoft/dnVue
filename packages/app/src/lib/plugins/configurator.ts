@@ -16,6 +16,7 @@ export function configureApplication(app: App): void {
     Startup.configure(ctx => {
         ctx.setDefaultLogWriter(new ColoredConsoleLogWriterFactory().create())
             .setDefaultLogger()
-            .setEnvironment(new HostingEnvironment(import.meta.env.NODE_ENV));
+            .setEnvironment(new HostingEnvironment(import.meta.env.NODE_ENV))
+            .setCryptoAlgorithmSecureKey(import.meta.env.DNVUE_CRYPTOALGORITHM_SECUREKEY);
     });
 }

@@ -18,3 +18,4 @@
 |**[crypto-js](https://www.npmjs.com/package/crypto-js)** & **[@types/crypto-js](https://www.npmjs.com/package/@types/crypto-js)**|
 |**[@fingerprintjs/fingerprintjs](https://www.npmjs.com/package/@fingerprintjs/fingerprintjs)**|
 |**[hashids](https://www.npmjs.com/package/hashids)**|
+|**[store2](https://www.npmjs.com/package/store2)**|

@@ -1,0 +1,43 @@
+{
+  "name": "@dnvue/caching",
+  "version": "1.0.0",
+  "description": "dnVue caching library.",
+  "main": "compile/es6/index.js",
+  "types": "compile/es6/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "compile": "tsc -p tsconfig.es6.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "local-storage",
+    "session-storage",
+    "caching"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "dependencies": {
+    "@dnvue/common": "^1.0.0",
+    "@dnvue/security": "^1.0.0",
+    "@dnvue/typings": "^1.0.0",
+    "store2": "^2.13.2"
+  },
+  "files": [
+    "LICENSE",
+    "index.ts",
+    "src/**/*.ts",
+    "compile/**/*.js",
+    "compile/**/*.d.ts"
+  ]
+}

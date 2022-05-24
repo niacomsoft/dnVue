@@ -20,6 +20,10 @@ export class AppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
+    setSecureStorage(secureStorage) {
+        window.DEFAULT_SECURE_STORAGE = Object.safeGet(secureStorage, true);
+        return this;
+    }
     setCryptoAlgorithmSecureKey(secureKey) {
         window.DEFAULT_CRYPTO_SECURE_KEY = secureKey;
         return this;

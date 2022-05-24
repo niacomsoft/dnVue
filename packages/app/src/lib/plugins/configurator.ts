@@ -17,6 +17,7 @@ export function configureApplication(app: App): void {
         ctx.setDefaultLogWriter(new ColoredConsoleLogWriterFactory().create())
             .setDefaultLogger()
             .setEnvironment(new HostingEnvironment(import.meta.env.NODE_ENV))
-            .setCryptoAlgorithmSecureKey(import.meta.env.DNVUE_CRYPTOALGORITHM_SECUREKEY);
+            .setCryptoAlgorithmSecureKey(import.meta.env.DNVUE_CRYPTOALGORITHM_SECUREKEY)
+            .setSecureStorage(ctx.environment.isProduction);
     });
 }

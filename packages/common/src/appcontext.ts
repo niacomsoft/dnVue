@@ -25,7 +25,12 @@ export class AppContext implements dnvue.IAppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
-    
+    setSecureStorage(secureStorage?: boolean | undefined): dnvue.IAppContext {
+        window.DEFAULT_SECURE_STORAGE = Object.safeGet<boolean>(secureStorage, true);
+
+        return this;
+    }
+
     setCryptoAlgorithmSecureKey(secureKey: string): dnvue.IAppContext {
         window.DEFAULT_CRYPTO_SECURE_KEY = secureKey;
 

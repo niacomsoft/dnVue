@@ -63,6 +63,14 @@ declare global {
         DEFAULT_CRYPTO_SECURE_KEY?: string;
 
         /**
+         * 默认使用加密存储。
+         *
+         * @type {boolean}
+         * @memberof Window
+         */
+        DEFAULT_SECURE_STORAGE?: boolean;
+
+        /**
          * 单例管理工具。
          *
          * @type {Record<string, any>}

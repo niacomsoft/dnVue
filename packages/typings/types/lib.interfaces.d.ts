@@ -259,6 +259,15 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         setCryptoAlgorithmSecureKey(secureKey: string): IAppContext;
+
+        /**
+         * 设置启用加密存储。
+         * 
+         * @param {boolean} [secureStorage] 是否启用加密存储。
+         * @returns {IAppContext}
+         * @memberof IAppContent
+         */
+        setSecureStorage(secureStorage?: boolean): IAppContext;
     }
 
     namespace security {

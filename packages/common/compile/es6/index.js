@@ -30,3 +30,4 @@ Number.greatOrEquals = function (value, comparableValue) {
 Number.lessOrEquals = function (value, comparableValue) {
     return Number.lessThan(value, Object.safeGet(comparableValue, 0)) || Number.equals(value, Object.safeGet(comparableValue, 0));
 };
+window.DEFAULT_CRYPTO_SECURE_KEY = "Prlt7kAqvY4SQ8IwmsNXLUyuaM51F9di";

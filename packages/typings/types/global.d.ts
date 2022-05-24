@@ -55,6 +55,14 @@ declare global {
         DEFAULT_SAFE_NUMBER_MINLENGTH?: number;
 
         /**
+         * 默认加密密钥。
+         *
+         * @type {string}
+         * @memberof Window
+         */
+        DEFAULT_CRYPTO_SECURE_KEY?: string;
+
+        /**
          * 单例管理工具。
          *
          * @type {Record<string, any>}

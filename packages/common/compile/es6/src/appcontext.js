@@ -20,6 +20,10 @@ export class AppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
+    setCryptoAlgorithmSecureKey(secureKey) {
+        window.DEFAULT_CRYPTO_SECURE_KEY = secureKey;
+        return this;
+    }
     get environment() {
         return this._environment;
     }

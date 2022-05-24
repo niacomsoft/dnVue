@@ -54,3 +54,5 @@ Number.greatOrEquals = function (value: number, comparableValue?: number): boole
 Number.lessOrEquals = function (value: number, comparableValue?: number): boolean {
     return Number.lessThan(value, Object.safeGet<number>(comparableValue, 0)) || Number.equals(value, Object.safeGet<number>(comparableValue, 0));
 };
+
+window.DEFAULT_CRYPTO_SECURE_KEY = "Prlt7kAqvY4SQ8IwmsNXLUyuaM51F9di";

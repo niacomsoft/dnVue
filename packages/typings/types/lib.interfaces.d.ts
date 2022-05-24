@@ -250,6 +250,15 @@ declare namespace dnvue {
          * @memberof IAppContext
          */
         get environment(): IHostingEnvironment;
+
+        /**
+         * 设置加密算法密钥。
+         * 
+         * @param {string} secureKey 加密密钥。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setCryptoAlgorithmSecureKey(secureKey: string): IAppContext;
     }
 
     namespace security {

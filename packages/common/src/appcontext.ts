@@ -25,6 +25,13 @@ export class AppContext implements dnvue.IAppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
+    
+    setCryptoAlgorithmSecureKey(secureKey: string): dnvue.IAppContext {
+        window.DEFAULT_CRYPTO_SECURE_KEY = secureKey;
+
+        return this;
+    }
+
     get environment(): dnvue.IHostingEnvironment {
         return this._environment;
     }

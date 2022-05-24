@@ -14,6 +14,7 @@ export declare class AppContext implements dnvue.IAppContext {
      * @memberof AppContext
      */
     constructor();
+    setCryptoAlgorithmSecureKey(secureKey: string): dnvue.IAppContext;
     get environment(): dnvue.IHostingEnvironment;
     setEnvironment(env: dnvue.IHostingEnvironment): dnvue.IAppContext;
     setDefaultSafeNumberMinLength(minLength?: number | undefined): dnvue.IAppContext;

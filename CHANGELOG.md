@@ -1,4 +1,34 @@
 # CHANGELOG
+## [1.0.0-alpha.13](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2022-05-24)
+
+
+### REFACTOR
+
+* **Issue #2 #9:** 重构了 IHashAlgorithm 哈希算法接口。 ([018c76b](https://github.com/niacomsoft/dnVue/commit/018c76b2d9eb1142cc286602ebe9348b7ecb82fe)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#9](https://github.com/niacomsoft/dnVue/issues/9)
+* **Issue #5 #9:** 重构了 computeHash 组合式 API。 ([42b4304](https://github.com/niacomsoft/dnVue/commit/42b4304a1e72444365623f770a7b37ff1511a72b)), closes [#5](https://github.com/niacomsoft/dnVue/issues/5) [#9](https://github.com/niacomsoft/dnVue/issues/9)
+
+
+### BUG FIXED
+
+* **Issue #1:** 调整了 vite.config.ts 中获取 {mode} 参数的错误。 ([4d92af4](https://github.com/niacomsoft/dnVue/commit/4d92af4fd7fd7fd4feeeed45da9982888ab99928)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #1:** 修改了属性 activedAppShortcutIndex 类型为 Number。 ([6d1e1f0](https://github.com/niacomsoft/dnVue/commit/6d1e1f0c5b8ea5bccde13c6fc154b10dce33ba40)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### BUILD
+
+* 添加依赖。 ([1adb3a7](https://github.com/niacomsoft/dnVue/commit/1adb3a77eae79de4b3ca93d228cc188bb50bdc74))
+
+
+### NEW FEATURE
+
+* **Issue #1:** 新增加密密钥配置。 ([6a1a51d](https://github.com/niacomsoft/dnVue/commit/6a1a51d28978bd01243cf94f54686f565f178e30)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #3:** 新增默认加密算法密钥配置。 ([96e4494](https://github.com/niacomsoft/dnVue/commit/96e44947ba1395e1b41fcfefb51483a51be65278)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3)
+* **Issue #3:** 新增主机环境信息的方法。 ([cca4f1f](https://github.com/niacomsoft/dnVue/commit/cca4f1f46fd17a7943d33ddd9c2f176580f689b1)), closes [#3](https://github.com/niacomsoft/dnVue/issues/3)
+* **Issue #5:** 新增 AppContext 相关的组合式 API。 ([069c1fc](https://github.com/niacomsoft/dnVue/commit/069c1fc5973dba429714ff03eada48429ec5fe8a)), closes [#5](https://github.com/niacomsoft/dnVue/issues/5)
+* **Issue #9 #3:** 新增加密、解密算法。 ([5171f22](https://github.com/niacomsoft/dnVue/commit/5171f2290d718ec4b0d896d14463084e22603fb9)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9) [#3](https://github.com/niacomsoft/dnVue/issues/3)
+* **Issue #9 #5:** 新增 useCrypto 组合式 API。 ([db65463](https://github.com/niacomsoft/dnVue/commit/db654639b2bef18190733b11c0d01a410845e0ec)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9) [#5](https://github.com/niacomsoft/dnVue/issues/5)
+* **Issue #9:** 新增 getFingerprintAsync 方法。 ([f5d9bd8](https://github.com/niacomsoft/dnVue/commit/f5d9bd88a892235686ffe7b13db7aefc85255baa)), closes [#9](https://github.com/niacomsoft/dnVue/issues/9)
+
 ## [1.0.0-alpha.12](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2022-05-21)
 
 

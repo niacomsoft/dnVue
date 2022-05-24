@@ -11,7 +11,9 @@ import {
     SHA256AlgorithmProvider,
     SHA512AlgorithmProvider,
     SHA3AlgorithmProvider,
-    RIPEMD160AlgorithmProvider
+    RIPEMD160AlgorithmProvider,
+    AESCryptoAlgorithm,
+    DESCryptoAlgorithm
 } from "@dnvue/security";
 
 /**
@@ -66,4 +68,24 @@ export function computeHash(s: string, algName: ("md5" | "sha1" | "sha256" | "sh
     }
 
     return hashStr;
+}
+
+/**
+ * 使用加密算法。
+ *
+ * @export
+ * @param {(("des" | "aes"))} [algName="aes"] 加密算法名称。
+ * @returns {dnvue.security.ICryptoAlgorithm}
+ */
+export function useCrypto(algName: ("des" | "aes") = "aes"): dnvue.security.ICryptoAlgorithm {
+    let alg: dnvue.security.ICryptoAlgorithm;
+    switch (algName) {
+        case "des":
+            alg = SingletonManager.createOrGet<DESCryptoAlgorithm>("__DNVUE_DES_CRYPTO_ALGORITHM__", () => new DESCryptoAlgorithm(window.DEFAULT_CRYPTO_SECURE_KEY ?? ""));
+            break;
+        default:
+            alg = SingletonManager.createOrGet<AESCryptoAlgorithm>("__DNVUE_AES_CRYPTO_ALGORITHM__", () => new AESCryptoAlgorithm(window.DEFAULT_CRYPTO_SECURE_KEY ?? ""));
+            break;
+    }
+    return alg;
 }

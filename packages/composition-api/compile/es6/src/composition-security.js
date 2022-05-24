@@ -3,7 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 import { SingletonManager } from "@dnvue/common";
-import { SafeNumber, MD5AlgorithmProvider, SHA1AlgorithmProvider, SHA256AlgorithmProvider, SHA512AlgorithmProvider, SHA3AlgorithmProvider, RIPEMD160AlgorithmProvider } from "@dnvue/security";
+import { SafeNumber, MD5AlgorithmProvider, SHA1AlgorithmProvider, SHA256AlgorithmProvider, SHA512AlgorithmProvider, SHA3AlgorithmProvider, RIPEMD160AlgorithmProvider, AESCryptoAlgorithm, DESCryptoAlgorithm } from "@dnvue/security";
 /**
  * 使用安全自然数服务。
  *
@@ -53,4 +53,23 @@ export function computeHash(s, algName = "md5") {
             break;
     }
     return hashStr;
+}
+/**
+ * 使用加密算法。
+ *
+ * @export
+ * @param {(("des" | "aes"))} [algName="aes"] 加密算法名称。
+ * @returns {dnvue.security.ICryptoAlgorithm}
+ */
+export function useCrypto(algName = "aes") {
+    let alg;
+    switch (algName) {
+        case "des":
+            alg = SingletonManager.createOrGet("__DNVUE_DES_CRYPTO_ALGORITHM__", () => { var _a; return new DESCryptoAlgorithm((_a = window.DEFAULT_CRYPTO_SECURE_KEY) !== null && _a !== void 0 ? _a : ""); });
+            break;
+        default:
+            alg = SingletonManager.createOrGet("__DNVUE_AES_CRYPTO_ALGORITHM__", () => { var _a; return new AESCryptoAlgorithm((_a = window.DEFAULT_CRYPTO_SECURE_KEY) !== null && _a !== void 0 ? _a : ""); });
+            break;
+    }
+    return alg;
 }

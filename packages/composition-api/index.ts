@@ -10,5 +10,6 @@ export {
     useDefaultResolver,
     useSafeNumber,
     computeHash,
-    useAppContext
+    useAppContext,
+    useCrypto
 } from "./src";

@@ -13,7 +13,8 @@ export {
     useSafeNumber,
     computeHash,
     useAppContext,
-    useCrypto
+    useCrypto,
+    useCaching
 } from "./src";
 
 export { getFingerprintAsync };

@@ -35,6 +35,7 @@
     "compile/**/*.d.ts"
   ],
   "dependencies": {
+    "@dnvue/caching": "^1.0.0",
     "@dnvue/common": "^1.0.0",
     "@dnvue/security": "^1.0.0",
     "@dnvue/typings": "^1.0.0"

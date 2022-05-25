@@ -1,0 +1,33 @@
+{
+  "name": "@dnvue/http-core",
+  "version": "1.0.0",
+  "description": "dnVue http abstracton.",
+  "main": "compile/es6/index.js",
+  "types": "compile/es6/index.d.ts",
+  "devDependencies": {},
+  "scripts": {
+    "compile": "tsc -p tsconfig.es6.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "http"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "files": [
+    "LICENSE",
+    "index.ts",
+    "src/**/*.ts",
+    "compile/**/*.js",
+    "compile/**/*.d.ts"
+  ]
+}

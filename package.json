@@ -45,6 +45,7 @@
   },
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages\\http\\core"
   ]
 }

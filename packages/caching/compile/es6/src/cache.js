@@ -2,7 +2,18 @@
 // COPYRIGHT © 2006 - 2022 WANG YUCAI. ALL RIGHTS RESERVED.
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+import Store2 from "store2";
 import { AESCryptoAlgorithm, SHA1AlgorithmProvider } from "@dnvue/security";
+import { sealed } from "@dnvue/common";
 /**
  * 提供了缓存相关的方法。
  *
@@ -14,7 +25,7 @@ import { AESCryptoAlgorithm, SHA1AlgorithmProvider } from "@dnvue/security";
 export class Cache {
     constructor() {
         /**
-         * 获取 Record 类型的对象实例，用于表示缓存数据清单。
+         * 设置或获取 Record 类型的对象实例，用于表示缓存数据清单。
          *
          * @protected
          * @type {Record<string, _InternalCacheItem>}
@@ -90,23 +101,108 @@ export class StoreCache extends Cache {
     constructor(api) {
         super();
         this._storeApi = api;
+        this._manifest = Object.safeGet(api.get(this._MANIFEST_KEY), {});
     }
     update(key, data, secureStorage) {
         secureStorage = this.useSecureStorage(secureStorage);
-        if (!secureStorage)
+        if (!secureStorage) {
             this._storeApi.set(key, data, true);
+            key = this._getCacheKey(key, true);
+            if (this._manifest[key]) {
+                this._manifest[key].secureStorage = false;
+                this._manifest[key].isRemoved = true;
+                this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
+            }
+        }
         else {
-            key = this._getCacheKey(key, secureStorage);
-            const cachableData = { key, data };
+            this._storeApi.remove(key);
+            key = this._getCacheKey(key, true);
+            const cacheableData = { key, data };
+            const cacheableStr = this._crypto.encrypt(JSON.stringify(cacheableData));
+            this._storeApi.set(key, cacheableStr);
+            this._manifest[key] = { secureStorage: true, isRemoved: false, key };
+            this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
         }
     }
     get(key) {
-        throw new Error("Method not implemented.");
+        if (this._storeApi.has(key))
+            return this._storeApi.get(key);
+        else {
+            key = this._getCacheKey(key, true);
+            if (!this._storeApi.has(key))
+                return undefined;
+            else {
+                const cacheableStr = this._storeApi.get(key);
+                if (String.isNullOrWhitespace(cacheableStr))
+                    return undefined;
+                else {
+                    const plainText = this._crypto.decrypt(cacheableStr);
+                    return JSON.parse(plainText).data;
+                }
+            }
+        }
     }
     remove(key) {
-        throw new Error("Method not implemented.");
+        if (this._storeApi.has(key))
+            this._storeApi.remove(key);
+        key = this._getCacheKey(key, true);
+        if (this._storeApi.has(key)) {
+            this._storeApi.remove(key);
+            if (this._manifest[key]) {
+                this._manifest[key].isRemoved = true;
+                this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
+            }
+        }
     }
     clear() {
-        throw new Error("Method not implemented.");
+        this._storeApi.clear();
     }
 }
+/**
+ * 提供了基于会话存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class SessionStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+let SessionStoreCache = class SessionStoreCache extends StoreCache {
+    /**
+     * 用于初始化一个 SessionStoreCache 类型的对象实例。
+     *
+     * @memberof SessionStoreCache
+     */
+    constructor() {
+        super(Store2.session);
+    }
+};
+SessionStoreCache = __decorate([
+    sealed,
+    __metadata("design:paramtypes", [])
+], SessionStoreCache);
+export { SessionStoreCache };
+/**
+ * 提供了基于本地存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class LocalStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+let LocalStoreCache = class LocalStoreCache extends StoreCache {
+    /**
+     * 用于初始化一个 LocalStoreCache 类型的对象实例。
+     *
+     * @memberof LocalStoreCache
+     */
+    constructor() {
+        super(Store2.local);
+    }
+};
+LocalStoreCache = __decorate([
+    sealed,
+    __metadata("design:paramtypes", [])
+], LocalStoreCache);
+export { LocalStoreCache };

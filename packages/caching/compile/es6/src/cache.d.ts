@@ -19,13 +19,13 @@ declare type _InternalCacheItem = {
  */
 export declare abstract class Cache implements dnvue.caching.ICache {
     /**
-     * 获取 Record 类型的对象实例，用于表示缓存数据清单。
+     * 设置或获取 Record 类型的对象实例，用于表示缓存数据清单。
      *
      * @protected
      * @type {Record<string, _InternalCacheItem>}
      * @memberof Cache
      */
-    protected readonly _manifest: Record<string, _InternalCacheItem>;
+    protected _manifest: Record<string, _InternalCacheItem>;
     /**
      * 获取一个字符串，用于表示缓存清单内部标识。
      *
@@ -103,5 +103,39 @@ export declare abstract class StoreCache extends Cache implements dnvue.caching.
     get<T>(key: string): T | null | undefined;
     remove(key: string): void;
     clear(): void;
+}
+/**
+ * 提供了基于会话存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class SessionStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+export declare class SessionStoreCache extends StoreCache implements dnvue.caching.ICache {
+    /**
+     * 用于初始化一个 SessionStoreCache 类型的对象实例。
+     *
+     * @memberof SessionStoreCache
+     */
+    constructor();
+}
+/**
+ * 提供了基于本地存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class LocalStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+export declare class LocalStoreCache extends StoreCache implements dnvue.caching.ICache {
+    /**
+     * 用于初始化一个 LocalStoreCache 类型的对象实例。
+     *
+     * @memberof LocalStoreCache
+     */
+    constructor();
 }
 export {};

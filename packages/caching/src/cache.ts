@@ -5,6 +5,7 @@
 
 import Store2, { StoreAPI } from "store2";
 import { AESCryptoAlgorithm, SHA1AlgorithmProvider } from "@dnvue/security";
+import { sealed } from "@dnvue/common";
 
 /**
  * 内部缓存项数据类型定义。
@@ -21,13 +22,13 @@ type _InternalCacheItem = { secureStorage: boolean; isRemoved: boolean; key: str
  */
 export abstract class Cache implements dnvue.caching.ICache {
     /**
-     * 获取 Record 类型的对象实例，用于表示缓存数据清单。
+     * 设置或获取 Record 类型的对象实例，用于表示缓存数据清单。
      *
      * @protected
      * @type {Record<string, _InternalCacheItem>}
      * @memberof Cache
      */
-    protected readonly _manifest: Record<string, _InternalCacheItem> = {};
+    protected _manifest: Record<string, _InternalCacheItem> = {};
 
     /**
      * 获取一个字符串，用于表示缓存清单内部标识。
@@ -115,24 +116,99 @@ export abstract class StoreCache extends Cache implements dnvue.caching.ICache {
     constructor(api: StoreAPI) {
         super();
         this._storeApi = api;
+        this._manifest = Object.safeGet<Record<string, _InternalCacheItem>>(api.get(this._MANIFEST_KEY), {});
     }
 
     update(key: string, data?: any, secureStorage?: boolean | undefined): void {
         secureStorage = this.useSecureStorage(secureStorage);
-        if (!secureStorage)
+        if (!secureStorage) {
             this._storeApi.set(key, data, true);
+            key = this._getCacheKey(key, true);
+            if (this._manifest[key]) {
+                this._manifest[key].secureStorage = false;
+                this._manifest[key].isRemoved = true;
+                this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
+            }
+        }
         else {
-            key = this._getCacheKey(key, secureStorage);
-            const cachableData: dnvue.caching.CacheItem = { key, data };
+            this._storeApi.remove(key);
+            key = this._getCacheKey(key, true);
+            const cacheableData: dnvue.caching.CacheItem = { key, data };
+            const cacheableStr: string = this._crypto.encrypt(JSON.stringify(cacheableData));
+            this._storeApi.set(key, cacheableStr);
+            this._manifest[key] = { secureStorage: true, isRemoved: false, key };
+            this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
         }
     }
     get<T>(key: string): T | null | undefined {
-        throw new Error("Method not implemented.");
+        if (this._storeApi.has(key)) return this._storeApi.get(key) as T;
+        else {
+            key = this._getCacheKey(key, true);
+            if (!this._storeApi.has(key)) return undefined;
+            else {
+                const cacheableStr: string = this._storeApi.get(key) as string;
+                if (String.isNullOrWhitespace(cacheableStr)) return undefined;
+                else {
+                    const plainText: string = this._crypto.decrypt(cacheableStr);
+                    return (JSON.parse(plainText) as dnvue.caching.CacheItem).data as T;
+                }
+            }
+        }
     }
     remove(key: string): void {
-        throw new Error("Method not implemented.");
+        if (this._storeApi.has(key)) this._storeApi.remove(key);
+        key = this._getCacheKey(key, true);
+        if (this._storeApi.has(key)) {
+            this._storeApi.remove(key);
+            if (this._manifest[key]) {
+                this._manifest[key].isRemoved = true;
+                this._storeApi.set(this._MANIFEST_KEY, this._manifest, true);
+            }
+        }
     }
     clear(): void {
-        throw new Error("Method not implemented.");
+        this._storeApi.clear();
+    }
+}
+
+/**
+ * 提供了基于会话存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class SessionStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+@sealed
+export class SessionStoreCache extends StoreCache implements dnvue.caching.ICache {
+    /**
+     * 用于初始化一个 SessionStoreCache 类型的对象实例。
+     * 
+     * @memberof SessionStoreCache
+     */
+    constructor() {
+        super(Store2.session);
+    }
+}
+
+/**
+ * 提供了基于本地存储相关的缓存方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class LocalStoreCache
+ * @extends {StoreCache}
+ * @implements {dnvue.caching.ICache}
+ * @sealed
+ */
+@sealed
+export class LocalStoreCache extends StoreCache implements dnvue.caching.ICache {
+    /**
+     * 用于初始化一个 LocalStoreCache 类型的对象实例。
+     * 
+     * @memberof LocalStoreCache
+     */
+    constructor() {
+        super(Store2.local);
     }
 }

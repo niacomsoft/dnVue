@@ -9,5 +9,8 @@ export {
     HttpResponseBase,
     VoidResponse,
     ResultResponse,
-    FailedResponse
+    FailedResponse,
+    HttpConfiguration,
+    IHttpConfigurationBuilder,
+    HttpConfigurationBuilder
 } from "./src";

@@ -268,6 +268,15 @@ declare namespace dnvue {
          * @memberof IAppContent
          */
         setSecureStorage(secureStorage?: boolean): IAppContext;
+
+        /**
+         * 设置 HTTP 请求基础 URL 地址。
+         * 
+         * @param {string} [baseUrl] 基础 URL 地址。
+         * @returns {IAppContext}
+         * @memberof IAppContext
+         */
+        setHttpBaseUrl(baseUrl?: string): IAppContext;
     }
 
     namespace security {

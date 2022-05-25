@@ -71,6 +71,14 @@ declare global {
         DEFAULT_SECURE_STORAGE?: boolean;
 
         /**
+         * 默认 HTTP 请求基础 URL 地址。
+         *
+         * @type {string}
+         * @memberof Window
+         */
+        DEFAULT_HTTP_BASE_URL?: string;
+
+        /**
          * 单例管理工具。
          *
          * @type {Record<string, any>}

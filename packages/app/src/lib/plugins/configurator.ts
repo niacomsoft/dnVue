@@ -18,6 +18,7 @@ export function configureApplication(app: App): void {
             .setDefaultLogger()
             .setEnvironment(new HostingEnvironment(import.meta.env.NODE_ENV))
             .setCryptoAlgorithmSecureKey(import.meta.env.DNVUE_CRYPTOALGORITHM_SECUREKEY)
-            .setSecureStorage(ctx.environment.isProduction);
+            .setSecureStorage(ctx.environment.isProduction)
+            .setHttpBaseUrl(import.meta.env.PRIVATE_API_BASEURL);
     });
 }

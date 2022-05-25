@@ -20,6 +20,10 @@ export class AppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
+    setHttpBaseUrl(baseUrl) {
+        window.DEFAULT_HTTP_BASE_URL = Object.safeGet(baseUrl, "./");
+        return this;
+    }
     setSecureStorage(secureStorage) {
         window.DEFAULT_SECURE_STORAGE = Object.safeGet(secureStorage, true);
         return this;

@@ -25,6 +25,11 @@ export class AppContext implements dnvue.IAppContext {
     constructor() {
         this._environment = new HostingEnvironment();
     }
+    setHttpBaseUrl(baseUrl?: string | undefined): dnvue.IAppContext {
+        window.DEFAULT_HTTP_BASE_URL = Object.safeGet<string>(baseUrl, "./");
+
+        return this;
+    }
     setSecureStorage(secureStorage?: boolean | undefined): dnvue.IAppContext {
         window.DEFAULT_SECURE_STORAGE = Object.safeGet<boolean>(secureStorage, true);
 

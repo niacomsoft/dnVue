@@ -14,6 +14,7 @@ export declare class AppContext implements dnvue.IAppContext {
      * @memberof AppContext
      */
     constructor();
+    setHttpBaseUrl(baseUrl?: string | undefined): dnvue.IAppContext;
     setSecureStorage(secureStorage?: boolean | undefined): dnvue.IAppContext;
     setCryptoAlgorithmSecureKey(secureKey: string): dnvue.IAppContext;
     get environment(): dnvue.IHostingEnvironment;

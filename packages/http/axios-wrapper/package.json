@@ -1,7 +1,7 @@
 {
-  "name": "@dnvue/http-core",
-  "version": "1.0.1",
-  "description": "dnVue http abstracton.",
+  "name": "@dnvue/http-axios",
+  "version": "1.0.0",
+  "description": "dnVue http use axios.",
   "main": "compile/es6/index.js",
   "types": "compile/es6/index.d.ts",
   "devDependencies": {
@@ -17,7 +17,8 @@
   "keywords": [
     "typescript",
     "javascript",
-    "http"
+    "http",
+    "axios"
   ],
   "author": "Wang Yucai",
   "license": "MIT",
@@ -25,15 +26,17 @@
     "url": "https://github.com/niacomsoft/dnVue/issues"
   },
   "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "dependencies": {
+    "@dnvue/common": "^1.0.0",
+    "@dnvue/http-core": "^1.0.0",
+    "@dnvue/typings": "^1.0.0",
+    "axios": "^0.27.2"
+  },
   "files": [
     "LICENSE",
     "index.ts",
     "src/**/*.ts",
     "compile/**/*.js",
     "compile/**/*.d.ts"
-  ],
-  "dependencies": {
-    "@dnvue/common": "^1.0.0",
-    "@dnvue/typings": "^1.0.0"
-  }
+  ]
 }

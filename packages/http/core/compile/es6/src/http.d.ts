@@ -1,4 +1,5 @@
 /// <reference types="@dnvue/typings" />
+import { HttpMethod } from "./http-method";
 import { HttpStatusCode } from "./http-statuscode";
 /**
  * 定义了 HTTP 响应基本信息。
@@ -218,22 +219,24 @@ export interface IHttpClient {
      * (异步的方法) 仅执行 HTTP 请求。
      *
      * @param {string} uri HTTP 请求 URI。
+     * @param {HttpMethod} method HTTP 请求方法。
      * @param {HttpConfiguration} [spec] 针对此次请求的特殊配置。
      * @returns {Promise<HttpResponseBase>}
      * @memberof IHttpClient
      * @async
      */
-    requestOnlyAsync(uri: string, spec?: HttpConfiguration): Promise<VoidResponse>;
+    requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration): Promise<VoidResponse>;
     /**
      * (异步的方法) 执行 HTTP 请求，并等待数据返回。
      *
      * @template TResult 数据结果类型。
      * @param {string} uri HTTP 请求 URI。
+     * @param {HttpMethod} [method] HTTP 请求方法。
      * @param {HttpConfiguration} [spec] 针对此次请求的特殊配置。
      * @returns {Promise<ResultResponse<TResult>>}
      * @memberof IHttpClient
      */
-    requestWaitAsync<TResult>(uri: string, spec?: HttpConfiguration): Promise<ResultResponse<TResult>>;
+    requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration): Promise<ResultResponse<TResult>>;
 }
 /**
  * 提供了 HTTP 请求相关的基本方法。
@@ -253,6 +256,6 @@ export declare abstract class HttpClient implements IHttpClient {
     constructor(configure: IHttpConfigurationBuilder | HttpConfiguration);
     readonly defaultConfiguration: HttpConfiguration;
     responseInjector?: dnvue.ParameterizedFunc<any, FailedResponse | undefined> | undefined;
-    abstract requestOnlyAsync(uri: string, spec?: HttpConfiguration | undefined): Promise<VoidResponse>;
-    abstract requestWaitAsync<TResult>(uri: string, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>>;
+    abstract requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<VoidResponse>;
+    abstract requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>>;
 }

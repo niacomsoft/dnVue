@@ -46,6 +46,7 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "packages\\http\\core"
+    "packages\\http\\core",
+    "packages\\http\\axios-wrapper"
   ]
 }

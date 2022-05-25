@@ -1,4 +1,21 @@
 # CHANGELOG
+## [1.0.0-alpha.14](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2022-05-25)
+
+
+### NEW FEATURE
+
+* **Issue #1 #10:** 新增数据缓存相关全局变量定义。 ([c4c1ebf](https://github.com/niacomsoft/dnVue/commit/c4c1ebfa97824d522d08ae6545111e715d955e46)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1) [#10](https://github.com/niacomsoft/dnVue/issues/10)
+* **Issue #10 #5:** 新增缓存组合式 API。 ([a5a9315](https://github.com/niacomsoft/dnVue/commit/a5a931512822784a3a17488a7d996d833103a42c)), closes [#10](https://github.com/niacomsoft/dnVue/issues/10) [#5](https://github.com/niacomsoft/dnVue/issues/5)
+* **Issue #10:** 完成了数据缓存类库开发。 ([6ebcd9a](https://github.com/niacomsoft/dnVue/commit/6ebcd9ad83484c612209c9720288a12d6e8b2573)), closes [#10](https://github.com/niacomsoft/dnVue/issues/10)
+* **Issue #10:** 新建 Caching 项目。 ([5a4d68f](https://github.com/niacomsoft/dnVue/commit/5a4d68f14157d1281f052a8b20205b44c83afe33)), closes [#10](https://github.com/niacomsoft/dnVue/issues/10)
+* **Issue #10:** 新增缓存抽象服务。 ([82d6b91](https://github.com/niacomsoft/dnVue/commit/82d6b91c5bf292e78f7799bed127a910b6228b2c)), closes [#10](https://github.com/niacomsoft/dnVue/issues/10)
+* **Issue #2 #10:** 新增缓存相关的接口。 ([f0f000f](https://github.com/niacomsoft/dnVue/commit/f0f000fd18975eed28ba31993b0d065428a86b93)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#10](https://github.com/niacomsoft/dnVue/issues/10)
+
+
+### CHORE
+
+* 调整了版本号。 ([89ae990](https://github.com/niacomsoft/dnVue/commit/89ae99067ef1065f7a6b357a22149acfa2bbb43e))
+
 ## [1.0.0-alpha.13](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2022-05-24)
 
 

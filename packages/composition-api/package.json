@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/composition-api",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "dnVue composition api.",
   "main": "compile/es6/index.js",
   "typings": "compile/es6/index.d.ts",

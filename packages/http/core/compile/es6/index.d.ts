@@ -1,1 +1,1 @@
-export { HttpStatusCode } from "./src";
+export { HttpStatusCode, HttpMethod } from "./src";

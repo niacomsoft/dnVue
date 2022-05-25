@@ -1,4 +1,22 @@
 # CHANGELOG
+## [1.0.0-alpha.15](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2022-05-25)
+
+
+### BUILD
+
+* **Issue #1:** 新增缓存类库依赖。 ([97e340f](https://github.com/niacomsoft/dnVue/commit/97e340fa9f3bd400e42cf710e90444be42f14a98)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### NEW FEATURE
+
+* **Issue #11:** 新增 HTTP 抽象 HttpClient 方法。 ([23a494a](https://github.com/niacomsoft/dnVue/commit/23a494aeafcb777ea8d4e0569fd68b476ee13117)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11) [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #11:** 新增 HTTP 核心项目。 ([1f744ac](https://github.com/niacomsoft/dnVue/commit/1f744acf4c0dd0856bf8c7dbf0f5eff76f21c2c0)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #11:** 新增 HTTP 请求方法枚举。 ([4987f3c](https://github.com/niacomsoft/dnVue/commit/4987f3cac1ef33def98fcf0aeb006a01ef613fec)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #11:** 新增 HTTP 请求配置构建程序。 ([03b563c](https://github.com/niacomsoft/dnVue/commit/03b563cf400efee346279077e9b5f994af958ad6)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #11:** 新增 HTTP 响应类型定义。 ([ae79559](https://github.com/niacomsoft/dnVue/commit/ae79559fe3c01f08fb6a0414fb7603d29a3e182b)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #11:** 新增 HTTP 响应状态码枚举类型。 ([2c5ce58](https://github.com/niacomsoft/dnVue/commit/2c5ce58774f697ac470e20be3e5234ba1a94118a)), closes [#11](https://github.com/niacomsoft/dnVue/issues/11)
+* **Issue #2 #3 #11:** 新增 DEFAULT_HTTP_BASE_URL 全局变量。 ([1c88d5a](https://github.com/niacomsoft/dnVue/commit/1c88d5ac2dd9aae858d2c0b8b0731009424122bd)), closes [#2](https://github.com/niacomsoft/dnVue/issues/2) [#3](https://github.com/niacomsoft/dnVue/issues/3) [#11](https://github.com/niacomsoft/dnVue/issues/11)
+
 ## [1.0.0-alpha.14](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2022-05-25)
 
 

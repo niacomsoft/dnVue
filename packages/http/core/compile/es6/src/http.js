@@ -71,3 +71,28 @@ export class HttpConfigurationBuilder {
         };
     }
 }
+/**
+ * 提供了 HTTP 请求相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class HttpClient
+ * @implements {IHttpClient}
+ */
+export class HttpClient {
+    /**
+     * 用于初始化一个 HttpClient 类型的对象实例。
+     *
+     * @param {(IHttpConfigurationBuilder | HttpConfiguration)} configure
+     * @memberof HttpClient
+     */
+    constructor(configure) {
+        const proxy = configure;
+        if (proxy.build) {
+            this.defaultConfiguration = configure.build();
+        }
+        else {
+            this.defaultConfiguration = configure;
+        }
+    }
+}

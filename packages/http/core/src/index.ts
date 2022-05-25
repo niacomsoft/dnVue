@@ -12,5 +12,7 @@ export {
     FailedResponse,
     HttpConfiguration,
     IHttpConfigurationBuilder,
-    HttpConfigurationBuilder
+    HttpConfigurationBuilder,
+    IHttpClient,
+    HttpClient
 } from "./http";

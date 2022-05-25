@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/common",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "dnVue common library.",
   "main": "compile/es6/index.js",
   "typings": "compile/es6/index.d.ts",

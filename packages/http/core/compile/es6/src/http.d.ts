@@ -1,3 +1,4 @@
+/// <reference types="@dnvue/typings" />
 import { HttpStatusCode } from "./http-statuscode";
 /**
  * 定义了 HTTP 响应基本信息。
@@ -191,4 +192,67 @@ export declare class HttpConfigurationBuilder implements IHttpConfigurationBuild
     withQuery(queryStr?: Record<string, string> | undefined): IHttpConfigurationBuilder;
     withTimeout(value?: number | undefined): IHttpConfigurationBuilder;
     build(): HttpConfiguration;
+}
+/**
+ * 定义了访问 HTTP 请求的接口。
+ *
+ * @export
+ * @interface IHttpClient
+ */
+export interface IHttpClient {
+    /**
+     * 获取 HttpConfiguration 类型的对象实例，用于表示默认的 HTTP 请求配置。
+     *
+     * @type {HttpConfiguration}
+     * @memberof IHttpClient
+     */
+    readonly defaultConfiguration: HttpConfiguration;
+    /**
+     * 设置或获取 dnvue.ParameterizedFunc<any, FailedResponse | undefined> 类型的对象实例，用于表示拦截 HTTP 响应并校验的方法。
+     *
+     * @type {(dnvue.ParameterizedFunc<any, FailedResponse | undefined>)}
+     * @memberof IHttpClient
+     */
+    readonly responseInjector?: dnvue.ParameterizedFunc<any, FailedResponse | undefined>;
+    /**
+     * (异步的方法) 仅执行 HTTP 请求。
+     *
+     * @param {string} uri HTTP 请求 URI。
+     * @param {HttpConfiguration} [spec] 针对此次请求的特殊配置。
+     * @returns {Promise<HttpResponseBase>}
+     * @memberof IHttpClient
+     * @async
+     */
+    requestOnlyAsync(uri: string, spec?: HttpConfiguration): Promise<VoidResponse>;
+    /**
+     * (异步的方法) 执行 HTTP 请求，并等待数据返回。
+     *
+     * @template TResult 数据结果类型。
+     * @param {string} uri HTTP 请求 URI。
+     * @param {HttpConfiguration} [spec] 针对此次请求的特殊配置。
+     * @returns {Promise<ResultResponse<TResult>>}
+     * @memberof IHttpClient
+     */
+    requestWaitAsync<TResult>(uri: string, spec?: HttpConfiguration): Promise<ResultResponse<TResult>>;
+}
+/**
+ * 提供了 HTTP 请求相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class HttpClient
+ * @implements {IHttpClient}
+ */
+export declare abstract class HttpClient implements IHttpClient {
+    /**
+     * 用于初始化一个 HttpClient 类型的对象实例。
+     *
+     * @param {(IHttpConfigurationBuilder | HttpConfiguration)} configure
+     * @memberof HttpClient
+     */
+    constructor(configure: IHttpConfigurationBuilder | HttpConfiguration);
+    readonly defaultConfiguration: HttpConfiguration;
+    responseInjector?: dnvue.ParameterizedFunc<any, FailedResponse | undefined> | undefined;
+    abstract requestOnlyAsync(uri: string, spec?: HttpConfiguration | undefined): Promise<VoidResponse>;
+    abstract requestWaitAsync<TResult>(uri: string, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>>;
 }

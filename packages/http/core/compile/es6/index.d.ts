@@ -1,1 +1,1 @@
-export { HttpStatusCode, HttpMethod, HttpResponseBase, VoidResponse, ResultResponse, FailedResponse, HttpConfiguration, IHttpConfigurationBuilder, HttpConfigurationBuilder } from "./src";
+export { HttpStatusCode, HttpMethod, HttpResponseBase, VoidResponse, ResultResponse, FailedResponse, HttpConfiguration, IHttpConfigurationBuilder, HttpConfigurationBuilder, IHttpClient, HttpClient } from "./src";

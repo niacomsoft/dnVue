@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/http-axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "dnVue http use axios.",
   "main": "compile/es6/index.js",
   "types": "compile/es6/index.d.ts",

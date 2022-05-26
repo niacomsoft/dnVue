@@ -3,8 +3,8 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { IHttpConfigurationBuilder, HttpConfigurationBuilder, HttpMethod, HttpClient, IHttpClient, HttpConfiguration, ResultResponse, VoidResponse } from "@dnvue/http-core";
-import axios, { AxiosInstance, AxiosRequestConfig, Method } from "axios";
+import { IHttpConfigurationBuilder, HttpConfigurationBuilder, HttpMethod, HttpClient, IHttpClient, HttpConfiguration, ResultResponse, VoidResponse, FailedResponse, HttpStatusCode } from "@dnvue/http-core";
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, Method } from "axios";
 
 /**
  * 提供了构建 Axios 配置相关的方法。
@@ -68,7 +68,7 @@ export class AxiosClient extends HttpClient implements IHttpClient {
      * @returns {Method}
      * @memberof AxiosClient
      */
-    protected getAxiosMethod(method?: HttpMethod): Method {
+    protected _getAxiosMethod(method?: HttpMethod): Method {
         let _target: Method = "GET";
         method = Object.safeGet<HttpMethod>(method, "HTTP-GET");
 
@@ -84,11 +84,87 @@ export class AxiosClient extends HttpClient implements IHttpClient {
         return _target;
     }
 
-    requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<VoidResponse> {
-        throw new Error("Method not implemented.");
+    /**
+     * 创建默认的查询字符串。
+     *
+     * @protected
+     * @returns {Record<string,string>}
+     * @memberof AxiosClient
+     */
+    protected _createDefaultQuery(): Record<string, string> {
+        return {
+            "dnvue_timestamp": new Date().getTime().toString()
+        };
     }
-    requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>> {
-        throw new Error("Method not implemented.");
+
+    /**
+     * (异步的方法) 基于 Axios 的 HTTP 请求。
+     *
+     * @protected
+     * @param {string} uri 请求的 URI。
+     * @param {Method} method
+     * @param {HttpConfiguration} [spec]
+     * @returns {*}  {Promise<AxiosResponse>}
+     * @memberof AxiosClient
+     * @async
+     */
+    protected async _internalRequestAsync(uri: string, method: Method, spec?: HttpConfiguration): Promise<AxiosResponse> {
+        let contextOptions: AxiosRequestConfig = Object.assign({}, this._defaultAxiosConfiguration, { method, url: uri });
+        if (spec?.headers) {
+            contextOptions.headers = Object.assign({}, contextOptions.headers, spec.headers);
+        }
+        if (spec?.query) {
+            contextOptions.params = Object.assign({}, contextOptions.params, spec.query);
+        }
+        contextOptions.timeout = spec?.timeout ?? 10000;
+        if (String.isNullOrWhitespace(spec?.baseUrl))
+            contextOptions.baseURL = spec?.baseUrl;
+        try {
+            const response = await this._axiosProvider.request(contextOptions);
+            if (this.responseInjector) {
+                const injectorError = this.responseInjector(response);
+                if (injectorError) throw { rawResponse: response, rawError: injectorError };
+            }
+            return response;
+        } catch (error: any) {
+            throw { rawResponse: error?.response, rawError: error };
+        }
+    }
+
+    async requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<VoidResponse> {
+        try {
+            const response = await this._internalRequestAsync(uri, this._getAxiosMethod(method), spec);
+            const voidResponse: VoidResponse = {
+                metadata: { rawResponse: response },
+                statusCode: HttpStatusCode.OK
+            };
+            return voidResponse;
+        } catch (error: any) {
+            const failedResponse: FailedResponse = {
+                statusCode: error.rawResponse ? (error.rawResponse as AxiosResponse).status as HttpStatusCode : undefined,
+                metadata: { error },
+                error: new Error("axios throw an error")
+            };
+            throw failedResponse;
+        }
+    }
+    async requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>> {
+        try {
+            const response = await this._internalRequestAsync(uri, this._getAxiosMethod(method), spec);
+            const resultResponse: ResultResponse<TResult> = {
+                result: response.data as TResult,
+                metadata: { rawResponse: response },
+                statusCode: HttpStatusCode.OK
+            };
+            return resultResponse;
+        } catch (error: any) {
+            const failedResponse: FailedResponse = {
+                statusCode: error.rawResponse ? (error.rawResponse as AxiosResponse).status as HttpStatusCode : undefined,
+                metadata: { error },
+                error: new Error("axios throw an error")
+            };
+            throw failedResponse;
+        }
     }
     /**
      * 用于初始化一个 Axios 类型的对象实例。

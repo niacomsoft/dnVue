@@ -209,12 +209,12 @@ export interface IHttpClient {
      */
     readonly defaultConfiguration: HttpConfiguration;
     /**
-     * 设置或获取 dnvue.ParameterizedFunc<any, FailedResponse | undefined> 类型的对象实例，用于表示拦截 HTTP 响应并校验的方法。
+     * 设置或获取 dnvue.ParameterizedFunc<any, Error | undefined> 类型的对象实例，用于表示拦截 HTTP 响应并校验的方法。
      *
-     * @type {(dnvue.ParameterizedFunc<any, FailedResponse | undefined>)}
+     * @type {(dnvue.ParameterizedFunc<any, Error | undefined>)}
      * @memberof IHttpClient
      */
-    readonly responseInjector?: dnvue.ParameterizedFunc<any, FailedResponse | undefined>;
+    readonly responseInjector?: dnvue.ParameterizedFunc<any, Error | undefined>;
     /**
      * (异步的方法) 仅执行 HTTP 请求。
      *
@@ -255,7 +255,7 @@ export declare abstract class HttpClient implements IHttpClient {
      */
     constructor(configure: IHttpConfigurationBuilder | HttpConfiguration);
     readonly defaultConfiguration: HttpConfiguration;
-    responseInjector?: dnvue.ParameterizedFunc<any, FailedResponse | undefined> | undefined;
+    responseInjector?: dnvue.ParameterizedFunc<any, Error | undefined> | undefined;
     abstract requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<VoidResponse>;
     abstract requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>>;
 }

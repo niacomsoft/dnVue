@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/http-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "dnVue http abstracton.",
   "main": "compile/es6/index.js",
   "types": "compile/es6/index.d.ts",

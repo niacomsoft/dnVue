@@ -1,5 +1,5 @@
 import { IHttpConfigurationBuilder, HttpConfigurationBuilder, HttpMethod, HttpClient, IHttpClient, HttpConfiguration, ResultResponse, VoidResponse } from "@dnvue/http-core";
-import { AxiosInstance, AxiosRequestConfig, Method } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, Method } from "axios";
 /**
  * 提供了构建 Axios 配置相关的方法。
  *
@@ -50,7 +50,27 @@ export declare class AxiosClient extends HttpClient implements IHttpClient {
      * @returns {Method}
      * @memberof AxiosClient
      */
-    protected getAxiosMethod(method?: HttpMethod): Method;
+    protected _getAxiosMethod(method?: HttpMethod): Method;
+    /**
+     * 创建默认的查询字符串。
+     *
+     * @protected
+     * @returns {Record<string,string>}
+     * @memberof AxiosClient
+     */
+    protected _createDefaultQuery(): Record<string, string>;
+    /**
+     * (异步的方法) 基于 Axios 的 HTTP 请求。
+     *
+     * @protected
+     * @param {string} uri 请求的 URI。
+     * @param {Method} method
+     * @param {HttpConfiguration} [spec]
+     * @returns {*}  {Promise<AxiosResponse>}
+     * @memberof AxiosClient
+     * @async
+     */
+    protected _internalRequestAsync(uri: string, method: Method, spec?: HttpConfiguration): Promise<AxiosResponse>;
     requestOnlyAsync(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<VoidResponse>;
     requestWaitAsync<TResult>(uri: string, method?: HttpMethod, spec?: HttpConfiguration | undefined): Promise<ResultResponse<TResult>>;
     /**

@@ -1,0 +1,10 @@
+@mixin generate-cls {
+    .v-flexbox {
+        display        : flex;
+        width          : percentage($number: 1);
+        height         : percentage($number: 1);
+        justify-content: flex-start;
+        align-items    : flex-start;
+        flex-direction : row;
+    }
+}

@@ -3,6 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { DnvueComponentProps } from "./component-props";
-export { vApp } from "./v-app";
-export { vFlexbox } from "./v-flexbox";
+import vFlexbox from "./v-flexbox.vue";
+
+export { vFlexbox };

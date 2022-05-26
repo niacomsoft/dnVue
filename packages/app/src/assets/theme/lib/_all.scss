@@ -1,5 +1,6 @@
 @use "./_variables"as *;
 @use "./components/_v-app"as v-app;
+@use "./components/_v-flexbox"as v-flexbox;
 
 :root {
 
@@ -31,3 +32,4 @@ body,
 }
 
 @include v-app.generate-cls;
+@include v-flexbox.generate-cls;

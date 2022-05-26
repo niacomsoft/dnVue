@@ -13,6 +13,8 @@
     "@dnvue/caching": "^1.0.0",
     "@dnvue/common": "^1.0.0",
     "@dnvue/composition-api": "^1.0.0",
+    "@dnvue/http-axios": "^1.0.0",
+    "@dnvue/http-core": "^1.0.0",
     "@dnvue/security": "^1.0.0",
     "@mdi/font": "^6.6.96",
     "animate.css": "^4.1.1",

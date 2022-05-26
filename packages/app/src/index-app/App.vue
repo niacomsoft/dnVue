@@ -6,6 +6,11 @@
 -->
 
 <template>
-  <div>
-  </div>
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
+
+<script lang="ts" setup>
+import { vApp } from "../components";
+</script>

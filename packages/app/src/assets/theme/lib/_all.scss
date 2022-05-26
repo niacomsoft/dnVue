@@ -1,0 +1,33 @@
+@use "./_variables"as *;
+@use "./components/_v-app"as v-app;
+
+:root {
+
+    @each $-text-size-alias,
+    $-text-size-value in $v-text-sizes {
+        --v-text-size--#{$-text-size-alias}: #{$-text-size-value / $v-text-size--base}rem;
+    }
+
+    @include v-app.generate-var;
+}
+
+* {
+    box-sizing: border-box;
+    font-size : var(--v-text-size--nm);
+}
+
+html {
+    font-size: #{$v-text-size--base}px;
+}
+
+html,
+body,
+#app {
+    padding         : 0;
+    margin          : 0;
+    width           : percentage($number: 1);
+    height          : percentage($number: 1);
+    background-color: var(--md-white);
+}
+
+@include v-app.generate-cls;

@@ -1,0 +1,15 @@
+$v-primary: var(--md-indigo-700);
+$v-success: var(--md-blue-700);
+$v-warning: var(--md-orange-700);
+$v-danger : var(--md-red-700);
+$v-error  :var(--md-red-900);
+$v-info   :var(--md-grey-700);
+
+$v-text-primary    : var(--md-grey-900);
+$v-text-regular    : var(--md-grey-800);
+$v-text-secondary  : var(--md-grey-700);
+$v-text-placeholder: var(--md-grey-400);
+$v-text-disabled   : var(--md-grey-500);
+
+$v-text-size--base: 16;
+$v-text-sizes     : ('nm': 16, 'sm': 14, "xs": 12, "xxs": 10, "lg": 18, "xl": 20, "xxl": 22, "xxxl": 24);

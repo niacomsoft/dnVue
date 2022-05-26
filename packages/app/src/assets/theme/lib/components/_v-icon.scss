@@ -1,0 +1,21 @@
+@use "../_variables"as *;
+
+@mixin generate-var {
+    --v-icon--default-size : var(--v-text-size--nm);
+    --v-icon--default-color: var(--md-white);
+}
+
+@mixin generate-cls {
+    .v-icon {
+        font: {
+            size : var(--v-icon--default-size);
+            style: normal;
+        }
+
+        color: var(--v-icon--default-color);
+    }
+
+    .v-icon[data-v-clickable=true] {
+        cursor: pointer;
+    }
+}

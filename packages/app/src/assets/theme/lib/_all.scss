@@ -1,6 +1,8 @@
 @use "./_variables"as *;
 @use "./components/_v-app"as v-app;
+@use "./components/_v-appbar"as v-appbar;
 @use "./components/_v-flexbox"as v-flexbox;
+@use "./components/_v-icon"as v-icon;
 
 :root {
 
@@ -10,6 +12,8 @@
     }
 
     @include v-app.generate-var;
+    @include v-appbar.generate-var;
+    @include v-icon.generate-var;
 }
 
 * {
@@ -33,3 +37,5 @@ body,
 
 @include v-app.generate-cls;
 @include v-flexbox.generate-cls;
+@include v-appbar.generate-cls;
+@include v-icon.generate-cls;

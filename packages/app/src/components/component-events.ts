@@ -3,9 +3,16 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { DnvueComponentProps } from "./component-props";
-export { DnvueComponentEvents } from "./component-events";
-export { vApp } from "./v-app";
-export { vAppbar } from "./v-appbar";
-export { vFlexbox } from "./v-flexbox";
-export { vIcon } from "./v-icon";
+/**
+ * 组件默认事件。
+ */
+export const DnvueComponentEvents = {
+    /**
+     * 单击事件。
+     * 
+     * @returns 
+     */
+    click: () => {
+        return true;
+    }
+};

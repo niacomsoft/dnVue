@@ -1,4 +1,17 @@
 # CHANGELOG
+## [1.0.0-alpha.16](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2022-05-26)
+
+
+### BUG FIXED
+
+* **Issue #10:** 修改了 httpclient 接口缺失的 httpmethod 定义。 ([4a51355](https://github.com/niacomsoft/dnVue/commit/4a513552e7e6e26b79e5d73b4fb6dc8e9c75c84b)), closes [#10](https://github.com/niacomsoft/dnVue/issues/10)
+
+
+### NEW FEATURE
+
+* **Issue #12:** 完成了 Axios HTTP 请求类库。 ([e8574db](https://github.com/niacomsoft/dnVue/commit/e8574db41f5310fb2c37f5e36bac5800f8b28cf8)), closes [#12](https://github.com/niacomsoft/dnVue/issues/12) [#12](https://github.com/niacomsoft/dnVue/issues/12)
+* **Issue #12:** 新增基于 Axios 的 HTTP 请求类库。 ([8942430](https://github.com/niacomsoft/dnVue/commit/8942430e77e79a709f86fe6be034d80a790e14ba)), closes [#12](https://github.com/niacomsoft/dnVue/issues/12)
+
 ## [1.0.0-alpha.15](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2022-05-25)
 
 

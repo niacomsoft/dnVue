@@ -63,7 +63,13 @@ export default (({ mode }) => {
       host: true,
       port: devServerPortNumber,
       strictPort: true,
-      open: true
+      open: true,
+      proxy: {
+        "/development-mode/api": {
+          target: environmentVars["PRIVATE_API_BASEURL_FOR_PROXY"],
+          changeOrigin: true
+        }
+      }
     },
     build: {
       outDir: buildDir,

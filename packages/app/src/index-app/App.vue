@@ -6,11 +6,6 @@
 -->
 
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <div>
+  </div>
 </template>
-
-<script lang="ts" setup>
-import { vApp, vFlexibleContainer } from "../components";
-</script>

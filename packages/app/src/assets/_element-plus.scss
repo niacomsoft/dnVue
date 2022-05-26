@@ -1,32 +1,34 @@
+@use "material-colors/dist/colors.scss" as *;
+
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
     'white': #ffffff,
     'black': #000000,
     'primary': (
-      'base': #303F9F,
+      'base': $md-indigo-700,
     ),
     'success': (
-      'base': #00796B,
+      'base': $md-blue-700,
     ),
     'warning': (
-      'base': #FFA000,
+      'base': $md-orange-700,
     ),
     'danger': (
-      'base': #D32F2F,
+      'base': $md-red-700,
     ),
     'error': (
-      'base': #B71C1C,
+      'base': $md-red-900,
     ),
     'info': (
-      'base': #616161,
+      'base': $md-grey-700,
     ),
   ),
   $text-color: (
-    'primary': #212121,
-    'regular': #424242,
-    'secondary': #616161,
-    'placeholder': #9E9E9E,
-    'disabled': #BDBDBD,
+    'primary': $md-grey-900,
+    'regular': $md-grey-800,
+    'secondary': $md-grey-700,
+    'placeholder': $md-grey-400,
+    'disabled': $md-grey-500,
   ),
   $border-radius: (
     'base': 2px,

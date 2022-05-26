@@ -20,6 +20,14 @@ interface PrivateImportMetaEnv {
    * @memberof PrivateImportMetaEnv
    */
   PRIVATE_API_BASEURL?: string;
+
+  /**
+   * 设置或获取一个字符串，用于表示开发模式下代理 URL 地址。
+   *
+   * @type {string}
+   * @memberof PrivateImportMetaEnv
+   */
+  PRIVATE_API_BASEURL_FOR_PROXY?:string;
 }
 
 /**

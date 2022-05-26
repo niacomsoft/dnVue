@@ -13,9 +13,5 @@ import { RouteRecordRaw } from "vue-router";
  */
 export function createRouteTable(): RouteRecordRaw[] {
     return [
-        {
-            path: "/",
-            component: () => import("../views/vw-home.vue")
-        }
     ];
 }

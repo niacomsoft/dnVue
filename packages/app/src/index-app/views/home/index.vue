@@ -7,10 +7,18 @@
 
 <template>
   <v-flexbox direction="column">
-    <v-appbar></v-appbar>
+    <v-appbar :logo-image-url="readonlyLogoImage"></v-appbar>
   </v-flexbox>
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
 import { vFlexbox, vAppbar } from "../../../components";
+
+/**
+ * 获取一个字符串，用于表示 LOGO 图片 URL。
+ */
+const readonlyLogoImage = computed(() => {
+  return new URL("../../../assets/icons/dnvue-128x128.png", import.meta.url).href;
+});
 </script>

@@ -11,5 +11,9 @@
         height          : auto !important;
         padding         : var(--v-appbar--vertical-padding) var(--v-appbar--horizontal-padding);
         background-color: var(--v-appbar--background-color);
+
+        &-logo {
+            padding-left: 10px;
+        }
     }
 }

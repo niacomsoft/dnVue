@@ -3,6 +3,7 @@
 @use "./components/_v-appbar"as v-appbar;
 @use "./components/_v-flexbox"as v-flexbox;
 @use "./components/_v-icon"as v-icon;
+@use "./components/_v-image"as v-image;
 
 :root {
 
@@ -39,3 +40,4 @@ body,
 @include v-flexbox.generate-cls;
 @include v-appbar.generate-cls;
 @include v-icon.generate-cls;
+@include v-image.generate-cls;

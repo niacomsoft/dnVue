@@ -1,0 +1,12 @@
+@mixin generate-cls {
+    .v-image {
+        width  : auto;
+        height : auto;
+        display: block;
+        border : 0 none;
+    }
+
+    .v-image[data-v-clickable=true] {
+        cursor: pointer;
+    }
+}

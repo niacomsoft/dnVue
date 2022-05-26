@@ -12,10 +12,19 @@ export const DnvueComponentProps = {
     /**
      * 设置或获取一个值，用于表示组件是否禁用。
      * 
-     * @type {Boolean}
+     * @type {boolean}
      */
     isDisabled: {
         type: Boolean,
         default: false
+    },
+    /**
+     * 设置或获取一个字符串，用于表示组件 Tooltip 提示。
+     * 
+     * @type {string}
+     */
+    tooltip: {
+        type: String,
+        default: null
     }
 };

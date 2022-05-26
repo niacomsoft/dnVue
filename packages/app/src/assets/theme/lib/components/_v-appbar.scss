@@ -1,0 +1,15 @@
+@use "../_variables"as *;
+
+@mixin generate-var {
+    --v-appbar--background-color  : var(--md-indigo-900);
+    --v-appbar--vertical-padding  : #{5 / $v-text-size--base}rem;
+    --v-appbar--horizontal-padding: var(--v-text-size--xxs);
+}
+
+@mixin generate-cls {
+    .v-appbar {
+        height          : auto !important;
+        padding         : var(--v-appbar--vertical-padding) var(--v-appbar--horizontal-padding);
+        background-color: var(--v-appbar--background-color);
+    }
+}

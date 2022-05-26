@@ -3,23 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { RouteRecordRaw } from "vue-router";
+import vAppbar from "./v-appbar.vue";
 
-/**
- * 创建路由表。
- *
- * @export
- * @returns {RouteRecordRaw[]}
- */
-export function createRouteTable(): RouteRecordRaw[] {
-    return [
-        {
-            path: "/",
-            redirect: { path: "/home" }
-        },
-        {
-            path: "/home",
-            component: () => import("../views/home/index.vue")
-        }
-    ];
-}
+export { vAppbar };

@@ -6,7 +6,7 @@
 -->
 
 <template>
-  <i v-if="readonlyClassName !== null" class="mdi" :class="readonlyClassName" :data-v-clickable="!isDisabled && clickable" :style="{ fontSize: readonlySize, color }" @click="onIconClick" />
+  <i v-if="readonlyClassName !== null" :title="tooltip" class="mdi v-icon" :class="readonlyClassName" :data-v-clickable="!isDisabled && clickable" :style="{ fontSize: readonlySize, color }" @click="onIconClick" />
 </template>
 
 <script lang="ts" setup>
@@ -14,6 +14,9 @@ import { computed } from "vue";
 import { DnvueComponentProps } from "../component-props";
 import { paramCase } from "change-case";
 import { DnvueComponentEvents } from "../component-events";
+import { useDefaultLogWriter } from "@dnvue/composition-api";
+
+const logger = useDefaultLogWriter();
 
 const props = defineProps(
   Object.assign({}, DnvueComponentProps, {
@@ -84,6 +87,9 @@ const readonlyClassName = computed<string | null>(() => {
  * 图标单击事件处理方法。
  */
 function onIconClick() {
-  if (props.clickable && !props.isDisabled) emits("click");
+  if (props.clickable && !props.isDisabled) {
+    logger.writeTrace({ message: "v-icon 组件被单击。" });
+    emits("click");
+  }
 }
 </script>

@@ -6,6 +6,7 @@
 @use "./components/_v-icon"as v-icon;
 @use "./components/_v-image"as v-image;
 @use "./components/_v-appmanifest"as v-appmanifest;
+@use "./components/_v-container"as v-container;
 
 :root {
 
@@ -18,6 +19,7 @@
     @include v-appbar.generate-var;
     @include v-icon.generate-var;
     @include v-appmanifest.generate-var;
+    @include v-container.generate-var;
 }
 
 * {
@@ -53,3 +55,4 @@ body,
 @include v-icon.generate-cls;
 @include v-image.generate-cls;
 @include v-appmanifest.generate-cls;
+@include v-container.generate-cls;

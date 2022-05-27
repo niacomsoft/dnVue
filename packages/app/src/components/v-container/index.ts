@@ -3,12 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { DnvueComponentProps } from "./component-props";
-export { DnvueComponentEvents } from "./component-events";
-export { vApp } from "./v-app";
-export { vAppbar } from "./v-appbar";
-export { vFlexbox } from "./v-flexbox";
-export { vIcon } from "./v-icon";
-export { vImage } from "./v-image";
-export { vAppManifest } from "./v-appmanifest";
-export { vContainer } from "./v-container";
+import vContainer from "./v-container.vue";
+
+export { vContainer };

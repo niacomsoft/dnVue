@@ -1,0 +1,55 @@
+@use "../_variables"as *;
+@use "sass:math"as *;
+
+@mixin generate-var {
+    --v-container-shortcuts--background-color: var(--md-grey-200);
+    --v-container-shortcuts--actived-color   : #{$v-primary};
+    --v-container-leftside--background-color : var(--md-grey-100);
+}
+
+@mixin generate-cls {
+    .v-container {
+        flex: 1;
+
+        >div {
+            padding: #{div(10, $v-text-size--base)}rem #{div(5, $v-text-size--base)}rem;
+            height : percentage($number: 1);
+        }
+
+        >div#{&}-shortcuts {
+            background-color: var(--v-container-shortcuts--background-color);
+            display         : flex;
+            flex-direction  : column;
+            align-items     : flex-end;
+
+            >div {
+                width          : #{div(30, $v-text-size--base)}rem;
+                height         : #{div(30, $v-text-size--base)}rem;
+                box-sizing     : content-box;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                margin-bottom  : #{div(10, $v-text-size--base)}rem;
+
+                >a>img {
+                    width  : #{div(25, $v-text-size--base)}rem;
+                    height : #{div(25, $v-text-size--base)}rem;
+                    display: block;
+                }
+            }
+
+            >div[data-v-actived=true] {
+                border-left: 3px solid var(--v-container-shortcuts--actived-color);
+            }
+        }
+
+        >div#{&}-leftside {
+            background-color: var(--v-container-leftside--background-color);
+            min-width       : 200px;
+        }
+
+        >div#{&}-content {
+            flex: 1;
+        }
+    }
+}

@@ -46,7 +46,11 @@
 - [NPM DEPENDENCIES](docs/npm-dependencies.md)
 - [CHANGELOG](CHANGELOG.md)
 
-## [License](LICENSE.md)
+## References
+
+- [https://unsplash.com/](https://unsplash.com/)
+
+## License
 
 >THE MIT LICENSE
 >

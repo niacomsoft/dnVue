@@ -22,6 +22,9 @@ import { vIcon } from "../v-icon";
 import { vImage } from "../v-image";
 import { DnvueComponentProps } from "../component-props";
 import { DnvueComponentEvents } from "../component-events";
+import { useComponentStateStore } from "../../lib";
+
+const componentStateStore = useComponentStateStore();
 
 const props = defineProps(
   Object.assign({}, DnvueComponentProps, {
@@ -76,6 +79,7 @@ const events = defineEmits(
  * 用于处理应用图标单击事件。
  */
 function onAppIconClick() {
+  componentStateStore.toggleAppManifestDrawerVisible();
   events("click", "app-icon");
 }
 

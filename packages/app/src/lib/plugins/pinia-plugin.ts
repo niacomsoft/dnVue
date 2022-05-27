@@ -3,15 +3,16 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export {
-    useMaterialDesignIcon,
-    useAnimateCss,
-    useMaterialColors,
-    useElementPlus,
-    usePrivateComponents,
-    configureApplication,
-    useLocalizations,
-    usePinia
-} from "./plugins";
-export { getApplicationConfiguration } from "./app-configuration";
-export { useComponentStateStore } from "./store";
+import { createPinia } from "pinia";
+import { App } from "vue";
+
+/**
+ * 启用 pinia 作为状态管理。
+ *
+ * @export
+ * @param {App} app Vue 应用对象实例。
+ * @returns {App}
+ */
+export function usePinia(app: App): App {
+    return app.use(createPinia());
+}

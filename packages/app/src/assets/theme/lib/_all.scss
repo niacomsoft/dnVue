@@ -1,3 +1,4 @@
+@use "sass:math"as *;
 @use "./_variables"as *;
 @use "./components/_v-app"as v-app;
 @use "./components/_v-appbar"as v-appbar;
@@ -9,7 +10,7 @@
 
     @each $-text-size-alias,
     $-text-size-value in $v-text-sizes {
-        --v-text-size--#{$-text-size-alias}: #{$-text-size-value / $v-text-size--base}rem;
+        --v-text-size--#{$-text-size-alias}: #{div($-text-size-value, $v-text-size--base)}rem;
     }
 
     @include v-app.generate-var;

@@ -12,7 +12,8 @@ import {
     useElementPlus,
     usePrivateComponents,
     configureApplication,
-    useLocalizations
+    useLocalizations,
+    usePinia
 } from "../lib";
 import { configureRoute } from "./router";
 
@@ -34,6 +35,8 @@ function configure(): void {
     configureApplication(app);
 
     useLocalizations(app);
+
+    usePinia(app);
 
     app.mount('#app');
 }

@@ -1,4 +1,33 @@
 # CHANGELOG
+## [1.0.0-alpha.17](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2022-05-27)
+
+
+### REFACTOR
+
+* **Issue #13:** 开始重构 Vite 应用骨架。 ([2858942](https://github.com/niacomsoft/dnVue/commit/28589428b157cdd61d3c52d8c43b85db275eeef6)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+
+
+### NEW FEATURE
+
+* **Issue #1 #13:** 新增 Pinia 状态管理和组件的集成。 ([cc842db](https://github.com/niacomsoft/dnVue/commit/cc842dbc59bc7ae97ac8a3835d7cc3d319834f92)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1) [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13 #1:** 完成了 v-appmanifest 应用清单组件。 ([9910b9b](https://github.com/niacomsoft/dnVue/commit/9910b9bc739ad73145c532a88008ac5614c1037a)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13) [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #13 #1:** 新增 v-container 容器组件。 ([43c55b8](https://github.com/niacomsoft/dnVue/commit/43c55b8286fdcb84380bd30bd9e47bae258baa0f)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13) [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #13 #1:** 新增弹性盒组件 vFlexbox。 ([e66586a](https://github.com/niacomsoft/dnVue/commit/e66586aef5ce2bbdf14695402a1a6179e6da9636)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13) [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #13 #1:** 新增应用清单抽屉组件 v-appmanifest。 ([921b170](https://github.com/niacomsoft/dnVue/commit/921b170f40d95a6a136700ade56fad89dfbd494d)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13) [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #13 #1:** 新增应用清单组件 v-appmanifest。 ([677b1da](https://github.com/niacomsoft/dnVue/commit/677b1da24ffa4d7b40b73e1a5852f13d52a8be53)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13) [#1](https://github.com/niacomsoft/dnVue/issues/1)
+* **Issue #13:** 调整了 LOGO 图片的样式。 ([aa3654e](https://github.com/niacomsoft/dnVue/commit/aa3654e7e8a684001e842a3e7acf2bb0ebe656f7)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13:** 完善了 v-appbar 组件。 ([75b27a9](https://github.com/niacomsoft/dnVue/commit/75b27a9669c2daaa61cfb393551d6514b019546c)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13:** 新增 vApp 组件。 ([1bd2742](https://github.com/niacomsoft/dnVue/commit/1bd274296ee9c1b24dc7cc7a5ea6d610f627109f)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13:** 新增 vAppbar 组件。 ([fba4d5e](https://github.com/niacomsoft/dnVue/commit/fba4d5ece26d9c7d22be63520d6129b7dc022bbe)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13:** 新增基于 @mdi/font 的图标组件 v-icon。 ([3844741](https://github.com/niacomsoft/dnVue/commit/384474177226f010aadadccea0454bd163993995)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+* **Issue #13:** 优化了 v-icon 组件，增加了 tooltip 属性定义。 ([7969970](https://github.com/niacomsoft/dnVue/commit/7969970576d4bb62905701f98e3a7d9900b550ef)), closes [#13](https://github.com/niacomsoft/dnVue/issues/13)
+
+
+### CHORE
+
+* 新增 http 包依赖。 ([6708c89](https://github.com/niacomsoft/dnVue/commit/6708c89188cb2843d9bd00b5aafb02249acf631c))
+* 修改了版本号。 ([b746237](https://github.com/niacomsoft/dnVue/commit/b7462377760b36029df12fafeeb2035f6de9db93))
+
 ## [1.0.0-alpha.16](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2022-05-26)
 
 

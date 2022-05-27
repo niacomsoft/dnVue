@@ -1,0 +1,42 @@
+@use "sass:math"as *;
+@use "../_variables"as *;
+
+@mixin generate-var {
+    --v-appmanifest-drawer--background-color      : var(--md-grey-100);
+    --v-appmanifest-drawer-modal--background-color: rgba(238, 238, 238, 0.5);
+}
+
+@mixin generate-cls {
+    .v-appmanifest-drawer {
+        background-color: var(--v-appmanifest-drawer--background-color);
+
+        .el-drawer__header {
+            margin-bottom   : 0;
+            padding         : #{div(10, $v-text-size--base)}rem;
+            background-color: var(--md-grey-100);
+
+            div[data-v-role=header] {
+                >div {
+                    padding: #{div(5, $v-text-size--base)}rem 0;
+
+                    >span {
+                        color: var(--md-grey-900);
+
+                        font: {
+                            size  : var(--v-text-size--xxl);
+                            weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+
+        .el-drawer__body {
+            padding: #{div(10, $v-text-size--base)}rem;
+        }
+
+        &-modal {
+            background-color: var(--v-appmanifest-drawer-modal--background-color) !important;
+        }
+    }
+}

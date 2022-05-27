@@ -13,5 +13,5 @@ export {
     useLocalizations,
     usePinia
 } from "./plugins";
-export { getApplicationConfiguration } from "./app-configuration";
 export { useComponentStateStore } from "./store";
+export { getExternalAppManifest } from "./app-configuration";

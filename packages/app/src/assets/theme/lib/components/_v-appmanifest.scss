@@ -33,6 +33,40 @@
 
         .el-drawer__body {
             padding: #{div(10, $v-text-size--base)}rem;
+
+            div[data-v-role=apps] {
+                >div {
+                    padding: {
+                        left  : #{div(40, $v-text-size--base)}rem;
+                        right : #{div(5, $v-text-size--base)}rem;
+                        top   : #{div(5, $v-text-size--base)}rem;
+                        bottom: #{div(5, $v-text-size--base)}rem;
+                    }
+
+                    background: {
+                        repeat  : no-repeat;
+                        size    : #{div(30, $v-text-size--base)}rem #{div(30, $v-text-size--base)}rem;
+                        position: #{div(10, $v-text-size--base)}rem center;
+                    }
+
+                    height       : #{div(50, $v-text-size--base)}rem;
+                    border-radius: #{div(2, $v-text-size--base)}rem;
+                    cursor       : pointer;
+                    display      : flex;
+                    width        : percentage($number: 1);
+                    align-items  : center;
+
+                    >a {
+                        color       : #{$v-text-primary};
+                        padding-left: #{10 / $v-text-size--base}rem;
+                        font-size   : var(--v-text-size--lg);
+                    }
+                }
+
+                >div:hover {
+                    box-shadow: 0 0 10px 3px var(--md-grey-300);
+                }
+            }
         }
 
         &-modal {

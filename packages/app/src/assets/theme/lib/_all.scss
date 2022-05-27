@@ -29,6 +29,14 @@ html {
     font-size: #{$v-text-size--base}px;
 }
 
+a,
+a:hover,
+a:visited,
+a:link,
+a:focus {
+    text-decoration: none;
+}
+
 html,
 body,
 #app {

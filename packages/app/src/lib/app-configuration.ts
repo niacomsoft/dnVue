@@ -3,19 +3,51 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-/// <reference path="../components.d.ts" />
+/**
+ * 定义了外部应用配置信息。
+ */
+type ExternalApp = {
+    /**
+     * 获取一个字符串，用于表示应用名称对应的本地化资源名称。
+     *
+     * @type {string}
+     */
+    readonly name: string;
+
+    /**
+     * 获取一个字符串，用于表示应用链接 URL 地址。
+     *
+     * @type {string}
+     */
+    readonly url: string;
+
+    /**
+     * 获取一个字符串，用于表示应用链接目标。
+     *
+     * @type {("_blank" | "_self")}
+     */
+    readonly target?: "_blank" | "_self";
+
+    /**
+     * 获取一个字符串，用于表示应用图标 BASE-64 格式的 URL 地址。
+     *
+     * @type {string}
+     */
+    readonly iconDataURL: string;
+};
 
 /**
- * 获取应用程序配置。
+ * 获取外部应用清单。
  *
  * @export
- * @returns {LinkedApplicationItemOption[]}
+ * @returns {ExternalApp[]}
  */
-export function getApplicationConfiguration(): LinkedApplicationItemOption[] {
-    return [{
-        name: "CONTROL_PANEL",
-        iconDataURL: "data:image/png;base64,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",
-        externalLink: false,
-        url: "./"
-    }];
+export function getExternalAppManifest(): ExternalApp[] {
+    return [
+        {
+            name: "CONTROL_PANEL",
+            url: "./index.html",
+            iconDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABrlJREFUeF7tnU2IHEUUx9+bSYwfC3oxOzM5KCIe3GxPVAQRlCx4yCkeRMGLbjCIRqIimx4VxNVDzPQKHtQIGvUgongQJSB4kASjiB7UmckKfgua6QmIYEBXMDMlG7ISEzdV1VPVH6//C3vaV/+q93+/remq7qlmwk+pHeBSZ4/kCQCUHAIAAABK7kDJ08cMAABK7kDJ08cMAABK7kDJ08cMAABK7kDJ08cMAABK7kDJ08cMAABK7kDJ08cMAADy48CGh768YrS2so0U3UZEl1mMbEhE3ytFr6/l4/t+jq7uW7QtdWhuZoB62NtNpB5xUQ1mavXbQeRCS7pGLgCohd3HmOhJp2Yz3R23g5ecagoUyxyA9Q/0Jqvr1MCHt3EUZJ6fj7xcamZuUK3VmWPFCy6TWtFirtzeb29804e2FM3MAaiHnQ+J+AY/hvLLcTS93Y+2DNXMAaiFnSNM3PBhJzN92m8H1/nQlqKZOQD1sPsjEV3qydBDcRTc6ElbhCwAEFHG5EkAgOTeiWgJAESUMXkSACC5dyJaAgARZUyeBABI7p2IlgBARBmTJwEAknsnouVYADRaveuVUncS0TUnf88wRY2GM4Onrzq4mlv1sLtEROf6cFOR+n0QNS9aTbs298VmrlQP+Ojbq6aiY8T8CRN1K5XKi7/smfouaX+JAaiFnXkmflzXMQDQOTT+35n5/n57+tkkSokAaLS6bylFt5p0CABMXBo/pkLqpiNR8wNbJWsAGmF3myJ6xbQjAGDq1Lhx/OtoTXXm6O4rD9so2QPQ6r6qFM2adgIATJ0aP46Jdvaj4DkbJWsA6mF3mbAp004AgKlTLuLsn39IAoCyGSoAsHFrzFhFB+OFYMZGBQAUcRm4WoUBwH+dEbsPAADMJjkAoPcpyUcALgL1vmYUkcJFYAPLwIyKq+82lWUgNoL0hcgmIqWNoOXksBWcTYnP1mtqW8Erg8DNoPxAkPrNoJXUcTs4IwjycDvYVer4YogrJ5PpWC8Dk3WzeisA4NpRO70cAND5iYgvsRu2aTR/FEfTnr54ajqGfMdlD0Cr+w4putmHTUxqbz9q3udDW4pm9gCEvXuI1As+DGWubO23N+73oS1FM3MALt/57bo/zlv6y72haimOmue715WlmDkAy3bWws4OJn7erbWjW+Jo09tuNeWp5QKAExC0eveyUnvHt1gdZ0V39Beab4yvJV8hNwAsWz01v3jOb38OZ4lpCylqMpHR00eKaagUf840fC+ONr0mv2zuMswVAO7SgpKpAwDA1CmhcQBAaGFN0wIApk4JjQMAQgtrmhYAMHVKaBwAEFpY07QAgKlTQuMAgNDCmqYFAEydEhoHACwLu/7R3mT172FTVTggRRPGzRUv0prq4uCpqa+M26QQCAAsTG7s6mxXzOO+heTQqEKzR/cEP1h07S0UABhaWws77zLxVsNwbZiqVqfyMBsAAG2pTjyvYHQgloHUqSGLcRRstGzjPBwAaCydnOtcwBX+homcv9RCkXpiEDXnnVfVQhAAaMyqPXz4Wh6NPrPw1DhUMe8ftKedfawYd3xKIADQuNYIe3cpUvuSmKtro4j6gyjYoIvz+XcAoJsB/Hz+/9tr1q+2AwAAwOcEU3xtTysAzABFQQMAFKVSnsYJADwZWxRZAHCWSpkcEJH3Qus2Y2q7ugeYabOvPHSrgHrYPfO7EXk4IML3f4Yvw0/XLSQApyWR+hExNodEpVXIpP1IAGA599QOibI9Ji5pYdJqJwUAopSOibM9KDKtQibtRw4ARKkcFGn7voCkhUmrnSQAiFI4KvZ/r0rTqpaHfkQBkMfj4j3UzKkkALC0EzOApWGa8ET7AKtpYgawLw5mAEvPcBFoaViaM0AaF4FYBuYXgFSWgdgIyisAKW0ELaePrWB3ELi6CExtK3glddwMcgOBCwBSvxm0kjpuB48PQSIA8nA7ePzUi6Hge6bTAeDbJTwVrHEYAPhGMOf6ACDnBfI9PADg2+Gc6wOAnBfI9/AAgG+Hc65fDzsPEvEzXoap6Fi8EFzoRdtQFKsAjVEn9zo+NvTTMozfj6PpLZaNnIYDAI2dF+9YnKhODL/GARFOuSuWmKfrABwRUyQMcEhUkarlaaw4Js6TsUWSxUGRRaoWxqp1AKsArUWyAwCA7PpqswMAWotkBwAA2fXVZgcAtBbJDgAAsuurzQ4AaC2SHQAAZNdXmx0A0FokOwAAyK6vNjsAoLVIdgAAkF1fbXYAQGuR7AAAILu+2uwAgNYi2QEAQHZ9tdkBAK1FsgMAgOz6arP7Bw2du66FrYTuAAAAAElFTkSuQmCC"
+        }
+    ];
 }

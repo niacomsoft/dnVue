@@ -15,14 +15,20 @@
         </div>
       </div>
     </template>
+    <div data-v-role="apps">
+      <div v-for="(app, appIdx) in readonlyAppManifest" :key="'v-appmanifest-item__' + appIdx" :style="{ backgroundImage: `url(${app.iconDataURL})` }">
+        <a :href="app.url" :target="app.target ?? '_target'">{{ $t(app.name) }}</a>
+      </div>
+    </div>
   </el-drawer>
 </template>
 
 <script lang="ts" setup>
-import { useComponentStateStore } from "../../lib";
+import { getExternalAppManifest, useComponentStateStore } from "../../lib";
 import { storeToRefs } from "pinia";
 import { DnvueComponentProps } from "../component-props";
 import { vIcon } from "../v-icon";
+import { computed } from "vue";
 
 /**
  * 组件状态。
@@ -52,4 +58,13 @@ const props = defineProps(
 function onDrawerIconClick() {
   componentState.toggleAppManifestDrawerVisible(false);
 }
+
+/**
+ * 获取 ExternalApp 类型的对象实例数组，用于表示应用清单列表。
+ *
+ * @readonly
+ */
+const readonlyAppManifest = computed(() => {
+  return getExternalAppManifest();
+});
 </script>

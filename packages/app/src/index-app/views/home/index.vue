@@ -7,7 +7,7 @@
 
 <template>
   <v-flexbox direction="column">
-    <v-appbar :logo-image-url="readonlyLogoImage"></v-appbar>
+    <v-appbar :logo-image-url="readonlyLogoImage" :title="$t('APPLICATION_NAME')"></v-appbar>
   </v-flexbox>
 </template>
 

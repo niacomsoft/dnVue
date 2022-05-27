@@ -9,6 +9,10 @@
   <v-flexbox class="v-appbar" align-items="center">
     <v-icon name="mdiApps" v-if="showAppIcon" size="var(--v-text-size--xxxl)" :tooltip="$t('APPLICATION_MANIFEST')" @click="onAppIconClick" />
     <v-image :src="logoImageUrl" @click="onLogoImageClick" width="40px" class="v-appbar-logo" />
+    <span class="v-appbar-title" :style="{ color: titleColor }">{{ title }}</span>
+    <div class="v-appbar-right-side">
+      <slot />
+    </div>
   </v-flexbox>
 </template>
 
@@ -38,6 +42,24 @@ const props = defineProps(
     logoImageUrl: {
       type: String,
       default: null,
+    },
+    /**
+     * 设置或获取一个字符串，用于表示应用标题。
+     *
+     * @type {string}
+     */
+    title: {
+      type: String,
+      default: null,
+    },
+    /**
+     * 设置或获取一个字符串，用于表示应用标题文字颜色。
+     *
+     * @type {string}
+     */
+    titleColor: {
+      type: String,
+      default: "var(--md-white)",
     },
   })
 );

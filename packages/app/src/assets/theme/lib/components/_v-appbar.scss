@@ -13,8 +13,23 @@
         background-color: var(--v-appbar--background-color);
 
         &-logo {
-            padding-left: 10px;
+            padding-left: var(--v-appbar--horizontal-padding);
             box-sizing  : content-box;
+        }
+
+        &-title {
+            padding-left: var(--v-appbar--horizontal-padding);
+
+            font: {
+                size  : var(--v-text-size--xl);
+                weight: bolder;
+            }
+        }
+
+        &-right-side {
+            flex        : 1;
+            height      : percentage($number: 1);
+            padding-left: var(--v-appbar--horizontal-padding);
         }
     }
 }

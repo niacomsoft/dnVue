@@ -22,5 +22,8 @@ export {
     IAnonymousPrincipal,
     AnonymousPrincipal,
     IClaimsPrincipal,
-    ClaimsPrincipal
+    ClaimsPrincipal,
+    IAuthenticationService,
+    AuthenticationService,
+    AuthenticationResult
 } from "./src";

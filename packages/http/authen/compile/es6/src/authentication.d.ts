@@ -1,3 +1,4 @@
+import { ICredentials } from "./credentials";
 /**
  * 定义了访问用户身份信息的接口。
  *
@@ -217,4 +218,68 @@ export declare class ClaimsPrincipal extends Principal implements IClaimsPrincip
      * @memberof ClaimsPrincipal
      */
     constructor(identity: IClaimsIdentity);
+}
+/**
+ * 定义了身份认证结果数据类型。
+ *
+ * @export
+ * @interface AuthenticationResult
+ * @template T
+ */
+export interface AuthenticationResult<T> {
+    /**
+     * 获取 T 类型的对象实例或值，用于表示身份认证结果。
+     *
+     * @type {T}
+     * @memberof AuthenticationResult
+     */
+    readonly result?: T;
+}
+/**
+ * 定义了身份认证相关的接口。
+ *
+ * @export
+ * @interface IAuthenticationService
+ */
+export interface IAuthenticationService {
+    /**
+     * (异步的方法) 执行登录。
+     *
+     * @template T
+     * @param {ICredentials} credentials 身份认证凭据。
+     * @returns {Promise<AuthenticationResult<T>>}
+     * @memberof IAuthenticationService
+     */
+    signinAsync<T>(credentials: ICredentials): Promise<AuthenticationResult<T>>;
+    /**
+     * (异步的方法) 为当前的应用进行授权。
+     *
+     * @template T
+     * @param {AuthenticationResult<T>} result 身份认证结果。
+     * @memberof IAuthenticationService
+     */
+    authorizeAsync<T>(result: AuthenticationResult<T>): void;
+}
+/**
+ * 提供了身份认证相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class AuthenticationService
+ * @implements {IAuthenticationService}
+ */
+export declare abstract class AuthenticationService implements IAuthenticationService {
+    abstract signinAsync<T>(credentials: ICredentials): Promise<AuthenticationResult<T>>;
+    abstract authorizeAsync<T>(result: AuthenticationResult<T>): void;
+    /**
+     * 构建用户身份信息。
+     *
+     * @protected
+     * @abstract
+     * @template T
+     * @param {AuthenticationResult<T>} authenResult 身份认证结果。
+     * @returns {IIdentity}
+     * @memberof AuthenticationService
+     */
+    protected abstract _buildIdentity<T>(authenResult: AuthenticationResult<T>): IIdentity;
 }

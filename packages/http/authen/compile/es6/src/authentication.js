@@ -162,3 +162,13 @@ ClaimsPrincipal = __decorate([
     __metadata("design:paramtypes", [Object])
 ], ClaimsPrincipal);
 export { ClaimsPrincipal };
+/**
+ * 提供了身份认证相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class AuthenticationService
+ * @implements {IAuthenticationService}
+ */
+export class AuthenticationService {
+}

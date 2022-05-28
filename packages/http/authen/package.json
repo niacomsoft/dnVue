@@ -1,0 +1,42 @@
+{
+  "name": "@dnvue/http-authen",
+  "version": "1.0.0",
+  "description": "dnVue authentication library.",
+  "main": "compile/es6/index.js",
+  "typings": "compile/es6/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "compile": "tsc -p tsconfig.es6.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/dnVue.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "security",
+    "authentication"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/dnVue/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/dnVue#readme",
+  "files": [
+    "LICENSE",
+    "index.ts",
+    "src/**/*.ts",
+    "compile/**/*.js",
+    "compile/**/*.d.ts"
+  ],
+  "dependencies": {
+    "@dnvue/caching": "^1.0.0",
+    "@dnvue/common": "^1.0.0",
+    "@dnvue/http-core": "^1.0.0",
+    "@dnvue/typings": "^1.0.0"
+  }
+}

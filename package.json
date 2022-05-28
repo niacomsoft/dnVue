@@ -47,6 +47,7 @@
   "workspaces": [
     "packages/*",
     "packages\\http\\core",
-    "packages\\http\\axios-wrapper"
+    "packages\\http\\axios-wrapper",
+    "packages\\http\\authen"
   ]
 }

@@ -122,3 +122,99 @@ export declare class ClaimsIdentity extends Identity implements IClaimsIdentity,
      */
     constructor(name: string, isAuthenticated?: boolean);
 }
+/**
+ * 定义了用户身份摘要信息的接口。
+ *
+ * @export
+ * @interface IPrincipal
+ */
+export interface IPrincipal {
+    /**
+     * 获取 IIdentity 类型的对象实例，用于表示用户身份信息。
+     *
+     * @type {IIdentity}
+     * @memberof IPrincipal
+     */
+    readonly identity: IIdentity;
+}
+/**
+ * 提供了访问用户身份摘要信息相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class Principal
+ * @implements {IPrincipal}
+ */
+export declare abstract class Principal implements IPrincipal {
+    /**
+     * 用于初始化一个 Principal 类型的对象实例。
+     *
+     * @param {IIdentity} [identity]
+     * @memberof Principal
+     */
+    constructor(identity?: IIdentity);
+    readonly identity: IIdentity;
+}
+/**
+ * 定义了访问匿名身份摘要信息的接口。
+ *
+ * @export
+ * @interface IAnonymousPrincipal
+ * @extends {IPrincipal}
+ */
+export interface IAnonymousPrincipal extends IPrincipal {
+}
+/**
+ * 提供了访问匿名身份摘要信息相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class AnonymousPrincipal
+ * @extends {Principal}
+ * @implements {IAnonymousPrincipal}
+ * @implements {IPrincipal}
+ * @sealed
+ */
+export declare class AnonymousPrincipal extends Principal implements IAnonymousPrincipal, IPrincipal {
+    /**
+     * 用于初始化一个 AnonymousPrincipal 类型的对象实例。
+     *
+     * @memberof AnonymousPrincipal
+     */
+    constructor();
+}
+/**
+ * 定义了访问用户身份信息点摘要的接口。
+ *
+ * @export
+ * @interface IClaimsPrincipal
+ * @extends {IPrincipal}
+ */
+export interface IClaimsPrincipal extends IPrincipal {
+    /**
+     * 获取 IClaimsIdentity 类型的对象实例，用于表示用户身份信息。
+     *
+     * @type {IClaimsIdentity}
+     * @memberof IClaimsPrincipal
+     */
+    readonly claimsIdentity: IClaimsIdentity;
+}
+/**
+ * 提供了访问用户身份摘要信息相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class ClaimsPrincipal
+ * @extends {Principal}
+ * @implements {IClaimsPrincipal}
+ * @implements {IPrincipal}
+ * @sealed
+ */
+export declare class ClaimsPrincipal extends Principal implements IClaimsPrincipal, IPrincipal {
+    readonly claimsIdentity: IClaimsIdentity;
+    /**
+     * 用于初始化一个 ClaimsPrincipal 类型的对象实例。
+     *
+     * @param {IClaimsIdentity} identity
+     * @memberof ClaimsPrincipal
+     */
+    constructor(identity: IClaimsIdentity);
+}

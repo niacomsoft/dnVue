@@ -19,5 +19,11 @@ export {
     AnonymousIdentity,
     Claim,
     IClaimsIdentity,
-    ClaimsIdentity
+    ClaimsIdentity,
+    IPrincipal,
+    Principal,
+    IAnonymousPrincipal,
+    AnonymousPrincipal,
+    IClaimsPrincipal,
+    ClaimsPrincipal
 } from "./authentication";

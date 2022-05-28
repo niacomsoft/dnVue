@@ -1,1 +1,1 @@
-export { ICredentials, Credentials, IBasicCredentials, BasicCredentials, ISecureBasicCredentials, SecureBasicCredentials, IIdentity, Identity, IAnonymousIdentity, AnonymousIdentity, IClaimsIdentity, Claim, ClaimsIdentity } from "./src";
+export { ICredentials, Credentials, IBasicCredentials, BasicCredentials, ISecureBasicCredentials, SecureBasicCredentials, IIdentity, Identity, IAnonymousIdentity, AnonymousIdentity, IClaimsIdentity, Claim, ClaimsIdentity, IPrincipal, Principal, IAnonymousPrincipal, AnonymousPrincipal, IClaimsPrincipal, ClaimsPrincipal } from "./src";

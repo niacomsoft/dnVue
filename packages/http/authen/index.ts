@@ -16,5 +16,11 @@ export {
     AnonymousIdentity,
     IClaimsIdentity,
     Claim,
-    ClaimsIdentity
+    ClaimsIdentity,
+    IPrincipal,
+    Principal,
+    IAnonymousPrincipal,
+    AnonymousPrincipal,
+    IClaimsPrincipal,
+    ClaimsPrincipal
 } from "./src";

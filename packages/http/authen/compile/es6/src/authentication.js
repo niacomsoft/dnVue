@@ -91,3 +91,74 @@ ClaimsIdentity = __decorate([
     __metadata("design:paramtypes", [String, Boolean])
 ], ClaimsIdentity);
 export { ClaimsIdentity };
+/**
+ * 提供了访问用户身份摘要信息相关的基本方法。
+ *
+ * @export
+ * @abstract
+ * @class Principal
+ * @implements {IPrincipal}
+ */
+export class Principal {
+    /**
+     * 用于初始化一个 Principal 类型的对象实例。
+     *
+     * @param {IIdentity} [identity]
+     * @memberof Principal
+     */
+    constructor(identity) {
+        this.identity = Object.safeGet(identity, new AnonymousIdentity());
+    }
+}
+/**
+ * 提供了访问匿名身份摘要信息相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class AnonymousPrincipal
+ * @extends {Principal}
+ * @implements {IAnonymousPrincipal}
+ * @implements {IPrincipal}
+ * @sealed
+ */
+let AnonymousPrincipal = class AnonymousPrincipal extends Principal {
+    /**
+     * 用于初始化一个 AnonymousPrincipal 类型的对象实例。
+     *
+     * @memberof AnonymousPrincipal
+     */
+    constructor() {
+        super();
+    }
+};
+AnonymousPrincipal = __decorate([
+    sealed,
+    __metadata("design:paramtypes", [])
+], AnonymousPrincipal);
+export { AnonymousPrincipal };
+/**
+ * 提供了访问用户身份摘要信息相关的方法。密闭的，不可以从此类型派生。
+ *
+ * @export
+ * @class ClaimsPrincipal
+ * @extends {Principal}
+ * @implements {IClaimsPrincipal}
+ * @implements {IPrincipal}
+ * @sealed
+ */
+let ClaimsPrincipal = class ClaimsPrincipal extends Principal {
+    /**
+     * 用于初始化一个 ClaimsPrincipal 类型的对象实例。
+     *
+     * @param {IClaimsIdentity} identity
+     * @memberof ClaimsPrincipal
+     */
+    constructor(identity) {
+        super(identity);
+        this.claimsIdentity = identity;
+    }
+};
+ClaimsPrincipal = __decorate([
+    sealed,
+    __metadata("design:paramtypes", [Object])
+], ClaimsPrincipal);
+export { ClaimsPrincipal };

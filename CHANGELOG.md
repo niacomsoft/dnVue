@@ -1,4 +1,31 @@
 # CHANGELOG
+## [1.0.0-alpha.18](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.17...v1.0.0-alpha.18) (2022-05-28)
+
+
+### CHORE
+
+* 新增背景图片。 ([61282b1](https://github.com/niacomsoft/dnVue/commit/61282b1110f2e9964337721948087d1fa4e6a81d))
+
+
+### BUG FIXED
+
+* **Issue #1:** 修复 v-appmanifest 组件样式表 v-appmanifest.scss 中的语法错误。 ([0d52ce7](https://github.com/niacomsoft/dnVue/commit/0d52ce75cd9f15a55d3e833ee92f9956adfef0e3)), closes [#1](https://github.com/niacomsoft/dnVue/issues/1)
+
+
+### NEW FEATURE
+
+* 从 GitIgnore 配置中排除了 .env 配置文件。 ([2249722](https://github.com/niacomsoft/dnVue/commit/22497220831ca60cd2707a3c1ee3816c9153edc7))
+* **Issue #14:** 新增身份认证服务接口。 ([f341c83](https://github.com/niacomsoft/dnVue/commit/f341c832f424d9fd169674e8aeec44828e41c26c)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增身份认证凭据和相关基类。 ([93e9360](https://github.com/niacomsoft/dnVue/commit/93e9360841e2adc9b297129d5d313114d834265a)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增身份认证相关类库。 ([e3dd1c2](https://github.com/niacomsoft/dnVue/commit/e3dd1c2218dced1f6d54772bb360c17247717a14)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增身份信息接口和基类。 ([ff0254d](https://github.com/niacomsoft/dnVue/commit/ff0254d590a75d52059ad661e186079f70f9d268)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增用户身份摘要信息的方法。 ([2c81927](https://github.com/niacomsoft/dnVue/commit/2c81927e00dee95a2a45e5fba895e60ab4d522f3)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+
+
+### BUILD
+
+* 新增 @dnvue/http-authen 依赖。 ([338fc8e](https://github.com/niacomsoft/dnVue/commit/338fc8ee2e96b7f72f89ef195cd241413946445e))
+
 ## [1.0.0-alpha.17](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2022-05-27)
 
 

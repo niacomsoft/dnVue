@@ -1,6 +1,6 @@
 {
   "name": "@niacomsoft/dnvue",
-  "version": "1.0.0-alpha.17",
+  "version": "1.0.0-alpha.18",
   "description": "A .NET programmer was developed, a front-end framework based on Vue3 and VITE!",
   "displayName": "dnVue",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/caching",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "dnVue caching library.",
   "main": "compile/es6/index.js",
   "types": "compile/es6/index.d.ts",

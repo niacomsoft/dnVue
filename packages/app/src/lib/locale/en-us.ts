@@ -110,4 +110,5 @@ export const enUS: Record<string, string> = {
     APPLICATION_NAME: ".NET & Vue",
     CONTROL_PANEL: "Control Panel",
     APPLICATION_MANIFEST: "Application Manifest",
+    INVALID_CREDENTIALS: "The username and login password must be provided.",
 };

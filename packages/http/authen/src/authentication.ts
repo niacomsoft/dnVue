@@ -286,26 +286,25 @@ export interface AuthenticationResult<T> {
  *
  * @export
  * @interface IAuthenticationService
+ * @template T 身份认证结果类型。
  */
-export interface IAuthenticationService {
+export interface IAuthenticationService<T> {
     /**
      * (异步的方法) 执行登录。
      *
-     * @template T
      * @param {ICredentials} credentials 身份认证凭据。
      * @returns {Promise<AuthenticationResult<T>>}
-     * @memberof IAuthenticationService
+     * @memberof IAuthenticationService<T>
      */
-    signinAsync<T>(credentials: ICredentials): Promise<AuthenticationResult<T>>;
+    signinAsync(credentials: ICredentials): Promise<AuthenticationResult<T>>;
 
     /**
      * (异步的方法) 为当前的应用进行授权。
      *
-     * @template T
      * @param {AuthenticationResult<T>} result 身份认证结果。
-     * @memberof IAuthenticationService
+     * @memberof IAuthenticationService<T>
      */
-    authorizeAsync<T>(result: AuthenticationResult<T>): void;
+    authorizeAsync(result: AuthenticationResult<T>): void;
 }
 
 /**
@@ -314,11 +313,12 @@ export interface IAuthenticationService {
  * @export
  * @abstract
  * @class AuthenticationService
- * @implements {IAuthenticationService}
+ * @implements {IAuthenticationService<T>}
+ * @template T 身份认证结果。
  */
-export abstract class AuthenticationService implements IAuthenticationService {
-    abstract signinAsync<T>(credentials: ICredentials): Promise<AuthenticationResult<T>>;
-    abstract authorizeAsync<T>(result: AuthenticationResult<T>): void;
+export abstract class AuthenticationService<T> implements IAuthenticationService<T> {
+    abstract signinAsync(credentials: ICredentials): Promise<AuthenticationResult<T>>;
+    abstract authorizeAsync(result: AuthenticationResult<T>): void;
 
     /**
      * 构建用户身份信息。
@@ -328,7 +328,7 @@ export abstract class AuthenticationService implements IAuthenticationService {
      * @template T
      * @param {AuthenticationResult<T>} authenResult 身份认证结果。
      * @returns {IIdentity}
-     * @memberof AuthenticationService
+     * @memberof AuthenticationService<T>
      */
-    protected abstract _buildIdentity<T>(authenResult: AuthenticationResult<T>): IIdentity;
+    protected abstract _buildIdentity(authenResult: AuthenticationResult<T>): IIdentity;
 }

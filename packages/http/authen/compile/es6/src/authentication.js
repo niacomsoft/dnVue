@@ -168,7 +168,8 @@ export { ClaimsPrincipal };
  * @export
  * @abstract
  * @class AuthenticationService
- * @implements {IAuthenticationService}
+ * @implements {IAuthenticationService<T>}
+ * @template T 身份认证结果。
  */
 export class AuthenticationService {
 }

@@ -3,7 +3,8 @@
     "composite": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "types": ["@dnvue/typings"]
+    "types": ["@dnvue/typings"],
+    "experimentalDecorators": true
   },
   "include": ["vite.config.ts"]
 }

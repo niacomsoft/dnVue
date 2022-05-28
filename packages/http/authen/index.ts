@@ -9,5 +9,12 @@ export {
     IBasicCredentials,
     BasicCredentials,
     ISecureBasicCredentials,
-    SecureBasicCredentials
+    SecureBasicCredentials,
+    IIdentity,
+    Identity,
+    IAnonymousIdentity,
+    AnonymousIdentity,
+    IClaimsIdentity,
+    Claim,
+    ClaimsIdentity
 } from "./src";

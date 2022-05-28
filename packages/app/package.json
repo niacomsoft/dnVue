@@ -1,7 +1,7 @@
 {
   "name": "dnvue",
   "private": true,
-  "version": "1.0.14",
+  "version": "1.0.15",
   "scripts": {
     "debug": "vite --mode debug",
     "build:pre-release": "vite build --mode pre-release",
@@ -13,6 +13,7 @@
     "@dnvue/caching": "^1.0.0",
     "@dnvue/common": "^1.0.0",
     "@dnvue/composition-api": "^1.0.0",
+    "@dnvue/http-authen": "^1.0.0",
     "@dnvue/http-axios": "^1.0.0",
     "@dnvue/http-core": "^1.0.0",
     "@dnvue/security": "^1.0.0",

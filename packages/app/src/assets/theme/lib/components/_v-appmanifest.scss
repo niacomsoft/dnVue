@@ -58,7 +58,7 @@
 
                     >a {
                         color       : #{$v-text-primary};
-                        padding-left: #{10 / $v-text-size--base}rem;
+                        padding-left: #{div(10, $v-text-size--base)}rem;
                         font-size   : var(--v-text-size--lg);
                     }
                 }

@@ -111,4 +111,5 @@ export const zhCN: Record<string, string> = {
     CONTROL_PANEL: "控制面板",
     APPLICATION_MANIFEST: "应用清单",
     INVALID_CREDENTIALS: "必须提供用户名和登录密码。",
+    AUTHORIZE_FAILED: "授权失败。",
 };

@@ -15,3 +15,7 @@ export {
 } from "./plugins";
 export { useComponentStateStore } from "./store";
 export { getExternalAppManifest } from "./app-configuration";
+export {
+    useBasicAuthenticator,
+    usePrincipal
+} from "./services";

@@ -7,15 +7,17 @@
 
 import {
     AnonymousIdentity,
+    AnonymousPrincipal,
     AuthenticationResult,
     AuthenticationService,
     ClaimsIdentity,
+    ClaimsPrincipal,
     IAuthenticationService,
     IBasicCredentials,
     ICredentials,
-    IIdentity
+    IIdentity,
+    IPrincipal
 } from "@dnvue/http-authen";
-import { ErrorHelper } from "../error-helper";
 import { useDefaultLogWriter, useCaching } from "@dnvue/composition-api";
 
 const KEYOF_AUTHENTICATION_SESSION_STORE: string = "dnvue.authentication";
@@ -23,11 +25,10 @@ const KEYOF_AUTHENTICATION_SESSION_STORE: string = "dnvue.authentication";
 /**
  * 提供了基础身份认证服务相关的方法。
  *
- * @export
  * @class BasicAuthenticationServiceProvider
  * @extends {AuthenticationService<dnvue.entity.User>}
  */
-export class BasicAuthenticationServiceProvider extends AuthenticationService<dnvue.entity.User> implements IAuthenticationService<dnvue.entity.User> {
+class BasicAuthenticationServiceProvider extends AuthenticationService<dnvue.entity.User> implements IAuthenticationService<dnvue.entity.User> {
     /**
      * 获取 dnvue.ILogWriter 类型的对象实例，用于表示记录运行时日志的方法。
      *
@@ -50,7 +51,7 @@ export class BasicAuthenticationServiceProvider extends AuthenticationService<dn
         return new Promise<AuthenticationResult<dnvue.entity.User>>((successCallback, failureCallback) => {
             const _basicCredentials = credentials as IBasicCredentials;
             if (String.isNullOrWhitespace(_basicCredentials?.userName) || String.isNullOrWhitespace(_basicCredentials?.password))
-                failureCallback(ErrorHelper.createError("INVALID_CREDENTIALS"));
+                failureCallback(new Error("INVALID_CREDENTIALS"));
             else {
                 // TODO: 进行模拟登录。
                 this._logger.writeDebug({ message: "尝试进行模拟登录。" });
@@ -78,7 +79,7 @@ export class BasicAuthenticationServiceProvider extends AuthenticationService<dn
                 successCallback();
             } catch (error) {
                 context._logger.writeError({ message: "存储身份认证信息、授权访问失败。", contextData: error });
-                failureCallback(ErrorHelper.createError("AUTHORIZE_FAILED"));
+                failureCallback(new Error("AUTHORIZE_FAILED"));
             }
         });
     }
@@ -91,4 +92,28 @@ export class BasicAuthenticationServiceProvider extends AuthenticationService<dn
             return claimsIdentity;
         }
     }
+}
+
+/**
+ * 使用基础身份认证服务。
+ *
+ * @export
+ * @returns {AuthenticationService<dnvue.entity.User>}
+ */
+export function useBasicAuthenticator(): AuthenticationService<dnvue.entity.User> {
+    return new BasicAuthenticationServiceProvider();
+}
+
+/**
+ * 使用身份摘要信息。
+ *
+ * @export
+ * @returns {IPrincipal}
+ */
+export function usePrincipal(): IPrincipal {
+    const _identity = useCaching("session").get<ClaimsIdentity>(KEYOF_AUTHENTICATION_SESSION_STORE);
+    if (_identity?.isAuthenticated) {
+        return new ClaimsPrincipal(_identity);
+    }
+    return new AnonymousPrincipal();
 }

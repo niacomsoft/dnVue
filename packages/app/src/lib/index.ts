@@ -19,3 +19,9 @@ export {
     useBasicAuthenticator,
     usePrincipal
 } from "./services";
+import { useLocalization } from "./locale";
+export { useLocalization };
+
+Error.create = function (resourceName: string): Error {
+    return new Error(useLocalization().t(resourceName));
+};

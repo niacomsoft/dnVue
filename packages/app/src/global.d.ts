@@ -3,7 +3,16 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { enUS } from "./en-us";
-export { zhCN } from "./zh-cn";
-export { LocaleOptions as LocalizationOptions } from "./locale-options";
-export { useLocalization } from "./locale-api";
+export { };
+
+declare global {
+    interface ErrorConstructor {
+        /**
+         * 创建异常。
+         *
+         * @param {string} resourceName 资源名称。
+         * @returns {Error}
+         */
+        create(resourceName: string): Error;
+    }
+}

@@ -38,7 +38,7 @@ async function onSignIn(e: dnvue.ui.SignInEventArgs): Promise<void> {
      */
     function redirect(): void {
       const redirect = route.query["__redirect__"];
-      let redirectPath: string = "";
+      let redirectPath: string = "/";
       if (redirect) {
         if (typeof redirect === "string") redirectPath = redirect;
         else redirectPath = redirect[0] ?? "";

@@ -61,8 +61,8 @@ body,
 
 .el {
     &-notification-extensions {
-        border-radius   : 2px;
-        background-color: var(--md-grey-50);
+        border-radius   : 2px !important;
+        background-color: var(--md-grey-50) !important;
     }
 }
 

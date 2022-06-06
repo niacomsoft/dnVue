@@ -1,0 +1,40 @@
+@use "../_variables"as *;
+@use "sass:math"as *;
+
+@mixin generate-var {
+    --v-signin--background-color      : var(--md-grey-100);
+    --v-signin--padding               : #{div(40, $v-text-size--base)}rem;
+    --v-signin-container--shadow-color: var(--md-grey-300);
+}
+
+@mixin generate-cls {
+    .v-signin {
+        width: percentage($number: 1);
+
+        &-container {
+            background-color: var(--v-signin--background-color);
+            padding         : var(--v-signin--padding);
+            opacity         : 0.95;
+            border-radius   : #{div(2, $v-text-size--base)}rem;
+
+            >div {
+                padding: #{div(10, $v-text-size--base)}rem 0;
+
+                span[data-v-role=title] {
+                    font: {
+                        size  : var(--v-text-size--xxl);
+                        weight: bold;
+                    }
+                }
+
+                .el-input {
+                    --el-input-bg-color: transparent;
+                }
+            }
+        }
+
+        &-container[shadow=true] {
+            box-shadow: 0 0 5px 3px var(--v-signin-container--shadow-color);
+        }
+    }
+}

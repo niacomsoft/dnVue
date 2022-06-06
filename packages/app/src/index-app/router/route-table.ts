@@ -22,8 +22,16 @@ export function createRouteTable(): RouteRecordRaw[] {
             component: () => import("../views/home/index.vue")
         },
         {
-            path: "/authentication/sign-in",
+            path: "/authentication",
             component: () => import("../views/authentication/index.vue"),
+            children: [{
+                path: "sign-in",
+                component: () => import("../views/authentication/sign-in/sign-in.vue"),
+                meta: {
+                    allowAnonymous: true,
+                    title: "SIGN_IN"
+                }
+            }],
             meta: {
                 allowAnonymous: true
             }

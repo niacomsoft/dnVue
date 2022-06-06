@@ -1,6 +1,6 @@
 {
   "name": "@dnvue/typings",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "dnVue typing declarations.",
   "main": "index.d.ts",
   "typings": "index.d.ts",

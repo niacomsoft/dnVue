@@ -7,6 +7,7 @@
 @use "./components/_v-image"as v-image;
 @use "./components/_v-appmanifest"as v-appmanifest;
 @use "./components/_v-container"as v-container;
+@use "./components/_v-signin"as v-signin;
 
 @use "./views/_authentication"as vw-authentication;
 
@@ -22,6 +23,7 @@
     @include v-icon.generate-var;
     @include v-appmanifest.generate-var;
     @include v-container.generate-var;
+    @include v-signin.generate-var;
 
     @include vw-authentication.generate-var;
 }
@@ -53,6 +55,17 @@ body,
     background-color: var(--md-white);
 }
 
+.mdi::before {
+    padding-right: 8px;
+}
+
+.el {
+    &-notification-extensions {
+        border-radius   : 2px;
+        background-color: var(--md-grey-50);
+    }
+}
+
 @include v-app.generate-cls;
 @include v-flexbox.generate-cls;
 @include v-appbar.generate-cls;
@@ -60,3 +73,4 @@ body,
 @include v-image.generate-cls;
 @include v-appmanifest.generate-cls;
 @include v-container.generate-cls;
+@include v-signin.generate-cls;

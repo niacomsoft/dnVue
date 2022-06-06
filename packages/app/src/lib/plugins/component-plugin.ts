@@ -16,7 +16,7 @@ import { App } from "vue";
 export function useElementPlus(app: App): App {
     import("../../assets/_element-plus.scss");
 
-    return app.use(ElementPlus, { zIndex: 9999 });
+    return app.use(ElementPlus, { zIndex: 9999, size: 'default' });
 }
 
 /**

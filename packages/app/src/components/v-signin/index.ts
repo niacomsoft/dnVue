@@ -3,9 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-/// <reference path="./types/lib.functions.d.ts" />
-/// <reference path="./types/lib.typings.d.ts" />
-/// <reference path="./types/lib.interfaces.d.ts" />
-/// <reference path="./types/lib.enums.d.ts" />
-/// <reference path="./types/lib.delegations.d.ts" />
-/// <reference path="./types/global.d.ts" />
+import vSignin from "./v-signin.vue";
+
+export { vSignin };

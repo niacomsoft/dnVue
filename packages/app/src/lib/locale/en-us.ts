@@ -112,4 +112,7 @@ export const enUS: Record<string, string> = {
     APPLICATION_MANIFEST: "Application Manifest",
     INVALID_CREDENTIALS: "The username and login password must be provided.",
     AUTHORIZE_FAILED: "Authorization failed.",
+    AUTHENTICATION_IN_PROGRESS: "Authentication in progress, please wait",
+    ENTER_USERNAME: "User Name / E-mail Address / Mobile Number",
+    ENTER_PASSWORD: "Password",
 };

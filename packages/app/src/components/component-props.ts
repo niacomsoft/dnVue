@@ -26,5 +26,14 @@ export const DnvueComponentProps = {
     tooltip: {
         type: String,
         default: null
+    },
+    /**
+     * 设置或获取一个值，用于表示是否处理中。
+     * 
+     * @type {boolean}
+     */
+    inProcessing: {
+        type: Boolean,
+        default: false
     }
 };

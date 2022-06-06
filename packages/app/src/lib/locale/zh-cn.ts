@@ -112,4 +112,7 @@ export const zhCN: Record<string, string> = {
     APPLICATION_MANIFEST: "应用清单",
     INVALID_CREDENTIALS: "必须提供用户名和登录密码。",
     AUTHORIZE_FAILED: "授权失败。",
+    AUTHENTICATION_IN_PROGRESS: "身份认证中，请稍候...",
+    ENTER_USERNAME: "请输入用户名 / 电邮地址 / 手机号",
+    ENTER_PASSWORD: "请输入登录密码",
 };

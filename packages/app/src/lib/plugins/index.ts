@@ -16,3 +16,5 @@ export { configureApplication } from "./configurator";
 export { useLocalizations } from "./localization-plugin";
 
 export { usePinia } from "./pinia-plugin";
+
+export { registerRouterInterceptor } from "./routerintercept-plugin";

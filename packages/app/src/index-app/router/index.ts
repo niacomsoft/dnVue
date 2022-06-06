@@ -7,6 +7,7 @@ import { createWebHashHistory, createRouter, Router, RouteRecordRaw } from "vue-
 import { App } from "vue";
 import { createRouteTable } from "./route-table";
 import { useDefaultLogWriter } from "@dnvue/composition-api";
+import { registerRouterInterceptor } from "../../lib";
 
 /**
  * 配置路由。
@@ -24,6 +25,7 @@ export function configureRoute(app: App): App {
         history: createWebHashHistory(),
         routes: routeTable
     });
-    
-    return app.use(router);
+
+    return app.use(registerRouterInterceptor(router));
 }
+

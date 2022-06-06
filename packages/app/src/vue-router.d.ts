@@ -21,7 +21,7 @@ declare module "vue-router" {
         allowAnonymous?: boolean;
 
         /**
-         * 设置或获取一个字符串，用于表示当前路由标题。
+         * 设置或获取一个字符串，用于表示当前路由标题资源名称。
          *
          * @type {string}
          * @memberof RouteMeta

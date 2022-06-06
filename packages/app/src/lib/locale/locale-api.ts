@@ -3,9 +3,10 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { LocaleOptions } from "./locale-options";
-import { useI18n, Composer } from "vue-i18n";
 import { SingletonManager } from "@dnvue/common";
+import i18next, { i18n } from "i18next";
+import { enUS } from "./en-us";
+import { zhCN } from "./zh-cn";
 
 /**
  * 使用字符串本地化资源。
@@ -13,8 +14,20 @@ import { SingletonManager } from "@dnvue/common";
  * @export
  * @returns {Composer}
  */
-export function useLocalization(): Composer {
-    return SingletonManager.createOrGet<Composer>("__DNVUE_LOCALIZATION_RESOURCE__", () => {
-        return useI18n(LocaleOptions);
+export function useLocalization(): i18n {
+    return SingletonManager.createOrGet<i18n>("__DNVUE_LOCALIZATION_RESOURCE__", () => {
+        i18next.init({
+            lng: import.meta.env.DNVUE_DEFAULT_CULTURE_NAME,
+            debug: import.meta.env.DEV,
+            resources: {
+                "zh-CN": {
+                    translation: zhCN
+                },
+                "en-US": {
+                    translation: enUS
+                }
+            }
+        });
+        return i18next;
     });
 }

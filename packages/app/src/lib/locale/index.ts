@@ -5,5 +5,4 @@
 
 export { enUS } from "./en-us";
 export { zhCN } from "./zh-cn";
-export { LocaleOptions as LocalizationOptions } from "./locale-options";
 export { useLocalization } from "./locale-api";

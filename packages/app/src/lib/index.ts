@@ -11,7 +11,8 @@ export {
     usePrivateComponents,
     configureApplication,
     useLocalizations,
-    usePinia
+    usePinia,
+    registerRouterInterceptor
 } from "./plugins";
 export { useComponentStateStore } from "./store";
 export { getExternalAppManifest } from "./app-configuration";

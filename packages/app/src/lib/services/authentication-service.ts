@@ -51,7 +51,7 @@ class BasicAuthenticationServiceProvider extends AuthenticationService<dnvue.ent
         return new Promise<AuthenticationResult<dnvue.entity.User>>((successCallback, failureCallback) => {
             const _basicCredentials = credentials as IBasicCredentials;
             if (String.isNullOrWhitespace(_basicCredentials?.userName) || String.isNullOrWhitespace(_basicCredentials?.password))
-                failureCallback(new Error("INVALID_CREDENTIALS"));
+                failureCallback(Error.create("INVALID_CREDENTIALS"));
             else {
                 // TODO: 进行模拟登录。
                 this._logger.writeDebug({ message: "尝试进行模拟登录。" });
@@ -79,7 +79,7 @@ class BasicAuthenticationServiceProvider extends AuthenticationService<dnvue.ent
                 successCallback();
             } catch (error) {
                 context._logger.writeError({ message: "存储身份认证信息、授权访问失败。", contextData: error });
-                failureCallback(new Error("AUTHORIZE_FAILED"));
+                failureCallback(Error.create("AUTHORIZE_FAILED"));
             }
         });
     }

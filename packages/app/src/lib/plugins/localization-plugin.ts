@@ -3,7 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { LocalizationOptions } from "../locale";
+import { zhCN, enUS } from "../locale";
 import { App } from "vue";
 import { createI18n } from "vue-i18n";
 
@@ -15,7 +15,13 @@ import { createI18n } from "vue-i18n";
  * @returns {App}
  */
 export function useLocalizations(app: App): App {
-    const locale = createI18n(LocalizationOptions);
+    const locale = createI18n({
+        locale: import.meta.env.DNVUE_DEFAULT_CULTURE_NAME,
+        messages: {
+            "zh-CN": zhCN,
+            "en-US": enUS
+        }
+    });
 
     return app.use(locale);
 }

@@ -18,5 +18,6 @@ export { Startup } from "./startup";
 export {
     StringResolver,
     ConstantStringResolver,
+    WebUtilities
 } from "./utilities";
 export { HostingEnvironment } from "./runtime";

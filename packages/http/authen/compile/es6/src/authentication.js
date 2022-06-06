@@ -79,8 +79,10 @@ let ClaimsIdentity = class ClaimsIdentity extends Identity {
     constructor(name, isAuthenticated = true) {
         super(name, isAuthenticated);
         this._claims = {};
-        this.claims = this._claims;
         this._claims = Object.assign({}, this._claims, { name, "is-authenticated": isAuthenticated });
+    }
+    get claims() {
+        return this._claims;
     }
     addClaims(claims) {
         this._claims = Object.assign({}, this._claims, claims);

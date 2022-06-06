@@ -109,7 +109,7 @@ export interface IClaimsIdentity extends IIdentity {
      * @type {Claim}
      * @memberof IClaimsIdentity
      */
-    readonly claims: Claim;
+    get claims(): Claim;
 
     /**
      * 添加身份信息点。
@@ -134,7 +134,9 @@ export interface IClaimsIdentity extends IIdentity {
 export class ClaimsIdentity extends Identity implements IClaimsIdentity, IIdentity {
     private _claims: Claim = {};
 
-    readonly claims: Claim = this._claims;
+    get claims(): Claim {
+        return this._claims;
+    }
     addClaims(claims?: Claim | undefined): void {
         this._claims = Object.assign({}, this._claims, claims);
     }

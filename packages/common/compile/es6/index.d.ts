@@ -1,1 +1,1 @@
-export { sealed, SingletonManager, LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLogWriter, ColoredConsoleLogWriterFactory, Logger, AppContext, Startup, StringResolver, ConstantStringResolver, HostingEnvironment } from "./src";
+export { sealed, SingletonManager, LogWriter, ConsoleLogWriter, ConsoleLogWriterFactory, ColoredConsoleLogWriter, ColoredConsoleLogWriterFactory, Logger, AppContext, Startup, StringResolver, ConstantStringResolver, HostingEnvironment, WebUtilities } from "./src";

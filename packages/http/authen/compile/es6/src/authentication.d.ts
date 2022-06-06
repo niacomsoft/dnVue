@@ -91,7 +91,7 @@ export interface IClaimsIdentity extends IIdentity {
      * @type {Claim}
      * @memberof IClaimsIdentity
      */
-    readonly claims: Claim;
+    get claims(): Claim;
     /**
      * 添加身份信息点。
      *
@@ -112,7 +112,7 @@ export interface IClaimsIdentity extends IIdentity {
  */
 export declare class ClaimsIdentity extends Identity implements IClaimsIdentity, IIdentity {
     private _claims;
-    readonly claims: Claim;
+    get claims(): Claim;
     addClaims(claims?: Claim | undefined): void;
     /**
      * 用于初始化一个 ClaimsIdentity 类型的对象实例。

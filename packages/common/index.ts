@@ -16,7 +16,8 @@ export {
     Startup,
     StringResolver,
     ConstantStringResolver,
-    HostingEnvironment
+    HostingEnvironment,
+    WebUtilities
 } from "./src";
 
 String.empty = function (): string {

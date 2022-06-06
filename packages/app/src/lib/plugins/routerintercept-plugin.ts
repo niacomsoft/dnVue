@@ -58,7 +58,9 @@ export function registerRouterInterceptor(router: Router, customInterceptor?: Ro
 
     router.beforeEach((to, from, next) => {
         const principal = usePrincipal();
-        console.log(to)
+        console.log(principal);
+        
+        console.log(to);
         if (to.meta?.allowAnonymous || principal.identity.isAuthenticated) {
             logWriter.writeTrace({ message: `路由 “${to.fullPath}” 允许匿名访问，或者已经经过身份认证，尝试放行。`, contextData: { router: to, principal } });
             if (customInterceptor?.before)
@@ -66,7 +68,7 @@ export function registerRouterInterceptor(router: Router, customInterceptor?: Ro
             else next();
         }
         else {
-            next({ path: "/authentication/sign-in", query: { "redirect-router": to.fullPath } });
+            next({ path: "/authentication/sign-in", query: { "__redirect__": to.fullPath } });
         }
     });
 

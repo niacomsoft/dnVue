@@ -3,19 +3,17 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-import { LocalizationOptions } from "../locale";
-import { App } from "vue";
-import { createI18n } from "vue-i18n";
+import { zhCN } from "./zh-cn";
+import { enUS } from "./en-us";
+import { I18nOptions } from "vue-i18n";
 
 /**
- * 启用本地化资源组件。
- *
- * @export
- * @param {App} app
- * @returns {App}
+ * 本地化配置。
  */
-export function useLocalizations(app: App): App {
-    const locale = createI18n(LocalizationOptions);
-
-    return app.use(locale);
-}
+export const LocaleOptions: I18nOptions = {
+    locale: import.meta.env.DNVUE_DEFAULT_CULTURE_NAME,
+    messages: {
+        "zh-CN": zhCN,
+        "en-US": enUS
+    }
+};

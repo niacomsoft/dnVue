@@ -6,6 +6,7 @@
 import { createWebHashHistory, createRouter, Router, RouteRecordRaw } from "vue-router";
 import { App } from "vue";
 import { createRouteTable } from "./route-table";
+import { useDefaultLogWriter } from "@dnvue/composition-api";
 
 /**
  * 配置路由。
@@ -15,12 +16,14 @@ import { createRouteTable } from "./route-table";
  * @returns {App}
  */
 export function configureRoute(app: App): App {
+    const logger = useDefaultLogWriter();
+
     const routeTable: RouteRecordRaw[] = createRouteTable();
 
     const router: Router = createRouter({
         history: createWebHashHistory(),
         routes: routeTable
     });
-
+    
     return app.use(router);
 }

@@ -30,13 +30,13 @@ function configure(): void {
     useElementPlus(app);
     usePrivateComponents(app);
 
-    configureRoute(app);
-
     configureApplication(app);
 
     useLocalizations(app);
 
     usePinia(app);
+
+    configureRoute(app);
 
     app.mount('#app');
 }

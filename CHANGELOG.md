@@ -1,4 +1,29 @@
 # CHANGELOG
+## [1.0.0-alpha.19](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.18...v1.0.0-alpha.19) (2022-06-06)
+
+
+### DOCUMENTATION
+
+* 调整了本地化资源配置表。 ([d88e32b](https://github.com/niacomsoft/dnVue/commit/d88e32b03ea65a62c070b6f7d2fc0fe47376065e))
+* 调整了资源定义文档。 ([67037aa](https://github.com/niacomsoft/dnVue/commit/67037aadd31e100bd6338484b5a959e660c95e86))
+
+
+### REFACTOR
+
+* **Issue #6:** 重构本地化配置。 ([3562b0a](https://github.com/niacomsoft/dnVue/commit/3562b0aac9b22af8c74e002ecf979b2e822f6ca8)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
+
+### NEW FEATURE
+
+* **Issue #14:** 调整了 IAuthenticationService 接口定义。 ([6e9f2e1](https://github.com/niacomsoft/dnVue/commit/6e9f2e138be27f7356a685ad14473eb1041c5597)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 完成了登录视图的布局。 ([77ed1e9](https://github.com/niacomsoft/dnVue/commit/77ed1e94d1047db601fa704559504333476fdf0f)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 完成了路由拦截。 ([3f104ad](https://github.com/niacomsoft/dnVue/commit/3f104ad50b094c1215b6bb77ee0622ec5ee72a83)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 完成了身份认证相关功能。 ([19e4d01](https://github.com/niacomsoft/dnVue/commit/19e4d01c602bce02ca57231db623a4fd7b7952bb)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14) [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增身份认证视图。 ([98495a6](https://github.com/niacomsoft/dnVue/commit/98495a68b1f3d9e14c5f609767aa881f587206cd)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增身份认证相关方法。 ([8445117](https://github.com/niacomsoft/dnVue/commit/8445117474eb8a4bd17c6b79f41f9935c474dc18)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #14:** 新增用来模拟登录的基础身份认证方法。 ([e95661f](https://github.com/niacomsoft/dnVue/commit/e95661fb4a54266a2e7fa2b38188513ec08ffe27)), closes [#14](https://github.com/niacomsoft/dnVue/issues/14)
+* **Issue #6:** 新增本地话资源配置。 ([ed7daee](https://github.com/niacomsoft/dnVue/commit/ed7daee626af91553f926969944c4ffd51af24f4)), closes [#6](https://github.com/niacomsoft/dnVue/issues/6)
+
 ## [1.0.0-alpha.18](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.17...v1.0.0-alpha.18) (2022-05-28)
 
 

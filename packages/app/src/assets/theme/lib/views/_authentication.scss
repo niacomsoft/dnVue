@@ -1,0 +1,6 @@
+@use "sass:math"as *;
+@use "../_variables"as *;
+
+@mixin generate-var {
+    --vw-authentication-container--width: #{div(500, $v-text-size--base)}rem;
+}

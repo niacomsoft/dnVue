@@ -20,6 +20,13 @@ export function createRouteTable(): RouteRecordRaw[] {
         {
             path: "/home",
             component: () => import("../views/home/index.vue")
+        },
+        {
+            path: "/authentication/sign-in",
+            component: () => import("../views/authentication/index.vue"),
+            meta: {
+                allowAnonymous: true
+            }
         }
     ];
 }

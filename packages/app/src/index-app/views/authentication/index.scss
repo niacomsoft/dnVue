@@ -1,0 +1,11 @@
+.vw-authentication {
+    background: {
+        image : url(../../../assets/images/authentication.jpg);
+        repeat: no-repeat;
+        size  : percentage($number: 1) percentage($number: 1);
+    }
+
+    >div {
+        width: var(--vw-authentication-container--width);
+    }
+}

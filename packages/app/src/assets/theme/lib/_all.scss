@@ -8,6 +8,8 @@
 @use "./components/_v-appmanifest"as v-appmanifest;
 @use "./components/_v-container"as v-container;
 
+@use "./views/_authentication"as vw-authentication;
+
 :root {
 
     @each $-text-size-alias,
@@ -20,6 +22,8 @@
     @include v-icon.generate-var;
     @include v-appmanifest.generate-var;
     @include v-container.generate-var;
+
+    @include vw-authentication.generate-var;
 }
 
 * {

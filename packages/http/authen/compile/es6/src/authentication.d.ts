@@ -259,6 +259,13 @@ export interface IAuthenticationService<T> {
      * @memberof IAuthenticationService<T>
      */
     authorizeAsync(result: AuthenticationResult<T>): Promise<void>;
+    /**
+     * (异步的方法) 退出。
+     *
+     * @returns {Promise<void>}
+     * @memberof IAuthenticationService
+     */
+    signoutAsync(): Promise<void>;
 }
 /**
  * 提供了身份认证相关的基本方法。
@@ -270,6 +277,7 @@ export interface IAuthenticationService<T> {
  * @template T 身份认证结果。
  */
 export declare abstract class AuthenticationService<T> implements IAuthenticationService<T> {
+    abstract signoutAsync(): Promise<void>;
     abstract signinAsync(credentials: ICredentials): Promise<AuthenticationResult<T>>;
     abstract authorizeAsync(result: AuthenticationResult<T>): Promise<void>;
     /**

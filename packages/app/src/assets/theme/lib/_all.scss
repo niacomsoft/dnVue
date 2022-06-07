@@ -8,6 +8,7 @@
 @use "./components/_v-appmanifest"as v-appmanifest;
 @use "./components/_v-container"as v-container;
 @use "./components/_v-signin"as v-signin;
+@use "./components/_v-toolbar"as v-toolbar;
 
 @use "./views/_authentication"as vw-authentication;
 
@@ -24,13 +25,14 @@
     @include v-appmanifest.generate-var;
     @include v-container.generate-var;
     @include v-signin.generate-var;
+    @include v-toolbar.generate-var;
 
     @include vw-authentication.generate-var;
 }
 
 * {
     box-sizing: border-box;
-    font-size : var(--v-text-size--nm);
+    font-size : var(--v-text-size--sm);
 }
 
 html {
@@ -64,6 +66,11 @@ body,
         border-radius   : 2px !important;
         background-color: var(--md-grey-50) !important;
     }
+
+    &-popover-extensions {
+        padding      : 0 !important;
+        border-radius: 0 !important;
+    }
 }
 
 @include v-app.generate-cls;
@@ -74,3 +81,4 @@ body,
 @include v-appmanifest.generate-cls;
 @include v-container.generate-cls;
 @include v-signin.generate-cls;
+@include v-toolbar.generate-cls;

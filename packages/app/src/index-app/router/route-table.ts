@@ -19,7 +19,10 @@ export function createRouteTable(): RouteRecordRaw[] {
         },
         {
             path: "/home",
-            component: () => import("../views/home/index.vue")
+            component: () => import("../views/home/index.vue"),
+            meta: {
+                title: "CONTROL_PANEL"
+            }
         },
         {
             path: "/authentication",

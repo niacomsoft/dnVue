@@ -115,4 +115,6 @@ export const enUS: Record<string, string> = {
     AUTHENTICATION_IN_PROGRESS: "Authentication in progress, please wait",
     ENTER_USERNAME: "User Name / E-mail Address / Mobile Number",
     ENTER_PASSWORD: "Password",
+    CURRENT_USER: "The user",
+    CHANGE_PASSWORD: "Change my password",
 };

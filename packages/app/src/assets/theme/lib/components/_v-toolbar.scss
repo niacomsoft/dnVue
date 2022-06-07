@@ -1,0 +1,71 @@
+@use "sass:math"as *;
+@use "../_variables"as *;
+
+@mixin generate-var {
+    --v-toolbar--height: #{div(40, $v-text-size--base)}rem;
+}
+
+@mixin generate-cls {
+    .v-toolbar {
+        height: var(--v-toolbar--height);
+
+        >#{&}-item {
+            height    : var(--v-toolbar--height);
+            width     : var(--v-toolbar--height);
+            cursor    : pointer;
+            box-sizing: content-box;
+
+            .mdi::before {
+                padding-right: 0 !important;
+            }
+        }
+
+        @at-root &-item {
+            &-default-user {
+                width: percentage($number: 1);
+
+                >.v-flexbox {
+                    padding         : 10px;
+                    background-color: var(--md-grey-100);
+
+                    img {
+                        height : #{div(30, $v-text-size--base)}rem;
+                        width  : auto;
+                        display: block;
+                    }
+                }
+
+                >div[data-v-role=item] {
+                    padding      : 10px;
+                    text-align   : left;
+                    white-space  : nowrap;
+                    overflow     : hidden;
+                    text-overflow: ellipsis;
+
+                    >h1 {
+                        font: {
+                            size  : var(--v-text-size--nm);
+                            weight: bold;
+                        }
+
+                        color         : var(--md-grey-700);
+                        text-transform: uppercase;
+                    }
+
+                    >button.el-button--danger {
+                        display: block;
+                        width  : percentage($number: 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .v-toolbar[data-v-role=right]>.v-toolbar-item {
+        padding-left: #{div(10, $v-text-size--base)}rem;
+    }
+
+    .v-toolbar[data-v-role=left]>.v-toolbar-item {
+        padding-right: #{div(10, $v-text-size--base)}rem;
+    }
+}

@@ -115,4 +115,6 @@ export const zhCN: Record<string, string> = {
     AUTHENTICATION_IN_PROGRESS: "身份认证中，请稍候...",
     ENTER_USERNAME: "请输入用户名 / 电邮地址 / 手机号",
     ENTER_PASSWORD: "请输入登录密码",
+    CURRENT_USER: "当前用户",
+    CHANGE_PASSWORD: "修改登录密码",
 };

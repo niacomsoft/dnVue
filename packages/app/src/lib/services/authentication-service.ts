@@ -47,6 +47,14 @@ class BasicAuthenticationServiceProvider extends AuthenticationService<dnvue.ent
      */
     protected readonly _authenStore: dnvue.caching.ICache = useCaching("session");
 
+    signoutAsync(): Promise<void> {
+        const context = this;
+        return new Promise<void>((successCallback) => {
+            context._authenStore.clear();
+            successCallback();
+        });
+    }
+
     signinAsync(credentials: ICredentials): Promise<AuthenticationResult<dnvue.entity.User>> {
         return new Promise<AuthenticationResult<dnvue.entity.User>>((successCallback, failureCallback) => {
             const _basicCredentials = credentials as IBasicCredentials;

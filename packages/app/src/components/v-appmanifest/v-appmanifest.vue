@@ -17,7 +17,7 @@
     </template>
     <div data-v-role="apps">
       <div v-for="(app, appIdx) in readonlyAppManifest" :key="'v-appmanifest-item__' + appIdx" :style="{ backgroundImage: `url(${app.iconDataURL})` }">
-        <a :href="app.url" :target="app.target ?? '_target'">{{ $t(app.name) }}</a>
+        <a :href="app.url" :target="app.target ?? '_target'" rel="opener">{{ $t(app.name) }}</a>
       </div>
     </div>
   </el-drawer>

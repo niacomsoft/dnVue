@@ -9,7 +9,7 @@
   <v-flexbox class="v-container">
     <div class="v-container-shortcuts" v-if="showAppShortcuts">
       <div v-for="(app, appIdx) in readonlyAppMainfest" :key="`v-app-shortcut__${appIdx}`" :data-v-actived="appIdx === activedAppShortcutIndex">
-        <a :href="app.url" :target="app.target ?? '_blank'" :title="$t(app.name)">
+        <a :href="app.url" :target="app.target ?? '_blank'" :title="$t(app.name)" rel="opener">
           <img :src="app.iconDataURL" />
         </a>
       </div>

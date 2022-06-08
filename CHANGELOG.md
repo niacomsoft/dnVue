@@ -1,4 +1,31 @@
 # CHANGELOG
+## [1.0.0-alpha.20](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2022-06-08)
+
+
+### PERFORMANCE OPTIMIZE
+
+* 调整了样式。 ([3c10ec9](https://github.com/niacomsoft/dnVue/commit/3c10ec9787a17004fffcda7c5af535127a998569))
+* 删除了无用的运行时日志。 ([cf57c4b](https://github.com/niacomsoft/dnVue/commit/cf57c4b18859cbb133f29da2e5bbdac70e35dda4))
+
+
+### BUG FIXED
+
+* 修复应用清单中 <a /> 超链接无法携带同源会话存储的问题。 ([5680c2e](https://github.com/niacomsoft/dnVue/commit/5680c2edf0bf8c248fa8d6b52f2dda49a81a65a7))
+
+
+### NEW FEATURE
+
+* **Issue #15:** 完成了登出功能。 ([9e0381b](https://github.com/niacomsoft/dnVue/commit/9e0381b123fe1fd7f92665662094715b2d5f9187)), closes [#15](https://github.com/niacomsoft/dnVue/issues/15) [#15](https://github.com/niacomsoft/dnVue/issues/15)
+* **Issue #15:** 新增 v-toolbar.vue 组件。 ([582896e](https://github.com/niacomsoft/dnVue/commit/582896e3fe3b2a143fa8b80c29539ce26407e5c4)), closes [#15](https://github.com/niacomsoft/dnVue/issues/15)
+* **Issue #15:** 修改了 IAuthenticationService 接口，增加了 signoutAsync 退出方法。 ([95b59b2](https://github.com/niacomsoft/dnVue/commit/95b59b2a0a32ed7975df1ed33b7d7149b1b096fd)), closes [#15](https://github.com/niacomsoft/dnVue/issues/15)
+* **Issue #16:** 完成了侧边栏组件。 ([333d379](https://github.com/niacomsoft/dnVue/commit/333d379f29fb913ec0bda581abf62b3c9ae86adf)), closes [#16](https://github.com/niacomsoft/dnVue/issues/16)
+* **Issue #16:** 完成了全局菜单验证。 ([5dfce27](https://github.com/niacomsoft/dnVue/commit/5dfce27e3fc03bd907329bcd8d6da3c7c5d3a042)), closes [#16](https://github.com/niacomsoft/dnVue/issues/16) [#16](https://github.com/niacomsoft/dnVue/issues/16)
+
+
+### CHORE
+
+* 修改了全局版本号。 ([72af432](https://github.com/niacomsoft/dnVue/commit/72af4324a1eafcfbbbb92b326a22728ac368a3b4))
+
 ## [1.0.0-alpha.19](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.18...v1.0.0-alpha.19) (2022-06-06)
 
 

@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { getExternalAppManifest, useComponentStateStore } from "../../lib";
+import { getExternalAppManifest, useTemporaryStateStore } from "../../lib";
 import { storeToRefs } from "pinia";
 import { DnvueComponentProps } from "../component-props";
 import { vIcon } from "../v-icon";
@@ -33,7 +33,7 @@ import { computed } from "vue";
 /**
  * 组件状态。
  */
-const componentState = useComponentStateStore();
+const componentState = useTemporaryStateStore();
 
 /**
  * 可监控的组件状态。

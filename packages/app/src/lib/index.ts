@@ -14,7 +14,10 @@ export {
     usePinia,
     registerRouterInterceptor
 } from "./plugins";
-export { useComponentStateStore } from "./store";
+export {
+    useTemporaryStateStore,
+    usePersistentStateStore
+} from "./store";
 export { getExternalAppManifest } from "./app-configuration";
 export {
     useBasicAuthenticator,

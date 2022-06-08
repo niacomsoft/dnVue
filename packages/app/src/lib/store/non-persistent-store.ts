@@ -21,9 +21,9 @@ type ComponentState = {
 };
 
 /**
- * 启用组件状态。
+ * 启用临时的组件状态。
  */
-export const useComponentStateStore = defineStore("component-state-store", {
+export const useTemporaryStateStore = defineStore("non-persistent-component-state", {
     state: (): ComponentState => ({
         showAppManifestDrawer: false
     }),

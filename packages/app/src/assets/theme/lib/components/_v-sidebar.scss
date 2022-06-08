@@ -1,0 +1,65 @@
+@use "../_variables"as *;
+@use "sass:math"as *;
+
+@mixin generate-var {
+    --v-sidebar--background-color: var(--v-container-leftside--background-color);
+    --v-sidebar-pin--border-color: var(--md-grey-400);
+    --v-sidebar-pin--color       : #{$v-text-primary};
+}
+
+@mixin generate-cls {
+    .v-sidebar {
+        background-color: var(--v-sidebar--background-color);
+        width           : percentage($number: 1);
+        height          : percentage($number: 1);
+
+        >div#{&}-content {
+            flex: 1;
+
+            >div {
+                height: percentage($number: 1);
+            }
+
+            >div[data-v-role=content] {
+                width: percentage($number: 1);
+                flex : 1;
+            }
+
+            >div[data-v-role=pin] {
+                width   : #{div(20, $v-text-size--base)}rem;
+                position: relative;
+
+                >div {
+                    position: absolute;
+                }
+
+                >div[class^=mdi] {
+                    width           : #{div(20, $v-text-size--base)}rem;
+                    height          : #{div(20, $v-text-size--base)}rem;
+                    border-radius   : percentage($number: 0.5);
+                    cursor          : pointer;
+                    font-size       : var(--v-text-size--sm);
+                    color           : var(--v-sidebar-pin--color);
+                    text-align      : center;
+                    border          : 1px solid var(--v-sidebar-pin--border-color);
+                    z-index         : #{$v-zindex--max - 1};
+                    top             : #{div(20, $v-text-size--base)}rem;
+                    background-color: var(--v-sidebar--background-color);
+                }
+
+                >div[class^=mdi].mdi::before {
+                    padding: 0 !important;
+                }
+
+                >div[data-v-role=line] {
+                    width           : #{div(1, $v-text-size--base)}rem;
+                    height          : percentage($number: 1);
+                    background-color: var(--v-sidebar-pin--border-color);
+                    z-index         : #{$v-zindex--max - 2};
+                    top             : 0;
+                    left            : percentage($number: 0.5);
+                }
+            }
+        }
+    }
+}

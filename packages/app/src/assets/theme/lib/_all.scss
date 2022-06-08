@@ -9,6 +9,7 @@
 @use "./components/_v-container"as v-container;
 @use "./components/_v-signin"as v-signin;
 @use "./components/_v-toolbar"as v-toolbar;
+@use "./components/_v-sidebar"as v-sidebar;
 
 @use "./views/_authentication"as vw-authentication;
 
@@ -26,6 +27,7 @@
     @include v-container.generate-var;
     @include v-signin.generate-var;
     @include v-toolbar.generate-var;
+    @include v-sidebar.generate-var;
 
     @include vw-authentication.generate-var;
 }
@@ -82,3 +84,4 @@ body,
 @include v-container.generate-cls;
 @include v-signin.generate-cls;
 @include v-toolbar.generate-cls;
+@include v-sidebar.generate-cls;

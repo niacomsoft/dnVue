@@ -15,6 +15,7 @@
       <template #left-side>
         <v-sidebar :pin-mode="globalSidebarExpanded ? 'pin' : 'unpin'" @pin-click="onSidebarPinClick"> </v-sidebar>
       </template>
+      <router-view />
     </v-container>
   </v-flexbox>
 </template>

@@ -73,6 +73,11 @@ body,
         padding      : 0 !important;
         border-radius: 0 !important;
     }
+
+    &-menu-extensions {
+        border-right    : 0 none !important;
+        background-color: transparent !important;
+    }
 }
 
 @include v-app.generate-cls;

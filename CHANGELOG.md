@@ -1,4 +1,25 @@
 # CHANGELOG
+## [1.0.0-alpha.21](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2022-06-09)
+
+
+### BUG FIXED
+
+* 修改了构建路径配置。 ([2e3d826](https://github.com/niacomsoft/dnVue/commit/2e3d82624015ec2c0b5422356c742f7d0d236adf))
+
+
+### NEW FEATURE
+
+* **Issue #16:** 完成了菜单组件。 ([5afd2d2](https://github.com/niacomsoft/dnVue/commit/5afd2d21c7233b266871064cf574077b2636fbb6)), closes [#16](https://github.com/niacomsoft/dnVue/issues/16) [#16](https://github.com/niacomsoft/dnVue/issues/16)
+* **Issue #16:** 重启 Issues [#16](https://github.com/niacomsoft/dnVue/issues/16) ([6af5221](https://github.com/niacomsoft/dnVue/commit/6af5221013ab6c2f2f9176df945fcce8367694c4))
+* **Issue #17:** 完善了 v-content-container.vue 组件。增加了通用加载中状态。 ([050eca6](https://github.com/niacomsoft/dnVue/commit/050eca65fd52366f480c7779abdec5ebec7eb710)), closes [#17](https://github.com/niacomsoft/dnVue/issues/17)
+* **Issue #17:** 新增数据内容容器组件。 ([0bb1865](https://github.com/niacomsoft/dnVue/commit/0bb18656982c248482297b0f4c275c35d173db5d)), closes [#17](https://github.com/niacomsoft/dnVue/issues/17)
+
+
+### CHORE
+
+* 调整了应用图标样式。 ([51206a9](https://github.com/niacomsoft/dnVue/commit/51206a945f31f2b5374490ff7d46430448f5ae15))
+* 修改了版本号。 ([5cbef42](https://github.com/niacomsoft/dnVue/commit/5cbef4233f54b2a9ccb43d1088d0701de491463b))
+
 ## [1.0.0-alpha.20](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2022-06-08)
 
 

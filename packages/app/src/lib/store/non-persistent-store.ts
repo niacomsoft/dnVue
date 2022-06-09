@@ -18,6 +18,12 @@ type ComponentState = {
      * @type {boolean}
      */
     showAppManifestDrawer: boolean;
+    /**
+     * 设置或获取一个值，用于表示是否正在处理某事务。
+     *
+     * @type {boolean}
+     */
+    transactionIsProcessing: boolean;
 };
 
 /**
@@ -25,7 +31,8 @@ type ComponentState = {
  */
 export const useTemporaryStateStore = defineStore("non-persistent-component-state", {
     state: (): ComponentState => ({
-        showAppManifestDrawer: false
+        showAppManifestDrawer: false,
+        transactionIsProcessing: false
     }),
     actions: {
         /**
@@ -36,6 +43,15 @@ export const useTemporaryStateStore = defineStore("non-persistent-component-stat
         toggleAppManifestDrawerVisible(visible: boolean = true): void {
             logger.writeTrace({ message: `"component-state-store" 尝试切换状态 "showAppManifestDrawer" 到 "${visible}"。` });
             this.showAppManifestDrawer = visible;
+        },
+        /**
+         * 切换事务处理中的状态。
+         *
+         * @param {boolean} [status=true] 状态值。
+         */
+        toggleTransactionProcessingState(status: boolean = true): void {
+            logger.writeWarning({ message: `"In-Processing" 正在切换到 "${status}"。` });
+            this.transactionIsProcessing = status;
         }
     }
 });

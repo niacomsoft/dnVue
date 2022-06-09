@@ -6,7 +6,7 @@
 -->
 
 <template>
-  <v-flexbox direction="column" class="animate__animated animate__fadeIn v-content-container">
+  <v-flexbox direction="column" class="animate__animated animate__fadeIn v-content-container" v-loading="transactionIsProcessing" :element-loading-text="$t('IN_PROCESSING')">
     <v-flexbox align-items="center" justify-content="space-between" data-v-role="header" v-if="readonlyHeaderSlotVisible">
       <span>{{ title }}</span>
       <slot name="header" />
@@ -18,7 +18,7 @@
       <slot />
     </div>
     <div data-v-role="footer" v-if="readonlyFooterSlotVisible">
-        <slot name="footer" />
+      <slot name="footer" />
     </div>
   </v-flexbox>
 </template>
@@ -26,9 +26,18 @@
 <script lang="ts" setup>
 import { vFlexbox } from "../v-flexbox";
 import { DnvueComponentProps } from "../component-props";
-import { computed, useSlots } from "vue";
+import { computed, onBeforeUnmount, useSlots } from "vue";
+import { useTemporaryStateStore } from "../../lib";
+import { storeToRefs } from "pinia";
+import { useDefaultLogWriter } from "@dnvue/composition-api";
 
 const slots = useSlots();
+
+const logWriter = useDefaultLogWriter();
+
+const temporaryStore = useTemporaryStateStore();
+
+const { transactionIsProcessing } = storeToRefs(temporaryStore);
 
 const props = defineProps(
   Object.assign({}, DnvueComponentProps, {
@@ -42,6 +51,21 @@ const props = defineProps(
   })
 );
 
+defineExpose({
+  /**
+   * 启动事务。
+   */
+  beginTransaction: function () {
+    temporaryStore.toggleTransactionProcessingState(true);
+  },
+  /**
+   * 结束事务。
+   */
+  endTransaction: function () {
+    temporaryStore.toggleTransactionProcessingState(false);
+  },
+});
+
 const readonlyHeaderSlotVisible = computed<boolean>(() => {
   return !String.isNullOrWhitespace(props.title) || (slots["header"] !== null && slots["header"] !== undefined);
 });
@@ -52,5 +76,10 @@ const readonlyOperationSlotVisible = computed<boolean>(() => {
 
 const readonlyFooterSlotVisible = computed<boolean>(() => {
   return slots["footer"] !== null && slots["footer"] !== undefined;
+});
+
+onBeforeUnmount(() => {
+  logWriter.writeWarning({ message: `"v-content-container" 组件正在处理 before-unmount 事件。` });
+  temporaryStore.toggleTransactionProcessingState(false);
 });
 </script>

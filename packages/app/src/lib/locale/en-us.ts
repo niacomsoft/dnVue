@@ -119,4 +119,5 @@ export const enUS: Record<string, string> = {
     CHANGE_PASSWORD: "Change my password",
     HOME_PAGE: "Home",
     DATA_TABLE: "Data Table",
+    IN_PROCESSING: "The transaction is processing, please wait a few minutes...",
 };

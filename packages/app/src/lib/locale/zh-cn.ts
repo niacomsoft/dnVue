@@ -117,4 +117,5 @@ export const zhCN: Record<string, string> = {
     ENTER_PASSWORD: "请输入登录密码",
     CURRENT_USER: "当前用户",
     CHANGE_PASSWORD: "修改登录密码",
+    HOME_PAGE: "首页",
 };

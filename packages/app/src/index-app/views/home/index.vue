@@ -13,7 +13,9 @@
     <v-app-manifest :title="$t('APPLICATION_MANIFEST')" />
     <v-container :actived-app-shortcut-index="0">
       <template #left-side>
-        <v-sidebar :pin-mode="globalSidebarExpanded ? 'pin' : 'unpin'" @pin-click="onSidebarPinClick"> </v-sidebar>
+        <v-sidebar :pin-mode="globalSidebarExpanded ? 'pin' : 'unpin'" @pin-click="onSidebarPinClick"> 
+          <vp-global-menu />
+        </v-sidebar>
       </template>
       <router-view />
     </v-container>
@@ -24,6 +26,7 @@
 import { storeToRefs } from "pinia";
 import { computed } from "vue";
 import { vFlexbox, vAppbar, vAppManifest, vContainer, vToolbar, vSidebar } from "../../../components";
+import { vpGlobalMenu } from "../../partials";
 import { usePersistentStateStore } from "../../../lib";
 
 const persistentStore = usePersistentStateStore();

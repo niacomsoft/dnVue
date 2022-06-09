@@ -12,7 +12,8 @@
             style: normal;
         }
 
-        color: var(--v-icon--default-color);
+        color  : var(--v-icon--default-color);
+        padding: 0 !important;
     }
 
     .v-icon[data-v-clickable=true] {

@@ -45,7 +45,7 @@ export default (({ mode }) => {
    * 
    * @type {string}
    */
-  const buildDir: string = resolve(__dirname, `dist/${process.env.NODE_ENV}/${mode}`);
+  const buildDir: string = resolve(__dirname, `dist/${environmentVars.NODE_ENV}/${mode}`);
 
   /**
    * 多页模式应用构建配置。

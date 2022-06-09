@@ -6,11 +6,11 @@
 -->
 
 <template>
-  <v-content-container :title="$t('DATA_TABLE')">
-
+  <v-content-container :title="$t('DATA_TABLE')" ref="container">
   </v-content-container>
 </template>
 
 <script lang="ts" setup>
+import { reactive, getCurrentInstance } from "vue";
 import { vContentContainer } from "../../../../components";
 </script>

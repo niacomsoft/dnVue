@@ -21,6 +21,36 @@ declare namespace dnvue {
     }
 
     /**
+     * 定义了启用状态类型。
+     *
+     * @interface EnabledState
+     */
+    interface EnabledState {
+        /**
+         * 设置或获取一个值，用于表示是否启用。
+         *
+         * @type {boolean}
+         * @memberof EnabledState
+         */
+        enabled: boolean;
+    }
+
+    /**
+     * 定义了可见状态类型。
+     *
+     * @interface VisibleState
+     */
+    interface VisibleState {
+        /**
+         * 设置或获取一个值，用于表示是否可见。
+         *
+         * @type {boolean}
+         * @memberof VisibleState
+         */
+        visible: boolean;
+    }
+
+    /**
      * 定义了日志项类型。
      *
      * @interface LogEntry

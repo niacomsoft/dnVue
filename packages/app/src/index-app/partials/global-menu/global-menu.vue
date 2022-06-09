@@ -6,20 +6,21 @@
 -->
 
 <template>
-  <el-menu class="el-menu-extensions" :collapse="!globalSidebarExpanded">
-    <el-menu-item index="root::home::1">
-      <v-icon name="mdiHome" color="inherit" />
-      <span>{{ $t("HOME_PAGE") }}</span>
-    </el-menu-item>
-  </el-menu>
+  <v-menu :items="readonlyMenuItems" :is-collapsed="!globalSidebarExpanded"> </v-menu>
 </template>
 
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
-import { vIcon } from "../../../components";
+import { computed } from "vue";
+import { vMenu } from "../../../components";
 import { usePersistentStateStore } from "../../../lib";
+import { configureGlobalMenuItems } from "./this-component";
 
 const persistentStore = usePersistentStateStore();
 
 const { globalSidebarExpanded } = storeToRefs(persistentStore);
+
+const readonlyMenuItems = computed(() => {
+  return configureGlobalMenuItems();
+});
 </script>

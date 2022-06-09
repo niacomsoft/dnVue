@@ -118,4 +118,5 @@ export const enUS: Record<string, string> = {
     CURRENT_USER: "The user",
     CHANGE_PASSWORD: "Change my password",
     HOME_PAGE: "Home",
+    DATA_TABLE: "Data Table",
 };

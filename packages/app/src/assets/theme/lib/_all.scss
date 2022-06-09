@@ -77,6 +77,15 @@ body,
     &-menu-extensions {
         border-right    : 0 none !important;
         background-color: transparent !important;
+        min-width       : 200px;
+
+        .el-menu {
+            background-color: var(--md-grey-50) !important;
+        }
+    }
+
+    &-menu-extensions[data-v-role=true] {
+        min-width: auto !important;
     }
 }
 

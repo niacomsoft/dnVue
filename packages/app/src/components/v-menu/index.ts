@@ -3,10 +3,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-/// <reference path="./types/lib.functions.d.ts" />
-/// <reference path="./types/lib.typings.d.ts" />
-/// <reference path="./types/lib.interfaces.d.ts" />
-/// <reference path="./types/lib.enums.d.ts" />
-/// <reference path="./types/lib.delegations.d.ts" />
-/// <reference path="./types/lib.components.d.ts" />
-/// <reference path="./types/global.d.ts" />
+import vMenu from "./v-menu.vue";
+import vMenuItem from "./v-menu-item.vue";
+
+export { vMenu, vMenuItem };

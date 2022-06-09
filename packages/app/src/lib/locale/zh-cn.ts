@@ -118,4 +118,5 @@ export const zhCN: Record<string, string> = {
     CURRENT_USER: "当前用户",
     CHANGE_PASSWORD: "修改登录密码",
     HOME_PAGE: "首页",
+    DATA_TABLE: "数据列表",
 };

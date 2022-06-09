@@ -15,3 +15,4 @@ export { vContainer } from "./v-container";
 export { vSignin } from "./v-signin";
 export { vToolbar, vToolbarItem } from "./v-toolbar";
 export { vSidebar } from "./v-sidebar";
+export { vMenu, vMenuItem } from "./v-menu";

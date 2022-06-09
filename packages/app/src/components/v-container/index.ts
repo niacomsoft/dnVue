@@ -4,5 +4,6 @@
 // **************************************************************************************************************************
 
 import vContainer from "./v-container.vue";
+import vContentContainer from "./v-content-container.vue";
 
-export { vContainer };
+export { vContainer, vContentContainer };

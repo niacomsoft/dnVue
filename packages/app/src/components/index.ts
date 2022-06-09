@@ -11,7 +11,7 @@ export { vFlexbox } from "./v-flexbox";
 export { vIcon } from "./v-icon";
 export { vImage } from "./v-image";
 export { vAppManifest } from "./v-appmanifest";
-export { vContainer } from "./v-container";
+export { vContainer, vContentContainer } from "./v-container";
 export { vSignin } from "./v-signin";
 export { vToolbar, vToolbarItem } from "./v-toolbar";
 export { vSidebar } from "./v-sidebar";

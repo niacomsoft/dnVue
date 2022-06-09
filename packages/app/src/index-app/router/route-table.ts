@@ -22,7 +22,11 @@ export function createRouteTable(): RouteRecordRaw[] {
             component: () => import("../views/home/index.vue"),
             meta: {
                 title: "CONTROL_PANEL"
-            }
+            },
+            children: [{
+                path: "dashboard",
+                component: () => import("../views/home/dashboard/dashboard.vue")
+            }]
         },
         {
             path: "/authentication",

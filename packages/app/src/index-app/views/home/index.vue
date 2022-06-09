@@ -8,7 +8,7 @@
 <template>
   <v-flexbox direction="column">
     <v-appbar :logo-image-url="readonlyLogoImage" :title="$t('APPLICATION_NAME')">
-      <v-toolbar></v-toolbar>
+      <v-toolbar />
     </v-appbar>
     <v-app-manifest :title="$t('APPLICATION_MANIFEST')" />
     <v-container :actived-app-shortcut-index="0">

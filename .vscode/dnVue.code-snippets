@@ -1,29 +1,34 @@
 {
-	"TypeScript Header": {
-	  "body": [
-		"// **************************************************************************************************************************",
-		"// COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI. ALL RIGHTS RESERVED.",
-		"// LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.",
-		"// **************************************************************************************************************************",
-		"$1"
-	  ],
-	  "description": "TypeScript 头部注释",
-	  "prefix": "dnvue",
-	  "scope": "typescript, javascript"
-	},
-	"HTML Header": {
-	  "body": [
-		"<!-- ",
-		"  **************************************************************************************************************************",
-		"  COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI. ALL RIGHTS RESERVED.",
-		"  LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.",
-		"  **************************************************************************************************************************",
-		"-->",
-		"$1"
-	  ],
-	  "description": "HTML 头部注释",
-	  "prefix": "dnvue",
-	  "scope": "html, vue"
-	}
+  "TypeScript Header": {
+    "body": [
+      "// **************************************************************************************************************************",
+      "// COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI. ALL RIGHTS RESERVED.",
+      "// LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.",
+      "// **************************************************************************************************************************",
+      "$1"
+    ],
+    "description": "TypeScript 头部注释",
+    "prefix": "dnvue",
+    "scope": "typescript, javascript"
+  },
+  "HTML Header": {
+    "body": [
+      "<!-- ",
+      "  **************************************************************************************************************************",
+      "  COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI. ALL RIGHTS RESERVED.",
+      "  LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.",
+      "  **************************************************************************************************************************",
+      "-->",
+      "$1"
+    ],
+    "description": "HTML 头部注释",
+    "prefix": "dnvue",
+    "scope": "html, vue"
+  },
+  "Vue Setup Grammar": {
+    "body": ["<script lang=\"ts\" setup>", "$1", "</script>"],
+    "description": "VUE3 Setup Grammar",
+    "prefix": "dnvue",
+    "scope": "vue"
   }
-  
+}

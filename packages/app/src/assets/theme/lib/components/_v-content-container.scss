@@ -1,0 +1,44 @@
+@use "../_variables"as *;
+@use "sass:math"as *;
+
+@mixin generate-var {
+    --v-content-container--padding             : #{div(10, $v-text-size--base)}rem;
+    --v-content-container-header--background   : var(--md-grey-100);
+    --v-content-container-operation--background: var(--md-grey-50);
+}
+
+@mixin generate-cls {
+    .v-content-container {
+        background-color: transparent;
+
+        >div {
+            padding         : var(--v-content-container--padding);
+            background-color: #FFFFFF;
+            width           : percentage($number: 1);
+        }
+
+        >div[data-v-role=header] {
+            background-color: var(--v-content-container-header--background);
+            height          : auto;
+
+            >span {
+                font: {
+                    size: var(--v-text-size--nm);
+                }
+            }
+        }
+
+        >div[data-v-role=operation] {
+            background-color: var(--v-content-container-operation--background);
+            height          : 200px;
+        }
+
+        >div[data-v-role=content] {
+            flex : 1;
+        }
+
+        >div[data-v-role=footer] {
+            background-color: var(--v-content-container-operation--background);
+        }
+    }
+}

@@ -7,6 +7,7 @@
 @use "./components/_v-image"as v-image;
 @use "./components/_v-appmanifest"as v-appmanifest;
 @use "./components/_v-container"as v-container;
+@use "./components/_v-content-container"as v-content-container;
 @use "./components/_v-signin"as v-signin;
 @use "./components/_v-toolbar"as v-toolbar;
 @use "./components/_v-sidebar"as v-sidebar;
@@ -28,6 +29,7 @@
     @include v-signin.generate-var;
     @include v-toolbar.generate-var;
     @include v-sidebar.generate-var;
+    @include v-content-container.generate-var;
 
     @include vw-authentication.generate-var;
 }
@@ -99,3 +101,4 @@ body,
 @include v-signin.generate-cls;
 @include v-toolbar.generate-cls;
 @include v-sidebar.generate-cls;
+@include v-content-container.generate-cls;

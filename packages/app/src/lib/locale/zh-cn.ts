@@ -120,4 +120,5 @@ export const zhCN: Record<string, string> = {
     HOME_PAGE: "首页",
     DATA_TABLE: "数据列表",
     IN_PROCESSING: "事务正在处理中，请稍候.....",
+    BUTTON: "按钮",
 };

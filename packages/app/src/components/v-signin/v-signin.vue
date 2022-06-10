@@ -21,7 +21,7 @@
         <el-checkbox v-model="observableTyped.remember" :label="$t('REMEMBER_ME')" :indeterminate="false" />
       </v-flexbox>
       <v-flexbox justify-content="flex-end">
-        <el-button type="primary" class="mdi mdi-account-key-outline" @click="onSignInButtonClick">{{ $t("SIGN_IN") }}</el-button>
+        <v-btn text="SIGN_IN" @click="onSignInButtonClick" />
       </v-flexbox>
     </div>
   </div>
@@ -31,6 +31,7 @@
 /// <reference path="../../global.d.ts" />
 
 import { vFlexbox } from "../v-flexbox";
+import { vBtn } from "../v-btn";
 import { DnvueComponentProps } from "../component-props";
 import { DnvueComponentEvents } from "../component-events";
 import { reactive } from "vue";

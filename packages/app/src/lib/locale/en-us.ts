@@ -120,4 +120,5 @@ export const enUS: Record<string, string> = {
     HOME_PAGE: "Home",
     DATA_TABLE: "Data Table",
     IN_PROCESSING: "The transaction is processing, please wait a few minutes...",
+    BUTTON: "Button",
 };

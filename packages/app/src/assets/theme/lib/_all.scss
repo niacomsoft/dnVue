@@ -89,6 +89,10 @@ body,
     &-menu-extensions[data-v-role=true] {
         min-width: auto !important;
     }
+
+    &-button[data-v-role--block=true] {
+        width: percentage($number: 1);
+    }
 }
 
 @include v-app.generate-cls;

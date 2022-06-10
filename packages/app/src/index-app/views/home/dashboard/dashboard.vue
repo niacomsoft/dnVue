@@ -22,7 +22,7 @@
     </template>
     <el-table :data="dataTable" stripe>
       <el-table-column type="index" width="80" label="序号" />
-      <el-table-column label="姓名" prop="name" width="auto" />
+      <el-table-column label="姓名" prop="name" />
     </el-table>
   </v-content-container>
 </template>

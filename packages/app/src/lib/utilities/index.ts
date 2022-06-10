@@ -4,3 +4,4 @@
 // **************************************************************************************************************************
 
 export { useNotification } from "./feedback-utils";
+export { getComponentOpenApi } from "./component-expose";

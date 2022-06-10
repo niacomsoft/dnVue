@@ -33,7 +33,11 @@
         }
 
         >div[data-v-role=content] {
-            flex : 1;
+            flex: 1;
+
+            >div {
+                display: block;
+            }
         }
 
         >div[data-v-role=footer] {

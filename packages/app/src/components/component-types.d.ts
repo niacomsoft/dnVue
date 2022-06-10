@@ -22,3 +22,26 @@ declare interface DnvueMenuItemOptions extends dnvue.ui.MenuItemOptions {
 
     readonly children?: DnvueMenuItemOptions[];
 }
+
+/**
+ * v-content-container.vue 组件开放接口定义。
+ *
+ * @interface ContentContainerExpose
+ */
+declare interface ContentContainerExpose {
+    /**
+     * 启动全局事务。
+     *
+     * @type {dnvue.Action}
+     * @memberof ContentContainerExpose
+     */
+    beginTransaction: dnvue.Action;
+
+    /**
+     * 结束全局事务。
+     *
+     * @type {dnvue.Action}
+     * @memberof ContentContainerExpose
+     */
+    endTransaction: dnvue.Action;
+}

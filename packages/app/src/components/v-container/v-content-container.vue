@@ -15,7 +15,9 @@
       <slot name="operation" />
     </div>
     <div data-v-role="content">
-      <slot />
+      <div>
+        <slot />
+      </div>
     </div>
     <div data-v-role="footer" v-if="readonlyFooterSlotVisible">
       <slot name="footer" />

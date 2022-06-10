@@ -16,19 +16,19 @@
         <div class="v-toolbar-item-default-user">
           <v-flexbox align-items="center" justify-content="space-between">
             <img src="../../assets/icons/App.png" />
-            <el-button type="primary" size="small" text @click="onSignoffButtonClick">{{ $t("SIGN_OFF") }}</el-button>
+            <v-btn mode="text" text="SIGN_OFF" @click="onSignoffButtonClick" />
           </v-flexbox>
           <v-flexbox data-v-role="item">
             <h1>{{ `${$t("CURRENT_USER")} - @${readonlyCurrentUserName}` }}</h1>
           </v-flexbox>
           <div data-v-role="item">
-            <el-button type="primary" size="small" link @click="onProfileButtonClick">{{ $t("PROFILE") }}</el-button>
+            <v-btn mode="link" text="PROFILE" @click="onProfileButtonClick" />
           </div>
           <div data-v-role="item">
-            <el-button type="primary" size="small" link @click="onChangePasswordButtonClick">{{ $t("CHANGE_PASSWORD") }}</el-button>
+            <v-btn mode="link" text="CHANGE_PASSWORD" @click="onChangePasswordButtonClick" />
           </div>
           <div data-v-role="item">
-            <el-button type="danger" class="mdi mdi-exit-to-app" @click="onSignoffButtonClick">{{ $t("SIGN_OFF") }}</el-button>
+            <v-btn el-type="danger" text="SIGN_OFF" block @click="onSignoffButtonClick" />
           </div>
         </div>
       </el-popover>
@@ -39,6 +39,7 @@
 <script lang="ts" setup>
 import { vFlexbox } from "../v-flexbox";
 import { vIcon } from "../v-icon";
+import { vBtn } from "../v-btn";
 import vToolbarItem from "./v-toolbar-item.vue";
 import { DnvueComponentProps } from "../component-props";
 import { DnvueComponentEvents } from "../component-events";

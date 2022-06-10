@@ -45,3 +45,18 @@ declare interface ContentContainerExpose {
      */
     endTransaction: dnvue.Action;
 }
+
+/**
+ * Element-Plus Table 组件开放接口定义。
+ *
+ * @interface ElementTableExpose
+ */
+declare interface ElementTableExpose {
+    /**
+     * 对 Table 进行重新布局。
+     *
+     * @type {dnvue.Action}
+     * @memberof ElementTableExpose
+     */
+    doLayout: dnvue.Action;
+}

@@ -20,7 +20,7 @@
         </el-form-item>
       </el-form>
     </template>
-    <el-table :data="dataTable" stripe>
+    <el-table :data="dataTable" stripe ref="el-table">
       <el-table-column type="index" width="80" label="序号" />
       <el-table-column label="姓名" prop="name" />
     </el-table>

@@ -1,4 +1,25 @@
 # CHANGELOG
+## [1.0.0-preview.0](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.21...v1.0.0-preview.0) (2022-06-11)
+
+
+### PERFORMANCE OPTIMIZE
+
+* 优化了 v-content-container.vue 组件样式。 ([751a828](https://github.com/niacomsoft/dnVue/commit/751a8281b1ccc121c82ad2db693210081acff63e))
+* 优化了 v-flexbox 样式。 ([26d2e34](https://github.com/niacomsoft/dnVue/commit/26d2e3421f6101ee0b87f76f1f6d33012027a2ea))
+
+
+### NEW FEATURE
+
+* 调整 el-button 为 v-btn 组件。 ([1754b11](https://github.com/niacomsoft/dnVue/commit/1754b11f750c8a22e3b369f38e051a77fac41051))
+* 新增 v-btn.vue 组件。 ([afb8cd5](https://github.com/niacomsoft/dnVue/commit/afb8cd5711acd0037f95ee645b23ef7c523bb284))
+* Daily-Build 2022.6.10-alpha.1820 ([881d168](https://github.com/niacomsoft/dnVue/commit/881d1687653b8522cff04173fb81455f6d6555f1))
+* **Issue #17:** 完成了数据分页组件。 ([ec3ece1](https://github.com/niacomsoft/dnVue/commit/ec3ece126e89b13e0927c868cb14fef638bd1ee5)), closes [#17](https://github.com/niacomsoft/dnVue/issues/17) [#17](https://github.com/niacomsoft/dnVue/issues/17)
+
+
+### CHORE
+
+* 修改了版本号。 ([b533adc](https://github.com/niacomsoft/dnVue/commit/b533adc900bee2aee278bbc8e4c1f32cd4e2e257))
+
 ## [1.0.0-alpha.21](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2022-06-09)
 
 

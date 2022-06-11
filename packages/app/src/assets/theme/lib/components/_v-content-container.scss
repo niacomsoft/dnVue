@@ -10,7 +10,6 @@
 @mixin generate-cls {
     .v-content-container {
         background-color: transparent;
-        overflow        : hidden !important;
 
         >div {
             padding         : var(--v-content-container--padding);
@@ -37,7 +36,7 @@
             flex: 1;
 
             >div {
-                display: block;
+                width     : percentage($number: 1);
             }
         }
 

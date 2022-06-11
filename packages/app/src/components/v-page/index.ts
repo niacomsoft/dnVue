@@ -3,6 +3,6 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // **************************************************************************************************************************
 
-export { useNotification } from "./feedback-utils";
-export { getComponentOpenApi } from "./component-expose";
-export { DEFAULT_PAGESIZES, DEFAULT_PAGESIZE } from "./invariant";
+import vPage from "./v-page.vue";
+
+export { vPage };

@@ -93,6 +93,10 @@ body,
     &-button[data-v-role--block=true] {
         width: percentage($number: 1);
     }
+
+    &-pagination {
+        padding: 0 !important;
+    }
 }
 
 @include v-app.generate-cls;

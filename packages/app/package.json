@@ -20,20 +20,20 @@
     "@mdi/font": "^6.7.96",
     "animate.css": "^4.1.1",
     "change-case": "^4.1.2",
-    "element-plus": "^2.2.0",
-    "i18next": "^21.8.8",
+    "element-plus": "^2.2.5",
+    "i18next": "^21.8.9",
     "material-colors": "^1.2.6",
     "pinia": "^2.0.0-rc.10",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
-    "vue-router": "4"
+    "vue-router": "4.0.16"
   },
   "devDependencies": {
     "@dnvue/typings": "^1.0.0",
     "@vitejs/plugin-vue": "^2.3.2",
-    "sass": "^1.51.0",
+    "sass": "^1.52.3",
     "typescript": "^4.6.4",
-    "vite": "^2.9.8",
-    "vue-tsc": "^0.37.1"
+    "vite": "^2.9.12",
+    "vue-tsc": "^0.37.3"
   }
 }

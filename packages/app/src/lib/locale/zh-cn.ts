@@ -121,4 +121,5 @@ export const zhCN: Record<string, string> = {
     DATA_TABLE: "数据列表",
     IN_PROCESSING: "事务正在处理中，请稍候.....",
     BUTTON: "按钮",
+    PAGING: "共计 #Total 页，当前第 #Index 页",
 };

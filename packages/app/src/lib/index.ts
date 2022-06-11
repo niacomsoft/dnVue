@@ -25,7 +25,12 @@ export {
 } from "./services";
 import { useLocalization } from "./locale";
 export { useLocalization };
-export { useNotification, getComponentOpenApi } from "./utilities";
+export {
+    useNotification,
+    getComponentOpenApi,
+    DEFAULT_PAGESIZES,
+    DEFAULT_PAGESIZE
+} from "./utilities";
 
 Error.create = function (resourceName: string): Error {
     return new Error(useLocalization().t(resourceName));

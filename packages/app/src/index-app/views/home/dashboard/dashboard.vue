@@ -20,10 +20,14 @@
         </el-form-item>
       </el-form>
     </template>
-    <el-table :data="dataTable" stripe ref="el-table">
-      <el-table-column type="index" width="80" label="序号" />
-      <el-table-column label="姓名" prop="name" />
+    <el-table :data="dataTable" border stripe ref="el-table" table-layout="auto">
+      <el-table-column type="index" width="80px" label="序号" />
+      <el-table-column label="姓名" prop="name" width="300px" />
+      <el-table-column label="年龄" align="right" prop="age" width="80px" />
     </el-table>
+    <template #footer> 
+      <v-page />
+    </template>
   </v-content-container>
 </template>
 
@@ -31,7 +35,7 @@
 /// <reference path="../../../../components/component-types.d.ts" />
 
 import { reactive, getCurrentInstance, watch, ref } from "vue";
-import { vContentContainer, vBtn } from "../../../../components";
+import { vContentContainer, vBtn, vPage } from "../../../../components";
 import { ContentContainerExpose } from "../../../../components/component-types";
 import { getComponentOpenApi } from "../../../../lib";
 

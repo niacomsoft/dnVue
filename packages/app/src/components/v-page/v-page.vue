@@ -6,7 +6,7 @@
 -->
 
 <template>
-  <el-pagination :page-sizes="sizes" layout="slot, prev, pager, next, jumper" :current-page="currentPage" :page-size="currentSize" :total="total" :disabled="isDisabled || total === 0" :prev-text="$t('PREVIOUS_PAGE')" :next-text="$t('NEXT_PAGE')" @size-change="onSizeChanged" @current-change="onCurrentChanged">
+  <el-pagination :page-sizes="sizes" layout="slot, prev, pager, next, sizes" :current-page="currentPage" :page-size="currentSize" :total="total" :page-count="total" :disabled="isDisabled || total === 0" :prev-text="$t('PREVIOUS_PAGE')" :next-text="$t('NEXT_PAGE')" @size-change="onSizeChanged" @current-change="onCurrentChanged">
     <span style="padding-right: 20px">{{ readonlyTotalDescription }}</span>
   </el-pagination>
 </template>
@@ -54,7 +54,7 @@ const props = defineProps(
      */
     total: {
       type: Number,
-      default: 0,
+      default: 1,
     },
   })
 );
@@ -87,6 +87,7 @@ const readonlyTotalDescription = computed<string>(() => {
 function onCurrentChanged(value: number): void {
   events("update:currentPage", value);
   events("currentPageChanged", value);
+  alert(value);
 }
 
 function onSizeChanged(value: number): void {

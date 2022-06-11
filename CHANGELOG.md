@@ -1,4 +1,11 @@
 # CHANGELOG
+## [1.0.0-preview.1](https://github.com/niacomsoft/dnVue/compare/v1.0.0-preview.0...v1.0.0-preview.1) (2022-06-11)
+
+
+### PERFORMANCE OPTIMIZE
+
+* **Issue #17:** 修复了 v-page.vue 组件中样式、属性错误。 ([30b5bed](https://github.com/niacomsoft/dnVue/commit/30b5bed4d28fad68b0c1c03cb7841ee5a6bbe37d)), closes [#17](https://github.com/niacomsoft/dnVue/issues/17)
+
 ## [1.0.0-preview.0](https://github.com/niacomsoft/dnVue/compare/v1.0.0-alpha.21...v1.0.0-preview.0) (2022-06-11)
 
 

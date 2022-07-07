@@ -1,4 +1,16 @@
 # CHANGELOG
+## [1.0.0-preview.2](https://github.com/niacomsoft/dnVue/compare/v1.0.0-preview.1...v1.0.0-preview.2) (2022-07-07)
+
+
+### CHORE
+
+* 更新了 npm 包依赖。 ([8501553](https://github.com/niacomsoft/dnVue/commit/85015531d3967155c0ad57a2d7e81176d4d5d5ce))
+
+
+### BUG FIXED
+
+* 调整 v-flexbox 组件样式。 ([3332ed5](https://github.com/niacomsoft/dnVue/commit/3332ed5d999fc0967ddd12b97931d54df538cf01))
+
 ## [1.0.0-preview.1](https://github.com/niacomsoft/dnVue/compare/v1.0.0-preview.0...v1.0.0-preview.1) (2022-06-11)
 
 

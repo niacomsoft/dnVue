@@ -23,7 +23,7 @@
     <el-table :data="dataTable" border stripe ref="el-table" table-layout="auto">
       <el-table-column type="index" width="80px" label="序号" />
       <el-table-column label="姓名" prop="name" width="300px" />
-      <el-table-column label="年龄" align="right" prop="age" width="80px" />
+      <el-table-column label="年龄" align="right" prop="age" width="auto" />
     </el-table>
     <template #footer> 
       <v-page />

@@ -6,7 +6,11 @@
         justify-content: flex-start;
         align-items    : flex-start;
         flex-direction : row;
-        flex-shrink    : 0;
         overflow       : auto;
+
+        >div {
+            flex-shrink: 0;
+            overflow   : auto;
+        }
     }
 }
